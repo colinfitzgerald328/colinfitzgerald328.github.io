@@ -30,7 +30,7 @@ twitter_username: colinfitz328
 github_username:  colinfitzgerald328
 
 # Build settings
-theme: jekyll-theme-clean-blog 
+theme: minima 
 plugins:
   - jekyll-feed
 
