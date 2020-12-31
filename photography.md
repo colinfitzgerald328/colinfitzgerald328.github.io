@@ -1,6 +1,6 @@
 ---
 layout: "page"
-title: Youtube Videos
+title: Photography 
 ---
 
-# Photography 
+# Photography
