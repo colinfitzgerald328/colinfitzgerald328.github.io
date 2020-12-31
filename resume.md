@@ -7,11 +7,11 @@ title: Resume
 
 626-390-3917 | colinfitzgerald@berkeley.edu
 
-SUMMARY
+**SUMMARY**
 
 NCAA Division 1 Track &amp; Cross-Country athlete with excellent work ethic, impeccable time management and people skills. Goal-oriented &amp; results-focused on the field &amp; in the classroom.
 
-EDUCATION
+**EDUCATION**
 
 University of California, Berkeley Berkeley, California
 
@@ -21,7 +21,7 @@ Honors: PAC-12 Fall Honor Roll &#39;19, PAC-12 Spring Honor Roll &#39;20, MPSF A
 
 - Relevant Coursework: Macroeconomics, Microeconomics, Analytic Geometry and Calculus, Business Statistics, Concepts of Probability
 
-WORK &amp; LEADERSHIP EXPERIENCE
+**WORK &amp; LEADERSHIP EXPERIENCE**
 
 **Student-Athlete** | August &#39;18 - Present Berkeley, California
 
@@ -44,14 +44,14 @@ WORK &amp; LEADERSHIP EXPERIENCE
 - Worked directly with editor to meet deadlines and edit photos to specific qualifications.
 - Interacted and collaborated with students to create portraits of the highest quality.
 
-AWARDS
+**AWARDS**
 
 - Glendale News Press Cross-Country Runner of the Year 2016 and 2017
 - Nike Cross Country Nationals Qualifier 2017
 - Scholar Athlete with highest GPA 2016, School 5000m Record Holder
 - Yearbook Newcomer and Photographer of the Year
 
-SKILLS, ACTIVITIES &amp; INTERESTS
+**SKILLS, ACTIVITIES &amp; INTERESTS**
 
 - Software: Python, R, SQL, Adobe Photoshop, Illustrator Lightroom, MS Office Suite
 - Language: French (Professional Working Proficiency)
