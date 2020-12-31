@@ -3,8 +3,8 @@ layout: "page"
 title: Photography
 ---
 
-# Photography
+### Mammoth Mountain Trip
 
-![A test image](MGB_4571.jpg)
+![Image of Yaktocat](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/images/DSC_0196.JPG?raw=true)
 
-And here is the caption, below. 
+Photo captured August 2020. Location: Devil's Postpile. 
