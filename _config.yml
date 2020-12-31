@@ -21,14 +21,14 @@
 title: Colin FitzGerald
 email: colinfitzgerald328@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-    I am a 21 year old Student at the University of California, Berkeley. I'm currently studying economics with a minor in data science. 
+    I am a 21 year old Student at the University of California, Berkeley. I'm currently studying economics with a minor in data science.
 baseurl: "colinfitzgerald328.github.io" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: JamesDe34476493
 github_username:  colinfitzgerald328
 
 # Build settings
-theme: jekyll-theme-cayman
+theme: minima
 plugins:
   - jekyll-feed
 
