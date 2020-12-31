@@ -28,7 +28,7 @@ twitter_username: JamesDe34476493
 github_username:  colinfitzgerald328
 
 # Build settings
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
