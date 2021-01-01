@@ -5,7 +5,7 @@ date:   2020-12-31 17:54:32 -0800
 categories: jekyll update
 ---
 
-#Created by Colin FitzGerald, Jasmine Kamalnathan, Victoria Ng, Stanley Quiros, Daniel Vermeulen, Ruoyi Yang
+# Created by Colin FitzGerald, Jasmine Kamalnathan, Victoria Ng, Stanley Quiros, Daniel Vermeulen, Ruoyi Yang
 
 ```{r include=FALSE}
 library(dplyr)
