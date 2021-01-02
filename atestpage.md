@@ -1,3 +1,9 @@
+---
+layout: "page"
+title: Resume
+---
+
+
 <!DOCTYPE html>
 <html>
 <head>
