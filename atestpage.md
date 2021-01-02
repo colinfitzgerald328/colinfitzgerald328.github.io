@@ -1,132 +1,64 @@
----
-layout: "page"
-title: Resume
----
+<html lang="en">
 
-
-
-<html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>VertiCard by TemplateMo</title>
 
-body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial;
-}
-
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row {
-  margin: 8px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+<!--
+Verticard Template
+https://templatemo.com/tm-533-verticard
+-->
 </head>
+
 <body>
+  <div class="tm-page-container mx-auto">
+    <header class="tm-header text-center">
+      <h1 class="tm-title text-uppercase">Verticard</h1>
+      <p class="tm-primary-color"><i>new bootstrap theme</i></p>
+    </header>
 
-<!-- MAIN (Center website) -->
-<div class="main">
+    <section class="tm-section">
+      <nav class="tm-nav">
+        <ul>
+          <li class="active">
+            <a href="index.html"><span class="tm-nav-deco"></span>Intro</a>
+          </li>
+          <li>
+            <a href="gallery.html"><span class="tm-nav-deco"></span>Gallery</a>
+          </li>
+          <li>
+            <a href="contact.html"><span class="tm-nav-deco"></span>Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="tm-content-container">
+        <figure class="mb-0">
+          <img src="img/img-1.jpg" alt="Image" class="img-fluid tm-img" />
+        </figure>
+        <div class="tm-content">
+          <h2 class="tm-page-title">Verticard Simple CSS Template</h2>
+          <p class="mb-4">
+            Curabitur ac est dapibus, ultricies diam non, vestibulum odio. Sed
+            ac nunc lacinia, maximus nisi non, efficitur lacus, Donec efficitur
+            at dui non molestie.
+          </p>
+          <p>
+            Verticard is provided by TemplateMo site for 100% free download. You can use it absolutely free for any website. Template re-distribution is NOT allowed on any kind of download website. Thank you.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<h1>MYLOGO.COM</h1>
-<hr>
-
-<h2>PORTFOLIO</h2>
-<p>Resize the browser window to see the responsive effect.</p>
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column">
-    <div class="content">
-      <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-    </div>
+    <footer>
+      <span>Copyright 2019 Simple Profile</span>
+      <span>designed by TemplateMo</span>
+    </footer>
   </div>
-  <div class="column">
-    <div class="content">
-    <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-    <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-    <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-    </div>
-  </div>
-<!-- END GRID -->
-</div>
-
-<div class="content">
-  <img src="/w3images/p3.jpg" alt="Bear" style="width:100%">
-  <h3>Some Other Work</h3>
-  <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-  <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
-</div>
-
-<!-- END MAIN -->
-</div>
-
 </body>
+
 </html>
