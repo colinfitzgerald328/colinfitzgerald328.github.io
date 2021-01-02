@@ -1,3 +1,9 @@
+---
+layout: "page"
+title: Resume
+---
+
+
 <html lang="en">
 
 <head>
