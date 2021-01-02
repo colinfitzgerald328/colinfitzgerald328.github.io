@@ -13,4 +13,4 @@ Photo captured August 2020. Location: [Devil's Postpile](https://www.google.com/
 
 ### Coffee Shots
 
-![Image of coffee](/Users/colinfitzgerald/colinfitzgerald328/colinfitzgerald328.github.io/images/DSC_0003.jpg)
+![Image of coffee](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/images/DSC_0003.jpg?raw=true)
