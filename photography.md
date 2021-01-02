@@ -21,4 +21,4 @@ Photo captured August 2020. Location: [Devil's Postpile](https://www.google.com/
 
 
 
-<img src="images/DSC_0003.jpg?raw=true" width="500" height="600"/>
+<img src="images/DSC_0003.jpg?raw=true" width="100" height="600"/>
