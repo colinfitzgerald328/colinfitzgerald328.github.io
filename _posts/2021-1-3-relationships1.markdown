@@ -18,7 +18,7 @@ You must reflect, you must learn. You must improve yourself and figure out what 
 
 I’ve healed from that loss, temporarily. Who knows what any of us are in for in the future?
 
-I’ve been in two serious relationships, and each one shows you the way; helps you to hone in on what to look for, what to avoid, and how you can improve yourself.
+I’ve been in two serious relationships, and each one shows you the way; it helps you to hone in on what to look for, what to avoid, and how you can improve yourself.
 
 It’s painful in moments, but when you come out on the other side you are so much stronger and have more wisdom. It’s clear that there is still much to learn, but another step in the journey of life has been crossed. One path, of many.
 
