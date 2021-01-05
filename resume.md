@@ -19,7 +19,7 @@ Bachelor of Arts in Economics and Data Science Expected May 2022
 
 Honors: PAC-12 Fall Honor Roll &#39;19, PAC-12 Spring Honor Roll &#39;20, MPSF All-Academic &#39;20
 
-- Relevant Coursework: Macroeconomics, Microeconomics, Analytic Geometry and Calculus, Business Statistics, Concepts of Probability
+- Relevant Coursework: Financial Economics, Behavioral Economics, Econometrics, Computational Structures in Data Science, Foundations of Data Science, Business Statistics, Business Calculus 
 
 **WORK &amp; LEADERSHIP EXPERIENCE**
 
