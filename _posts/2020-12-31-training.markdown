@@ -8,8 +8,12 @@ categories: jekyll update
 # Running Training Log - Projected Miles Run, Average Pace, Total Miles for the Week
 Running Weekly Training Log
 
-I used a couple of functions in this project. I was inspired by my class, Stat 20, to use the
-tools I learned for my own life.
+Back in April during the first few months of quarantine, I was simultaneously training and taking Stat 20, known formally as Introduction to Probability and Statistics at U.C. Berkeley.
+
+I wanted to meld together my statistics knowledge with my training to see if I could build an application for myself similar to Strava. I ended up with an R Studio coding outline that allows me to analyze certain facets of my weekly training via a Markdown document.
+
+
+I created a couple of my own functions for this project. 
 
 
 The first function I use is a function that calculates the average running pace that I ran for the day.
