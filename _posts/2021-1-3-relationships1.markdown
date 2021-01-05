@@ -14,7 +14,7 @@ Pain, happiness, joy, maturity, immaturity, loss, grief, wisdom. Those are some 
 
 When you break up with someone or get broken up with, pain ensues. You lose a best friend, someone that you’ve been on a journey with. You lose one of your closest companions. But with every loss, of course come many lessons. You are forced to reflect on what went wrong. Maybe you blame yourself, or do you blame them?
 
-You must reflect, you must learn. You must improve yourself and figure out what poor decisions both sides made. That doesn’t mean there weren’t fun times too; you can’t be bitter. But you must understand.
+You must reflect, you must learn. You must improve yourself and figure out what poor decisions both you and your significant other made. That doesn’t mean there weren’t fun times too; you can’t be bitter. But you must understand.
 
 I’ve healed from that loss, temporarily. Who knows what any of us are in for in the future?
 
