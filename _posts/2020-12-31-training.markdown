@@ -7,8 +7,8 @@ categories: jekyll update
 
 # Running Training Log - Projected Miles Run, Average Pace, Total Miles for the Week
 
-By Colin FitzGerald. January 1, 2021. 
-Running Weekly Training Log
+By Colin FitzGerald. January 1, 2021.
+
 
 Back in April during the first few months of quarantine, I was simultaneously training and taking Stat 20, known formally as Introduction to Probability and Statistics at U.C. Berkeley.
 
