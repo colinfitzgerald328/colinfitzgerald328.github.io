@@ -524,9 +524,4 @@ for category in category_freq:
 
 # App Recommendation for Google Play
 
-Again, productivity and entertainment seem to be the categories of apps with the most possible potential. Once again, the stats confimsheer intuition  
-
-
-```python
-
-```
+Again, productivity and entertainment seem to be the categories of apps with the most possible potential. In conclusion, this project has shown that the statistics confirmed my initial intuition. 
