@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Threshold Development"
+title:  "Threshold Development and a Relationship Story"
 date:   2021-1-10 12:01:30 -0800
 categories: jekyll update
 ---
@@ -51,12 +51,18 @@ Frequently, she would have trouble sleeping. I remember one night when she woke 
 
 She dumped me in February. While it caused me a lot of pain to lose someone I had gotten close with, I know now that it was the correct decision for her, and I may have also failed as a boyfriend in other areas. I do not hold anything against her, however. She is fighting a difficult battle with depression and body image, and I respect that. Because of my lifestyle, I was not in the position to be able to fully support her. However, I do also do think that it is a lot to ask of a 20-year-old man to take care of his girlfriend in the case of mental breakdowns and extreme physical pain.
 
-That’s the end of this story for now. I am currently back to training at full capacity, and my mental health is in a good spot. I have healed from that relationship and am beginning to find life balance between running and school. I have learned many lessons along the way and know that I have many more to learn.
+That’s the end of this story for now. I am currently back to training at full capacity, and my mental health is in a good spot.
+
+I would like to thank my parents and the people that I was able to rely on through these difficult times. I am forever grateful for you even if I was not able to fully express it.
+
+I have healed from that relationship and am beginning to find life balance between running and school. I have learned many lessons along the way and know that I have many more to learn.
 
 ## Junior Year Second Semester (Spring 2021)
 
 In this training cycle I have already run the 3 mile, 2 mile, 1 mile workout in splits of 14:43, 9:36, and 4:30. During the mile, I had a friend help on the last lap and managed to close in a 62.XX. That was a solid workout. I have also already run a 6 mile Threshold in 29:54. Finally, I have also run 16x200m in an average of 28.5. The steps may be small, but they will add up over time.
 
-My training must get faster over the next couple of months, but I need to do so in a smart and methodical way. I have learned through overtraining and burnout that I must progress my training slowly and consistently, rather than all at once. It will take some of my statistical background, setting my ego aside, and frequent consultation with my college coach. We can get it done. I am excited. 
+My training must get faster over the next couple of months, but I need to do so in a smart and methodical way. I have learned through overtraining and burnout that I must progress my training slowly and consistently, rather than all at once. It will take some of my statistical background, setting my ego aside, and frequent consultation with my college coach. We can get it done. I am excited.
+
+I'm going to take these lines to thank my Mom. My Mom has been instrumental in my athletic development over the years. Many times, I have wanted to quit running altogether. She has helped me through the darkest days, and given me so much valuable advice that I am currently processing and will learn from in the future. She has also helped over the last couple of months to taylor my training to my own strengths. She has amazing perspective. Thanks Mom. 
 
 My sights are set on a sub-30 minute 10K, sub-14 5k, and sub-4 minute mile.  
