@@ -53,4 +53,6 @@ She dumped me in February. While it caused me a lot of pain to lose someone I ha
 
 That’s the end of this story for now. I am currently back to training at full capacity, and my mental health is in a good spot. I have healed from that relationship and am beginning to find life balance between running and school. I have learned many lessons along the way and know that I have many more to learn.
 
+In this training cycle I have already run the 3 mile, 2 mile, 1 mile workout in splits of 14:43, 9:36, and 4:30. During the mile, I had a friend help on the last lap and managed to close in a 62.XX. That was a solid workout. I have also already run a 6 mile Threshold in 29:54. Finally, I have also run 16x200m in an average of 28.5. The steps may be small, but they will add up over time. 
+
 My sights are set on a sub-30 minute 10K, sub-14 5k, and sub-4 minute mile.  
