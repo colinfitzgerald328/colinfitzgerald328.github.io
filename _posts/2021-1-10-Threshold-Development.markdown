@@ -5,18 +5,18 @@ date:   2021-1-10 12:01:30 -0800
 categories: jekyll update
 ---
 
-#Training Insights: Where we’ve been and where we hope to go (A combination of Injury and Relationship failure)
+# Training Insights: Where we’ve been and where we hope to go (A combination of Injury and Relationship failure)
 
-##Lactate Threshold Development over the years – Extension of time tolerating 5:00 pace
+## Lactate Threshold Development over the years – Extension of time tolerating 5:00 pace
 
-##Senior year of high school:
+## Senior year of high school:
 2 mile, 2 mile, 1 mile @ 9:50’s and 5:00 for the mile (2-3 minutes rest) OR 10:0X for the 2 miles, 4:3X for the last mile
 
-##Freshman year of college (Fall 2018):
-##First semester: Pure interval training with short rest, no continuous threshold runs
+## Freshman year of college (Fall 2018):
+## First semester: Pure interval training with short rest, no continuous threshold runs
 *8 mile HARD effort (5:20’s and faded) (Supposed to be a 1 hour run but started to slow at 45 minutes mark)
 
-##Example workouts:
+## Example workouts:
 6x mile w/ 1 minute rest on dirt trail (5:02’s)
 1 mile, 2 mile, 1 mile, 2 mile w/ 60-90 seeeconds rest
 (4:56, 9:46, 4:57, 10:29)
@@ -24,18 +24,18 @@ categories: jekyll update
 
 These are some example workouts that I did the first semester I was at UC Berkeley. There is quite an obvious pattern in the latter two workouts. I clearly faded, pace wise, as the workout wore on. It clearly indicates an athlete running out of control.  
 
-##Second Semester (Spring 2019):
+## Second Semester (Spring 2019):
 I did end up being able to run a 4 mile LT run in 20:10, which isn’t too bad.
 I’m not going to write much about the second semester of college. I got injured and had poison oak so bad I could not walk midway through the season. To say the least, it was a wash. I ended the season with bests of 4:02 for 1500m and 8:51.8 for 3000m. These were a far cry from my 3:55.2 (1600m conversion) and 8:35.8 (3200m conversion) from high school. I ended the season barely able to complete a 1200m rep on the track in under four minutes, or 5:20 pace. My body was trashed from straining too hard in workouts along with a debilitating case of Poison Oak.
 
-##First Semester of Sophomore Year (Fall 2019):
+## First Semester of Sophomore Year (Fall 2019):
 I worked very hard over the summer to regain my aerobic capacity after a month or so completely off due to Peroneal Tendinitis. In my last workout before heading back to school, I ran an 8 mile tempo run at the Rose Bowl in 42:16 (5:17 average). For reference, the Rose Bowl is not a flat training loop. I would estimate a slightly faster average on a flat course. This was a true tempo effort, and my first time ever doing longer tempo runs. I was really thrilled to finally, after a year-long break from tempo runs, be doing them again. The year before, that would have been an all-out race effort.
 
 Once I returned to school, I did not run any more tempo runs at a faster average than that, although I did run a 6 mile tempo where the last couple of miles, I dipped into the 5:0X’s. I look at that workout as a mini breakthrough.
 
 Over winter break, I had put in some solid base miles, so I tried my hand at a 4 mile LT run in early December, before I headed home for Winter Break. I ran 20:00, a 10 second PR for a threshold run, during base training. This was another mini break-through.
 
-##Second Semester (Spring 2020): 
+## Second Semester (Spring 2020):
 We began running 10 mile tempo runs in January of 2020, and the first one was rough. I ran 5:20’s for the first 7 miles feeling smooth, and then used whatever I had left to hang on a close the last couple of miles in 5:21’s. I ran 53:31 for my first 10 mile tempo run.
 My coach smartly implemented hills after Monday runs. I credit that small addition to my tempo-run development.
 
