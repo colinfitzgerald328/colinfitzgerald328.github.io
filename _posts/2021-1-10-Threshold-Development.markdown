@@ -63,6 +63,6 @@ In this training cycle I have already run the 3 mile, 2 mile, 1 mile workout in 
 
 My training must get faster over the next couple of months, but I need to do so in a smart and methodical way. I have learned through overtraining and burnout that I must progress my training slowly and consistently, rather than all at once. It will take some of my statistical background, setting my ego aside, and frequent consultation with my college coach. We can get it done. I am excited.
 
-I'm going to take these lines to thank my Mom. My Mom has been instrumental in my athletic development over the years. Many times, I have wanted to quit running altogether. She has helped me through the darkest days, and given me so much valuable advice that I am currently processing and will learn from in the future. She has also helped over the last couple of months to taylor my training to my own strengths. She has amazing perspective. Thanks Mom. 
+I'm going to take these lines to thank my Mom. My Mom has been instrumental in my athletic development over the years. Many times, I have wanted to quit running altogether. She has helped me through the darkest days, and given me so much valuable advice that I am currently processing and will learn from in the future. She has also helped over the last couple of months to tailor my training to my own strengths. She has amazing perspective. Thanks Mom. 
 
 My sights are set on a sub-30 minute 10K, sub-14 5k, and sub-4 minute mile.  
