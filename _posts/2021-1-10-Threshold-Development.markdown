@@ -51,4 +51,6 @@ Frequently, she would have trouble sleeping. I remember one night when she woke 
 
 She dumped me in February. While it caused me a lot of pain to lose someone I had gotten close with, I know now that it was the correct decision for her, and I may have also failed as a boyfriend in other areas. I do not hold anything against her, however. She is fighting a difficult battle with depression and body image, and I respect that. Because of my lifestyle, I was not in the position to be able to fully support her. However, I do also do think that it is a lot to ask of a 20-year-old man to take care of his girlfriend in the case of mental breakdowns and extreme physical pain.
 
-That’s the end of this story for now. I am currently back to training at full capacity, and my mental health is in a good spot. I have healed from that relationship and am beginning to find life balance between running and school. I have learned many lessons along the way and know that I have many more to learn.  
+That’s the end of this story for now. I am currently back to training at full capacity, and my mental health is in a good spot. I have healed from that relationship and am beginning to find life balance between running and school. I have learned many lessons along the way and know that I have many more to learn.
+
+My sights are set on a sub-30 minute 10K, sub-14 5k, and sub-4 minute mile.  
