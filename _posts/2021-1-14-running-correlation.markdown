@@ -537,7 +537,3 @@ With this zoomed in look, we can tell that most of our errors hover around the r
 
 From analysis of the errors, and correlation coefficient of -0.98, we can conclude that linear prediction is a good indicator for calculating my stride length, given a running pace between 200 and 300 seconds per kilometer.
 
-
-```python
-
-```
