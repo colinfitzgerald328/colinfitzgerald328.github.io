@@ -466,7 +466,7 @@ run_with_errors.scatter("Average Running Pace", "Error")
 ```
 
 
-![png](output_35_0.png)
+![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_35_0.png?raw=true)
 
 
 
