@@ -5,7 +5,7 @@ date:   2021-1-10 12:01:30 -0800
 categories: jekyll update
 ---
 
-### Training Insights: Where we’ve been and where we hope to go (A combination of Injury and Relationship failure)
+
 
 ## Lactate Threshold Development over the years – Extension of time tolerating 5:00 pace
 
