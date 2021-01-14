@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Threshold Development and a Relationship Story"
+title:  "Threshold Development from 2017 to 2020"
 date:   2021-1-10 12:01:30 -0800
 categories: jekyll update
 ---
@@ -60,6 +60,6 @@ In this training cycle I have already run the 3 mile, 2 mile, 1 mile workout in 
 
 My training must get faster over the next couple of months, but I need to do so in a smart and methodical way. I have learned through overtraining and burnout that I must progress my training slowly and consistently, rather than all at once. It will take some of my statistical background, setting my ego aside, and frequent consultation with my college coach. We can get it done, and I am excited.
 
-I've found that a 14-day cycle works best for me. I combine a 6 mile threshold run, a repetition workout at 3k, 5k, or mile pace, and a long continuous hill run. I also do 30-60 second hill reps, and one long run of 15-20 miles, depending on where I am in training. 
+I've found that a 14-day cycle works best for me. I combine a 6 mile threshold run, a repetition workout at 3k, 5k, or mile pace, and a long continuous hill run. I also do 30-60 second hill reps, and one long run of 15-20 miles, depending on where I am in training.
 
 My sights are set on a sub-30 minute 10K, sub-14 5k, and a sub-4 minute mile.  
