@@ -38,7 +38,7 @@ I finished the season with bests of 4:02 for 1500m and 8:51.8 for 3000m. These t
 ## First Semester of Sophomore Year (Fall 2019):
 I worked very hard over the summer to regain my aerobic capacity after a month or so completely off due to peroneal tendinitis.
 
-In my last workout before heading back to school, I ran an 8 mile tempo run at the Rose Bowl in 42:16 (5:17 average). For reference, the Rose Bowl is not a flat training loop. I would estimate a slightly faster average on a flat course. This was a true tempo effort, and my first time ever doing longer tempo runs. I was really thrilled to finally, after a year-long break from tempo runs, be doing them again. The year before, that would have been an all-out race effort.
+In my last workout before heading back to school, I ran an 8 mile tempo run at the Rose Bowl in 42:16 (5:17 average). For reference, the Rose Bowl is not a flat training loop. I would estimate a slightly faster average on a flat course. This was a true tempo effort, and my first time ever doing longer tempo runs. I was really thrilled to finally, after a year-long break from tempo runs, be doing them again. That would have been an all-out effort the year before. 
 
 Once I returned to school, I did not run any more tempo runs at a faster average than that, although I did run a 6 mile tempo where the last couple of miles, I dipped into the 5:0X’s. I look at that workout as a mini breakthrough.
 
