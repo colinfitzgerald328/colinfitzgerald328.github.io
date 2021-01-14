@@ -11,7 +11,7 @@ categories: jekyll update
 
 ## Senior Year of High School (Fall 2017 - Spring 2018):
 
-Staple Threshold workout: (2 mile, 2 mile, 1 mile) in 10:00, 10:00, 5:00. We also did another version of this workout where I would run the 2 mile efforts at a slightly slower clip (5:10's), and then run the mile hard. I would typically run the final mile in 4:35. 
+Staple Threshold workout: (2 mile, 2 mile, 1 mile) in 10:00, 10:00, 5:00. We also did another version of this workout where I would run the 2 mile efforts at a slightly slower clip (5:10's), and then run the mile hard. I would typically run the final mile in 4:35.
 
 ## Freshman Year of College (Fall 2018):
 ## First Semester: Pure Interval Training with Short Rest, No Continuous Threshold Runs
@@ -29,7 +29,7 @@ Post-workout my calves were so tight that I could barely walk. I raced the PAC-1
 In retrospect, there is quite an obvious pattern in the latter two workouts. The split trend indicates an athlete running out of control, as the average pace per rep decreases rather than quickens over the final two repetitions.
 
 ## Second Semester (Spring 2019):
-I did end up being able to run a 4 mile LT (Lactate-Threshold) run in 20:10, which isn’t too bad.
+I ran a 4-mile LT (Lactate Threshold) run in 20:10. 
 
 I’m not going to write much about the second semester of college. I developed peroneal tendinitis in my left foot in February. This injury was a  direct result of a lack of sleep and an abundance of extremely taxing interval sessions on the track. Because of the pressure that these track workouts placed on my calves, my feet could no longer support my legs, and thus I became injured. I also contracted Poison Oak. This was not a typical case of Poison Oak by any means. My leg swelled to such a size, where I could hardly walk. I did not recover in time to save my training and complete my freshman track season.
 
