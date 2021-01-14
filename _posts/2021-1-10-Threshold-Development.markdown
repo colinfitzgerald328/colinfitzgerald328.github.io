@@ -9,9 +9,9 @@ categories: jekyll update
 
 ## Lactate Threshold (2017 - 2020)
 
-## Senior Year of High School (Fall 2017 - Spring 2018): 
+## Senior Year of High School (Fall 2017 - Spring 2018):
 
-Staple Threshold workout: (2 mile, 2 mile, 1 mile) in 10:00, 10:00, 5:00. We also did another version of this workout where I would run the 2 mile efforts at a slightly slower clip (5:10's), and then run the mile hard. I would typically run the final mile in 4:35 or so.
+Staple Threshold workout: (2 mile, 2 mile, 1 mile) in 10:00, 10:00, 5:00. We also did another version of this workout where I would run the 2 mile efforts at a slightly slower clip (5:10's), and then run the mile hard. I would typically run the final mile in 4:35. 
 
 ## Freshman Year of College (Fall 2018):
 ## First Semester: Pure Interval Training with Short Rest, No Continuous Threshold Runs
