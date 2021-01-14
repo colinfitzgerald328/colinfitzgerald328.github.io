@@ -112,7 +112,7 @@ plots.ylabel("Average Stride Length (Centimeters)")
 
 
 
-![png](output_7_1.png)
+![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_7_1.png?raw=true)
 
 
 In the initial visualization of the data, it becomes apparent that the minutes and second display on the x axis isn't very elegant. I spend the following few lines converting the strings of times into solely seconds displays.
