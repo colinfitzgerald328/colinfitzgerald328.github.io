@@ -10,30 +10,38 @@ categories: jekyll update
 ## Lactate Threshold Development over the years – Extension of time tolerating 5:00 pace
 
 ## Senior year of high school:
-2 mile, 2 mile, 1 mile @ 9:50’s and 5:00 for the mile (2-3 minutes rest) OR 10:0X for the 2 miles, 4:3X for the last mile
+(2 mile, 2 mile, 1 mile) in 10:00, 10:00, 5:00. We also did another version of this workout where I would run the 2 mile efforts at a slightly slower clip (5:10's), and then run the mile hard. I would typically run the final mile in 4:35 or so.
 
 ## Freshman year of college (Fall 2018):
 ## First semester: Pure interval training with short rest, no continuous threshold runs
-*8 mile HARD effort (5:20’s and faded) (Supposed to be a 1 hour run but started to slow at 45 minutes mark)
+The closest type of workout that we did to a threshold run was a timed one hour run. This was a fitness test to assess our summer of training. The instructions were to run the first 30 minutes at no faster than 5:20 pace, and then cut down. I held on for the first 40 minutes and then faded into oblivion. I collapsed on the side of the dirt loop, exhausted.
 
 ## Example workouts:
-6x mile w/ 1 minute rest on dirt trail (5:02’s)
-1 mile, 2 mile, 1 mile, 2 mile w/ 60-90 seeeconds rest
+(6x) 1 mile w/ 1 minute rest on dirt trail (5:02’s)
+(1 mile, 2 mile, 1 mile, 2 mile) w/ 60-90 seconds rest
 (4:56, 9:46, 4:57, 10:29)
-3x 2 mile w/ 2-3 minute rest (9:40, 9:56, 9:53)  this workout was extremely unproductive for my body as an 18 year old freshman collegiate athlete. I was redlining after the first repetition.
+(3x) 2 mile w/ 2-3 minute rest (9:40, 9:56, 9:53)
 
-These are some example workouts that I did the first semester I was at UC Berkeley. There is quite an obvious pattern in the latter two workouts. I clearly faded, pace wise, as the workout wore on. It clearly indicates an athlete running out of control.  
+The 3 x 2-mile workout was extremely unproductive for my body as an 18 year old freshman collegiate athlete.
+Post-workout my calves were so tight that I could barely walk. I raced the PAC-12 Cross Country Championship not long after. That was one of the most difficult races of my life. Although I ran a personal best that day, I knew from an analytical perspective that I was training too hard.
+
+In retrospect, there is quite an obvious pattern in the latter two workouts. The split trend indicates an athlete running out of control, as the average pace per rep decreases rather than quickens over the final two repetitions.
 
 ## Second Semester (Spring 2019):
-I did end up being able to run a 4 mile LT run in 20:10, which isn’t too bad.
-I’m not going to write much about the second semester of college. I got injured and had poison oak so bad I could not walk midway through the season. To say the least, it was a wash. I ended the season with bests of 4:02 for 1500m and 8:51.8 for 3000m. These were a far cry from my 3:55.2 (1600m conversion) and 8:35.8 (3200m conversion) from high school. I ended the season barely able to complete a 1200m rep on the track in under four minutes, or 5:20 pace. My body was trashed from straining too hard in workouts along with a debilitating case of Poison Oak.
+I did end up being able to run a 4 mile LT (Lactate-Threshold) run in 20:10, which isn’t too bad.
+
+I’m not going to write much about the second semester of college. I developed peroneal tendinitis in my left foot in February. This injury was a  direct result of a lack of sleep and an abundance of extremely taxing interval sessions on the track. Because of the pressure that these track workouts placed on my calves, my feet could no longer support my legs, and thus I became injured. I also contracted Poison Oak. This was not a typical case of Poison Oak by any means. My leg swelled to such a size, where I could hardly walk. I did not recover in time to save my training and complete my freshman track season.
+
+I finished the season with bests of 4:02 for 1500m and 8:51.8 for 3000m. These times were a far cry from my 3:55.2 (1600m conversion) and 8:35.8 (3200m conversion) from high school. I could no longer complete a 1200m repetition on the track in under 4 minutes. My body needed a nice long rest, and it got its way.
 
 ## First Semester of Sophomore Year (Fall 2019):
-I worked very hard over the summer to regain my aerobic capacity after a month or so completely off due to Peroneal Tendinitis. In my last workout before heading back to school, I ran an 8 mile tempo run at the Rose Bowl in 42:16 (5:17 average). For reference, the Rose Bowl is not a flat training loop. I would estimate a slightly faster average on a flat course. This was a true tempo effort, and my first time ever doing longer tempo runs. I was really thrilled to finally, after a year-long break from tempo runs, be doing them again. The year before, that would have been an all-out race effort.
+I worked very hard over the summer to regain my aerobic capacity after a month or so completely off due to peroneal tendinitis.
+
+In my last workout before heading back to school, I ran an 8 mile tempo run at the Rose Bowl in 42:16 (5:17 average). For reference, the Rose Bowl is not a flat training loop. I would estimate a slightly faster average on a flat course. This was a true tempo effort, and my first time ever doing longer tempo runs. I was really thrilled to finally, after a year-long break from tempo runs, be doing them again. The year before, that would have been an all-out race effort.
 
 Once I returned to school, I did not run any more tempo runs at a faster average than that, although I did run a 6 mile tempo where the last couple of miles, I dipped into the 5:0X’s. I look at that workout as a mini breakthrough.
 
-Over winter break, I had put in some solid base miles, so I tried my hand at a 4 mile LT run in early December, before I headed home for Winter Break. I ran 20:00, a 10 second PR for a threshold run, during base training. This was another mini break-through.
+Over winter break, I had put in some solid base miles, so I attempted a 4 mile LT (Lactate-Threshold) run in early December, before I headed home for Winter Break. I ran 20:00, a 10 second PR for a threshold run, during base training. This was another mini break-through.
 
 ## Second Semester (Spring 2020):
 We began running 10 mile tempo runs in January of 2020, and the first one was rough. I ran 5:20’s for the first 7 miles feeling smooth, and then used whatever I had left to hang on and close the last couple of miles in 5:21’s. I ran 53:31 for my first 10 mile tempo run.
@@ -50,8 +58,8 @@ I’ll end that semester there as COVID hit not long after. I was running 100 mi
 
 In this training cycle I have already run the 3 mile, 2 mile, 1 mile workout in splits of 14:43, 9:36, and 4:30. During the mile, I had a friend help on the last lap and managed to close in a 62.XX. That was a solid workout. I have also already run a 6 mile Threshold run in 29:54. Finally, I have also run 16x200m in an average of 28.5. The steps may be small, but they will add up over time.
 
-My training must get faster over the next couple of months, but I need to do so in a smart and methodical way. I have learned through overtraining and burnout that I must progress my training slowly and consistently, rather than all at once. It will take some of my statistical background, setting my ego aside, and frequent consultation with my college coach. We can get it done. I am excited.
+My training must get faster over the next couple of months, but I need to do so in a smart and methodical way. I have learned through overtraining and burnout that I must progress my training slowly and consistently, rather than all at once. It will take some of my statistical background, setting my ego aside, and frequent consultation with my college coach. We can get it done, and I am excited.
 
-I'm going to take these lines to thank my mom. My mom has been instrumental in my athletic development over the years. Many times, I have wanted to quit running altogether. She has helped me through the darkest days, and given me so much valuable advice that I am currently processing and will learn from in the future. She has also helped over the last couple of months to tailor my training to my own strengths. She has amazing perspective. Thank you.
+I've found that a 14-day cycle works best for me. I combine a 6 mile threshold run, a repetition workout at 3k, 5k, or mile pace, and a long continuous hill run. I also do 30-60 second hill reps, and one long run of 15-20 miles, depending on where I am in training. 
 
 My sights are set on a sub-30 minute 10K, sub-14 5k, and a sub-4 minute mile.  
