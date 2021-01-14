@@ -56,7 +56,7 @@ The following week I returned to the 4 mile threshold run and ran 20:02. I wasn�
 
 The following Tuesday I experienced another mini breakthrough. I ran 3 miles, 2 miles, and 1 mile with 2 minutes of rest. I ran 15:12, 9:48, and 4:44. The important part to note here is that contrary to the way I had been running workouts my freshman year of college, I was now getting faster as the workout wore on. On Friday, I returned to the 10 mile tempo and ran my second-fastest time ever to this day. I ran 52:02 for 10 miles at the Rose Bowl, a 5:11 average. I closed the last 2 miles in 9:56, and ran 4:49 for the last mile. I could tell after this workout that I was starting to become very aerobically fit.
 
-I’ll end that semester there as COVID hit not long after. I was running 100 mile weeks
+I’ll end that semester there as COVID hit not long after. I took a break from training for a while. I lowered my mileage from 90 to 55 and focused on speed development under the guidance of my mom, an RRCA certified running coach. 
 
 ## Junior Year Second Semester (Spring 2021)
 
