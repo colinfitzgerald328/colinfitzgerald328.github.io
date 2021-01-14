@@ -9,14 +9,15 @@ categories: jekyll update
 
 ## Lactate Threshold Development over the years – Extension of time tolerating 5:00 pace
 
-## Senior year of high school:
-(2 mile, 2 mile, 1 mile) in 10:00, 10:00, 5:00. We also did another version of this workout where I would run the 2 mile efforts at a slightly slower clip (5:10's), and then run the mile hard. I would typically run the final mile in 4:35 or so.
+## Senior Year of High School
 
-## Freshman year of college (Fall 2018):
-## First semester: Pure interval training with short rest, no continuous threshold runs
+Staple Threshold workout: (2 mile, 2 mile, 1 mile) in 10:00, 10:00, 5:00. We also did another version of this workout where I would run the 2 mile efforts at a slightly slower clip (5:10's), and then run the mile hard. I would typically run the final mile in 4:35 or so.
+
+## Freshman Year of College (Fall 2018):
+## First Semester: Pure Interval Training with Short Rest, No Continuous Threshold Runs
 The closest type of workout that we did to a threshold run was a timed one hour run. This was a fitness test to assess our summer of training. The instructions were to run the first 30 minutes at no faster than 5:20 pace, and then cut down. I held on for the first 40 minutes and then faded into oblivion. I collapsed on the side of the dirt loop, exhausted.
 
-## Example workouts:
+## Example Workouts :
 (6x) 1 mile w/ 1 minute rest on dirt trail (5:02’s)
 (1 mile, 2 mile, 1 mile, 2 mile) w/ 60-90 seconds rest
 (4:56, 9:46, 4:57, 10:29)
