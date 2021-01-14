@@ -453,7 +453,7 @@ run_with_errors.scatter("Average Running Pace")
 ```
 
 
-![png](output_32_0.png)
+![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_32_0.png?raw=true)
 
 
 # Taking A Closer Look at the Residuals
