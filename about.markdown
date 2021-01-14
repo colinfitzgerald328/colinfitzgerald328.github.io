@@ -6,7 +6,7 @@ permalink: /about/
 
 ## My name is Colin FitzGerald.
 
- I am a 21 Year Old Student-Athlete at the University of California, Berkeley.
+ I am a 21-year-old Student-Athlete at the University of California, Berkeley.
 
  I created this blog to share parts of my life story and to give myself motivation to
  innovate my artwork, photography, self, and personal brand.
