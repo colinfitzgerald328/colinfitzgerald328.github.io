@@ -38,13 +38,16 @@ I finished the season with bests of 4:02 for 1500m and 8:51.8 for 3000m. These t
 ## First Semester of Sophomore Year (Fall 2019):
 I worked very hard over the summer to regain my aerobic capacity after a month or so completely off due to peroneal tendinitis.
 
-In my last workout before heading back to school, I ran an 8 mile tempo run at the Rose Bowl in 42:16 (5:17 average). For reference, the Rose Bowl is not a flat training loop. I would estimate a slightly faster average on a flat course. This was a true tempo effort, and my first time ever doing longer tempo runs. I was really thrilled to finally, after a year-long break from tempo runs, be doing them again. That would have been an all-out effort the year before. 
+In my last workout before heading back to school, I ran an 8 mile tempo run at the Rose Bowl in 42:16 (5:17 average). For reference, the Rose Bowl is not a flat training loop. I would estimate a slightly faster average on a flat course. This was a true tempo effort, and my first time ever doing longer tempo runs. I was really thrilled to finally, after a year-long break from tempo runs, be doing them again. That would have been an all-out effort the year before.
 
-Once I returned to school, I did not run any more tempo runs at a faster average than that, although I did run a 6 mile tempo where the last couple of miles, I dipped into the 5:0X’s. I look at that workout as a mini breakthrough.
+Once I returned to school, I did not run any more tempo runs at a faster average. We had a new coach, so he was focused on the bigger picture. We ran our workouts slower, but the genius was in the consistency. No longer were our bodies going completely acidic after each session and our bodies could handle more volume. We may have rarely run faster than 4:50 pace in practice, but because we were so consistent, we peaked at the right time and I lowered my 8k personal best from 25:18 to 24:36. This training method was quite effective for cross country.  
 
-Over winter break, I had put in some solid base miles, so I attempted a 4 mile LT (Lactate-Threshold) run in early December, before I headed home for Winter Break. I ran 20:00, a 10 second PR for a threshold run, during base training. This was another mini break-through.
+As it is of note, in the last few weeks before our Conference Championship, I ran a 6 mile tempo run. I ran the first 4 miles controlled, and then in the last two miles I dipped into the 5:0X's. I look at that workout as a breakthrough moment. Never before had I run that controlled and that fast in a true tempo effort.
+
+Over Winter Break, I attempted a 4 mile LT solely off of base training. I ran 20:00, a 10 second PR for a threshold run. This was another mini break-through for me.
 
 ## Second Semester (Spring 2020):
+
 We began running 10 mile tempo runs in January of 2020, and the first one was rough. I ran 5:20’s for the first 7 miles feeling smooth, and then used whatever I had left to hang on and close the last couple of miles in 5:21’s. I ran 53:31 for my first 10 mile tempo run.
 
 My coach then smartly implemented hills after Monday runs. I credit that small addition to my tempo-run development.
