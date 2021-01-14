@@ -248,7 +248,7 @@ plots.ylabel("Average Stride Length (Centimeters)")
 
 
 
-![png](output_17_1.png)
+![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_17_1.png?raw=true)
 
 
 Now we have cleaned the data, dropped the unnecessary parts, and have a simple visualization of what we are going to look at in further detail. We have a two column table containing what we would like to analyze for this particular moment. Time for some statistical testing.
