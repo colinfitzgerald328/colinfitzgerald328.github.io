@@ -38,7 +38,7 @@ I finished the season with bests of 4:02 for 1500m and 8:51.8 for 3000m. These t
 ## First Semester of Sophomore Year (Fall 2019):
 I worked very hard over the summer to regain my aerobic capacity after a month or so completely off due to peroneal tendinitis.
 
-In my last workout before heading back to school, I ran an 8 mile tempo run at the Rose Bowl in 42:16 (5:17 average). For reference, the Rose Bowl is not a flat training loop. I would estimate a slightly faster average on a flat course. This was a true tempo effort, and my first time ever doing longer tempo runs. I was really thrilled to finally, after a year-long break from tempo runs, be doing them again. That would have been an all-out effort the year before.
+In my last workout before heading back to school, I ran an 8 mile tempo run at the Rose Bowl in 42:16 (5:17 average). For reference, the Rose Bowl is not a flat training loop. I would estimate a slightly faster average on a flat course. This was a true tempo effort, and my first time ever doing longer tempo runs. I was really thrilled to finally be doing tempo runs again. That would have been an all-out effort the year before.
 
 Once I returned to school, I did not run any more tempo runs at a faster average. We had a new coach, so he was focused on the bigger picture. We ran our workouts slower, but the genius was in the consistency. No longer were our bodies going completely acidic after each session and our bodies could handle more volume. We may have rarely run faster than 4:50 pace in practice, but because we were so consistent, we peaked at the right time and I lowered my 8k personal best from 25:18 to 24:36. This training method was quite effective for cross country.  
 
@@ -56,7 +56,7 @@ The following week I returned to the 4 mile threshold run and ran 20:02. I wasn�
 
 The following Tuesday I experienced another mini breakthrough. I ran 3 miles, 2 miles, and 1 mile with 2 minutes of rest. I ran 15:12, 9:48, and 4:44. The important part to note here is that contrary to the way I had been running workouts my freshman year of college, I was now getting faster as the workout wore on. On Friday, I returned to the 10 mile tempo and ran my second-fastest time ever to this day. I ran 52:02 for 10 miles at the Rose Bowl, a 5:11 average. I closed the last 2 miles in 9:56, and ran 4:49 for the last mile. I could tell after this workout that I was starting to become very aerobically fit.
 
-I’ll end that semester there as COVID hit not long after. I took a break from training for a while. I lowered my mileage from 90 to 55 and focused on speed development under the guidance of my mom, an RRCA certified running coach. 
+I’ll end that semester there as COVID hit not long after. I took a break from training for a while. I lowered my mileage from 90 to 55 and focused on speed development under the guidance of my mom, an RRCA certified running coach.
 
 ## Junior Year Second Semester (Spring 2021)
 
