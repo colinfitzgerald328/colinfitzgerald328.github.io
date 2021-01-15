@@ -153,9 +153,7 @@ for i in updated_list:
 ```
 
 
-```python
-finale_list = make_array(final_list)
-```
+
 
 
 ```python
