@@ -95,7 +95,7 @@ progressive_cleaned.show()
 
 # Initial Visualization of the Data
 
-We want to visualize the data initially, so that we can see if there are any obvious patterns in the data. Upon initial inspection, there looks to be good possibility for a linear relationship between average running pace and average stride length.
+We want to look at an initial visualization of the data so that we can see if there are any obvious patterns. Upon initial inspection, there looks to be good possibility for a linear relationship between average running pace and average stride length.
 
 
 ```python
@@ -115,7 +115,7 @@ plots.ylabel("Average Stride Length (Centimeters)")
 ![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_7_1.png?raw=true)
 
 
-In the initial visualization of the data, it becomes apparent that the minutes and second display on the x axis isn't very elegant. I spend the following few lines converting the strings of times into solely seconds displays.
+In the initial visualization of the data, it becomes apparent that the minutes and second display on the x axis isn't very elegant. Consequently, I spent the following lines of code converting the average pace per kilometer from a minutes and seconds version to purely seconds form. 
 
 
 ```python
