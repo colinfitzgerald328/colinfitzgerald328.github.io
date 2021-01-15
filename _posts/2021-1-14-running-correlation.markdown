@@ -531,9 +531,8 @@ root_mean_squared_error / mean_stride_length
 
 
 
-With this zoomed in look, we can tell that most of our errors hover around the range +- 2. This means that our usual error is around 2 centimeters. That's not a bad error. Given the mean stride length of 154, the predicted percentage of stride length that we will be off by is about 1.3 percent. That's a darn good estimate. If we take into consideration the RMSE of 1.23, we take 1.23 / 154.38 and get a result of 0.007, which is 0.07 percent.
+With this zoomed in look, we can tell that most of our errors hover around the range +- 2. This means that our usual error is around 2 centimeters. That's not a bad error. Given the mean stride length of 154, the predicted percentage of stride length that we will be off by is about 1.3 percent. That's a darn good estimate. If we take into consideration the RMSE of 1.23, we take 1.23 / 154.38 and get a result of 0.007, which is 0.7 percent.
 
 # Conclusion
 
 From analysis of the errors, and correlation coefficient of -0.98, we can conclude that linear prediction is a good indicator for calculating my stride length, given a running pace between 200 and 300 seconds per kilometer.
-
