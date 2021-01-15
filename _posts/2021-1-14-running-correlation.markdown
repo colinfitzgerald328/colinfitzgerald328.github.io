@@ -20,6 +20,10 @@ import numpy as np
 
 The data generating process was as follows: I went on my run. Once I finished my run, I saved it. I uploaded the run to my iPhone via bluetooth. Once the running data uploaded, I exported a CSV file of the data to my computer. The watch I use is the COROS Pace 2.
 
+As a side note, this statistical analysis only takes into account one run. In the future I plan to run a more comprehensive analysis because it is essential to have a variety of data to truly prove a statistical relationship. However, this is a good jumping-off point.
+
+The following running data is from an 18 mile long run. I started at 6:39 mile pace and closed in 5:27 for the last mile. As it was progressive, I chose to analyze the linear relationship between stride length as running pace increases. For the actual analysis, I used the column that contains minutes per kilometer rather than minutes per mile. We are also, for the purpose of this project, holding constant external factors such as elevation gain per mile, heart rate, and prior muscle fatigue. 
+
 
 ```python
 progressive_longrun_data = Table.read_table("ProgressiveLongRun.csv")
@@ -115,7 +119,7 @@ plots.ylabel("Average Stride Length (Centimeters)")
 ![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_7_1.png?raw=true)
 
 
-In the initial visualization of the data, it becomes apparent that the minutes and second display on the x axis isn't very elegant. Consequently, I spent the following lines of code converting the average pace per kilometer from a minutes and seconds version to purely seconds form. 
+In the initial visualization of the data, it becomes apparent that the minutes and second display on the x axis isn't very elegant. Consequently, I spent the following lines of code converting the average pace per kilometer from a minutes and seconds version to purely seconds form.
 
 
 ```python
