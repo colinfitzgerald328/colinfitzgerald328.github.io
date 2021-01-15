@@ -18,7 +18,9 @@ import numpy as np
 
 ## Importing the Data
 
-The data generating process was as follows: I went on my run. Once I finished my run, I saved it. I uploaded the run to my iPhone via bluetooth. Once the running data uploaded, I exported a CSV file of the data to my computer. The watch I use is the [COROS Pace 2](https://www.coros.com/pace2.php). 
+The data generating process was as follows: I went on my run. Once I finished my run, I saved it. I uploaded the run to my iPhone via bluetooth. Once the running data uploaded, I exported a CSV file of the data to my computer.
+
+Here is a link to the [google sheets version](https://drive.google.com/file/d/1lkrTW4mS5EdYcq0NKE17-w8q00bJJj8y/view?usp=sharing) of the data. For reference, the watch I used to collect this data is the [COROS Pace 2](https://www.coros.com/pace2.php). 
 
 As a side note, this statistical analysis only takes into account one run. In the future I plan to run a more comprehensive analysis because it is essential to have a variety of data to truly prove a statistical relationship. However, this is a good jumping-off point.
 
