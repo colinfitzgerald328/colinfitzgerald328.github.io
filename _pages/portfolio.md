@@ -9,7 +9,7 @@ header:
   caption: "[**Unsplash** @petefogden](https://unsplash.com/@petefogden?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge)"
 sidebar:
   - title: "Student"
-    image: https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/assets/images/49a923771972ef73ce369d5b1a621d67.jpg?raw=true
+    image: https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/assets/images/P1260418.jpg?raw=true
     image_alt: "logo"
     text: "U.C. Berkeley"
   - title: "Goal:"
