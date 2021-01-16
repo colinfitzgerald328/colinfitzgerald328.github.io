@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Implementing Black Scholes Using Python"
-date:   2021-01-21 05:04:00 -0800
+date:   2021-01-16 05:04:00 -0800
 excerpt: "Econ 136 Problem Set #2: Creating a Black-Scholes Option Price in Python and Verifying That It Works"
 categories: 
   - tutorial
@@ -25,6 +25,8 @@ init_printing()
 ```
 
 The function below creates our black-scholes option pricer. 
+
+## Function Used to Create Black-Scholes Option Price 
 
 
 ```python
@@ -55,7 +57,7 @@ black_scholes(100, 105, 0.5, 0.06, 0.2783, option = 'call')
 
 
 
-$\displaystyle 6.999918456914479$
+![png](/assets/images/output_4_0.png)
 
 
 
@@ -89,6 +91,8 @@ new_table = Table().with_column("Level of Underlying", np.arange(0,101,10))
 ```python
 new_table.show()
 ```
+
+## Initial Table 
 
 
 <table border="1" class="dataframe">
@@ -155,7 +159,7 @@ black_scholes(0.0001, 50, 1, 0.1, 0.39115)
 
 
 
-$\displaystyle 1.9179745627200469e-246$
+![png](/assets/images/output_11_0.png)
 
 
 
@@ -191,6 +195,8 @@ time_to_expiration_of_one_year_array
 new_table = new_table.with_column("Time to Expiration of One Year", time_to_expiration_of_one_year_array)
 new_table.show()
 ```
+
+## Graph of Time to Expiration of Zero 
 
 
 <table border="1" class="dataframe">
@@ -269,6 +275,9 @@ no_time_to_expiration_array
 new_table = new_table.with_column("Time to Expiration of None", no_time_to_expiration_array )
 new_table.show()
 ```
+
+
+## Graph of Time to Expiration of Both One and Zero Years 
 
 
 <table border="1" class="dataframe">
@@ -361,6 +370,8 @@ new_table = new_table.with_column("Time to Expiration of Three Years", three_yea
 new_table.show()
 ```
 
+## Graph of All Three Times to Expiration 
+
 
 <table border="1" class="dataframe">
     <thead>
@@ -423,6 +434,8 @@ plt.ylabel('Price (Arbitrary) ')
 
 ![png](/assets/images/output_23_1.png)
 
+## Final Graph 
+
 
 This is the final graph that we were supposed to replicate from our lecture slides. Mission accomplished! We can see that, at option expiration, the graph of the underlying and price has the sharp, rigid slope that we were looking for. In contrast, the other two curves are just that, curved. That is exactly what we would expect with the given inputs. 
 
@@ -455,7 +468,7 @@ black_scholes(100, 105, 0.5, 0.06, 0.2783, option = 'call')
 
 
 
-$\displaystyle 6.999918456914479$
+![png](/assets/images/output_26_0.png)
 
 
 
@@ -467,7 +480,7 @@ black_scholes(85, 105, 0.5, 0.06, 0.2783, option = 'call')
 
 
 
-$\displaystyle 1.7631924132300867$
+![png](/assets/images/output_27_0.png)
 
 
 
@@ -479,7 +492,7 @@ black_scholes(85, 105, 0.5, 0.06, 0.2783, option = 'put')
 
 
 
-$\displaystyle 18.65997343582343$
+![png](/assets/images/output_28_0.png)
 
 
 
@@ -491,15 +504,10 @@ black_scholes(100, 105, 0.5, 0.06, 0.5, option = 'call')
 
 
 
-$\displaystyle 13.236096156868378$
+![png](/assets/images/output_29_0.png)
 
+
+## Conclusion 
 
 
 These last few lines were further verification of our option pricer. We tested different volatilities and spot prices, and also looked at the different prices associated with calls and puts. 
-
-
-```python
-
-```
-
-
