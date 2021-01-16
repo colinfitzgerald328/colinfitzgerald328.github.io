@@ -4,8 +4,8 @@ permalink: /portfolio/
 excerpt: "Template design system including logo mark, website design, and branding applications."
 author_profile: false
 header:
-  image:  /assets/images/DSC_2086.jpg
-  teaser: /assets/images/DSC_2086.jpg
+  image:  /assets/images/DSC_0286.jpg
+  teaser: /assets/images/DSC_0286.jpg
   caption: "[**Unsplash** @petefogden](https://unsplash.com/@petefogden?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge)"
 sidebar:
   - title: "Student"
@@ -17,10 +17,10 @@ sidebar:
 gallery:
   - url: /assets/images/DSC_0003.jpg
     image_path: assets/images/DSC_0003.jpg
-    alt: "placeholder image 1"
+    alt: "Coffee"
   - url: /assets/images/DSC_1086.jpg
     image_path: assets/images/DSC_1086.jpg
-    alt: "placeholder image 2"
+    alt: "Rock Creek Lake. Location: Mammoth Lakes, California"
   - url: /assets/images/unsplash-gallery-image-1.jpg
     image_path: assets/images/unsplash-gallery-image-1.jpg
     alt: "placeholder image 3"
