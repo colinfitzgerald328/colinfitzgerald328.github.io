@@ -21,11 +21,11 @@ nba2020=read.csv("/Users/colinfitzgerald/Downloads/nba20.csv")
 
 # Introduction
 
-##### Background
+# Background
 
 NBA players make millions of dollars each year. However, not all players get played the same. For example, during the basketball season of 2013-14, Kobe Bryant of the LA Lakers was paid $30.4 million whereas Dwight Howard earned $20.5 million. The average person may guess that Kobe Bryant simply is a "better player" so deserves a higher salary. This makes sense, but what factors exactly make one player more valuable than another?
 
-##### Variables
+# Variables
 
 To explore this question we relied on the 2019 NBA data set which contains several variables including the performance statistics, height, weight, and age of players from different teams along with their salaries. We analyzed the data based on 3 categories:
 
@@ -37,7 +37,7 @@ To explore this question we relied on the 2019 NBA data set which contains sever
 
 Body Type is measured by the age, height, and weight of the players. Experience is measured by games played (gp) and average minutes played per game (min) during the 2019 season. Performance statistics is measured by average points scored per game (pts), averages assists per game (ast), and field goal percenage (fgp) for the 2019 basketball season.
 
-##### Study Questions
+# Study Questions
 Question 1: Is the difference between 2019-2020 and 2020-2021 average salary significant?
 
 Question 2: Do a player's body type, experience, and performance statistics affect salary? What are the dominant variables that determine a player’s salary?
@@ -48,7 +48,7 @@ The data consists of pairs of points from which the correlation coefficient r ca
 
 The scatterplots below are not based on simple random samples and are not foot-ball shaped. However, for the purposes of finding r values, and conducting hypothesis tests on the data, this project assumes the data set is all from a simple random sample of 2020 and 2019  and their scatterplots are foot-ball shaped.
 
-##### Distribution of NBA Salaries
+# Distribution of NBA Salaries
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -68,7 +68,7 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-##### Average 19.20 salary
+# Average 19.20 salary
 mean(nba2020$salary19.20)
 {% endhighlight %}
 
@@ -92,7 +92,7 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-##### Average 20.21 Salary
+# Average 20.21 Salary
 mean(nba2020$salary20.21, na.rm = TRUE)
 {% endhighlight %}
 
@@ -100,9 +100,9 @@ mean(nba2020$salary20.21, na.rm = TRUE)
 
 # Scatterplots of Salary and Body Type, Experience, and Performance Stats Variables from NBA 2020 Statistics
 
-##### Body Type
+# Body Type
 
-##### Salary and Age
+# Salary and Age
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -128,7 +128,7 @@ r = cor(nba2019$salary, nba2019$age, use="complete.obs")
 
 The correlation coefficient between 2019 salary and age is apprroximately 0.36.
 
-##### Salary and Height
+# Salary and Height
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -154,7 +154,7 @@ r = cor(nba2019$salary, nba2019$height, use="complete.obs")
 
 The correlation coefficient between 2019 salary and height is apprroximately 0.05.
 
-##### Salary and Weight
+# Salary and Weight
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -182,7 +182,7 @@ The correlation coefficient between 2019 salary and weight is apprroximately 0.1
 
 # Experience
 
-##### Salary and Games Played for the 2019 Season
+# Salary and Games Played for the 2019 Season
 {% highlight ruby %}
 knitr::opts_chunk$set(
 	echo = FALSE,
@@ -207,7 +207,7 @@ r = cor(nba2019$salary, nba2019$gp, use="complete.obs")
 
 The correlation coefficient between 2019 salary and games played is apprroximately 0.32.
 
-##### Salary and Average Minutes per Game
+# Salary and Average Minutes per Game
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -235,7 +235,7 @@ The correlation coefficient between 2019 salary and average minutes played per g
 
 # Performance Statistics
 
-##### Salary and Average Points per Game
+# Salary and Average Points per Game
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -260,7 +260,7 @@ r = cor(salaryvspts$nba2019.salary,salaryvspts$nba2019.pts)
 
 The correlation coefficient between 2019 salary and average points per game is apprroximately 0.63.
 
-##### Salary and Average Assists per Game
+# Salary and Average Assists per Game
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -288,7 +288,7 @@ r = cor(salaryvsassists$nba2019.salary,salaryvsassists$nba2019.ast)
 
 The correlation coefficient between 2019 salary and average assists per game is apprroximately 0.52.
 
-##### Salary and Field Goal Percentage
+# Salary and Field Goal Percentage
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -318,9 +318,9 @@ The correlation coefficient between 2019 salary and field goal percentage is app
 
 # Data Analysis
 
-##### Question 1
+# Question 1
 
-##### Is the difference between 2019-2020 and 2020-2021 average salary significant? - *Jasmine Kamalnathan*
+# Is the difference between 2019-2020 and 2020-2021 average salary significant? - *Jasmine Kamalnathan*
 
 Null: Average salary for 2019-2020 is $7,561,619 while the average salary for 2020-2021 is $9,683,054. This difference is due to chance. The average salary in 2019-2020 and 2020-2021 is the same.
 
@@ -353,10 +353,10 @@ P (z > 3.059) is about 0.11%.
 
 Reject the null. The difference in 2019-20 and 2020-21 in average salary is not due to chance. There are factors causing there to be a higher average salary in 2020-21 than 2019-20.
 
-##### Question 2
-##### Do a player's body type, experience, and performance statistics affect 2019 salary? What are the dominant variables that determine a player’s salary in 2019?
+# Question 2
+# Do a player's body type, experience, and performance statistics affect 2019 salary? What are the dominant variables that determine a player’s salary in 2019?
 
-##### Is the correlation of 0.36 between salary and age real? - *Jasmine Kamalnathan*
+# Is the correlation of 0.36 between salary and age real? - *Jasmine Kamalnathan*
 
 Null: There is no correlation between the salary of players and their age.
 
@@ -389,7 +389,7 @@ P (z > 8.301833) = 0%
 
 We reject the null. The correlation of 0.35 between salary and age is real.
 
-##### Is the correlation of 0.05 between salary and height real? - *Victoria Ng*
+# Is the correlation of 0.05 between salary and height real? - *Victoria Ng*
 
 Null: There is no real correlation between the salary of players and their heights.
 
@@ -418,7 +418,7 @@ P (z > 1.166586) is about 12%.
 
 We cannot reject the null. The correlation of 0.05 between salary and height is not real.
 
-##### Is the correlation of 0.15 between salary and weight real? - *Stanley Quiros*
+# Is the correlation of 0.15 between salary and weight real? - *Stanley Quiros*
 
 Null: There is no correlation between the salary of players and their weights.
 
@@ -445,7 +445,7 @@ P (z > 1.166586) is about 0.06%.
 
 We reject the null. The correlation of 0.15 between salary and weight is real.
 
-##### Is the correlation of 0.32 between salary and games played real? - *Daniel Vermeulen*
+# Is the correlation of 0.32 between salary and games played real? - *Daniel Vermeulen*
 
 Null: It is due to chance. There is no correlation between the salary of players and the number of games played.
 
@@ -472,7 +472,7 @@ P (z > 7.26176) is essentially 0%.
 
 Since the P-value is so small, we reject the null. This means that the correlation of 0.32 between player salary and the number of games played is real.
 
-##### Is the correlation of 0.60 between salary and average minutes played per game real? - *Ruoyi Yang*
+# Is the correlation of 0.60 between salary and average minutes played per game real? - *Ruoyi Yang*
 
 Null: There is no correlation between the salary of players and average minutes played per game.
 
@@ -501,7 +501,7 @@ P (z > 16.16437) is essentially 0%.
 
 We reject the null. The correlation of 0.60 between salary and average minutes played per game is real.
 
-##### Is the correlation of 0.63 between salary and average points per game real? *Colin FitzGerald*
+# Is the correlation of 0.63 between salary and average points per game real? *Colin FitzGerald*
 
 Null: There is no linear relationship between the salary of players and average points per game.
 
@@ -530,7 +530,7 @@ P (z >  17.77685) is essentially 0%.
 
 We reject the null. The p-value of 0% is highly statistically significant. The correlation of 0.63 between salary and average points per game is real. There is sufficient evidence that there is a linear relationship between salary and average points scored per game.
 
-##### Is the correlation of 0.52 between salary and average assists per game real? *Colin FitzGerald*
+# Is the correlation of 0.52 between salary and average assists per game real? *Colin FitzGerald*
 
 Null: There isn't a linear relationship between the salary of players and average assists per game.
 
@@ -559,7 +559,7 @@ P (z >  13.12086) is essentially 0%.
 
 We reject the null. The p-value of 0% is highly statistically significant. The correlation of 0.52 between salary and average assists per game is real. There is sufficient evidence that there is a linear relationship between salary and average assists per game.
 
-##### Is the correlation of 0.13 between salary and field goal percentage real? *Colin FitzGerald*
+# Is the correlation of 0.13 between salary and field goal percentage real? *Colin FitzGerald*
 
 Null: There isn't a linear relationship between the salary of players and field goal percentage.
 
@@ -588,7 +588,7 @@ P (z >  2.835834) is essentially 0.2%.
 
 We reject the null at the 1% level. The correlation of 0.13 between salary and field goal percentage is real. There is sufficient evidence that there is a linear relationship between salary and field goal percentage.
 
-##### Is there a correlation between average minutes played per game and average points per game? - *Jasmine Kamalnathan*
+# Is there a correlation between average minutes played per game and average points per game? - *Jasmine Kamalnathan*
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -605,7 +605,7 @@ mingpr = cor(nba2019$pts, nba2019$min, use="complete.obs")
 {% endhighlight %}
 The correlation between average points per game and average minutes per game is of 0.88.
 
-##### Is the correlation of 0.88 between average points per game and average minutes per game real? -*Jasmine Kamalnathan*
+# Is the correlation of 0.88 between average points per game and average minutes per game real? -*Jasmine Kamalnathan*
 
 Null: There is no correlation between average points per game and average minutes per game.
 
@@ -654,7 +654,7 @@ Of all variables compared to salary, average minutes played per game and average
 
 This all makes sense. The most dominant variables that relate to salary are average minutes played per game and average points per game. The more points a player scores, the higher they tend to be paid, likely because they are more valuable to the success of the team. The strong correlation between average minutes played per game and average points per game likely exists because the more points a player is able to score, the longer they are kept on the court and off the bench. Of the variables studied, the highest predictor of salary seems to be a player's abilty to score points. The more points scored per game, the higher the salary tends to be.
 
-##### References
+# References
 
 https://thesportjournal.org/article/determinants-of-nba-player-salaries/
 
