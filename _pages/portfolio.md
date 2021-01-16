@@ -8,12 +8,12 @@ header:
   teaser: /assets/images/unsplash-gallery-image-1.jpg
   caption: "[**Unsplash** @petefogden](https://unsplash.com/@petefogden?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge)"
 sidebar:
-  - title: "Role"
+  - title: "Student"
     image: https://placehold.it/350x250
     image_alt: "logo"
-    text: "Designer, Front-End Developer"
-  - title: "Responsibilities"
-    text: "yee yee"
+    text: "U.C. Berkeley"
+  - title: "Goal:"
+    text: "Capture the world and use my images to make people happy :)"
 gallery:
   - url: /assets/images/unsplash-gallery-image-1.jpg
     image_path: assets/images/unsplash-gallery-image-1.jpg
