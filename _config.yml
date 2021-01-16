@@ -9,9 +9,9 @@ minimal_mistakes_skin: "aqua" # "default", "air", "aqua", "contrast", "dark", "d
 
 #Site Settings
 locale: "en-US"
-title          : "Ravi Riley"
+title          : "Colin FitzGerald"
 title_separator: "|"
-name           : "Ravi Riley"
+name           : "Colin FitzGerald"
 description    : "personal site that hosts my resume and projects"
 url            : "https://colinfitzgerald328.github.io"
 baseurl        : ""
@@ -75,9 +75,7 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/colinfitzgerald328"
-    - label: "Thingiverse"
-      icon: "fas fa-fw fa-link"
-      url: "https://thingiverse.com/raviriley"
+
 
 #Site Footer
 footer:
