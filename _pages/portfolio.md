@@ -6,7 +6,7 @@ author_profile: false
 header:
   image:  /assets/images/DSC_0286.jpg
   teaser: /assets/images/DSC_0286.jpg
-  caption: "[**Unsplash** @petefogden](https://unsplash.com/@petefogden?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge)"
+  caption: "[**Unsplash** @colinfitzgerald328](https://unsplash.com/@colinfitzgerald328)"
 sidebar:
   - title: "Student"
     image: https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/assets/images/P1260418.jpg?raw=true
