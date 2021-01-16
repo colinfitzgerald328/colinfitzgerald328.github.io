@@ -13,5 +13,5 @@ classes: wide
 
 ![Resume page 1](/assets/resume/Colin FitzGerald Resume 2021_website.png)
 
-[Download PDF](/assets/resume/Ravi Riley Resume.pdf) 
+[Download PDF](assets/resume/Colin FitzGerald Resume 2021.pdf) 
 <!-- | [View on Overleaf](https://www.overleaf.com/read/yjqwjrxvrtxz) -->
