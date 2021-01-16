@@ -5,7 +5,7 @@ date:   2020-12-31 05:04:00 -0800
 excerpt: "The final project for my introductory statistics course."
 categories: 
   - tutorial
-  - pinned
+  
 
 toc: true
 ---
