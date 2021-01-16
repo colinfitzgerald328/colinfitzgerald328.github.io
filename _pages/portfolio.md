@@ -11,7 +11,7 @@ sidebar:
   - title: "Student"
     image: https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/assets/images/P1260418.jpg?raw=true
     image_alt: "logo"
-    text: "U.C. Berkeley"
+    text: "U.C. Berkeley Class of 2022"
   - title: "Goal:"
     text: "Capture the world and use my images to make people happy :)"
 gallery:
