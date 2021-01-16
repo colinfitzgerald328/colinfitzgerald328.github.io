@@ -31,5 +31,5 @@ gallery:
 
 Here are some pictures that I have captured over the past couple of months. 
 
-{% include gallery caption=""Success is a manifestation of your drive."" %}
+{% include gallery caption="Success is a manifestation of your drive." %}
 
