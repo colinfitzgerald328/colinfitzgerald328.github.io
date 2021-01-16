@@ -196,7 +196,7 @@ new_table = new_table.with_column("Time to Expiration of One Year", time_to_expi
 new_table.show()
 ```
 
-## Graph of Time to Expiration of One Year 
+## Table of Time to Expiration of One Year 
 
 
 <table border="1" class="dataframe">
