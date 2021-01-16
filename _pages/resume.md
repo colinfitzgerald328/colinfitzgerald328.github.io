@@ -11,8 +11,7 @@ classes: wide
 </object>
 -->
 
-![Resume page 1](/assets/resume/master_resume-1.png)
-![Resume page 2](/assets/resume/master_resume-2.png)
+![Resume page 1](/assets/resume/Colin FitzGerald Resume 2021_website.png)
 
 [Download PDF](/assets/resume/Ravi Riley Resume.pdf) 
 <!-- | [View on Overleaf](https://www.overleaf.com/read/yjqwjrxvrtxz) -->
