@@ -1,0 +1,22 @@
+{% if include.id %}
+  {% assign project-gallery = page[include.id] %}
+{% else %}
+  {% assign project-gallery = page.project-gallery %}
+{% endif %}
+
+<!-- adapted from http://www.menucool.com/ui/responsive-image-grid-with-hover-effect -->
+<ul id="rig">
+  {% for link in project-gallery %}
+	{% if link.image %}
+	  <li>
+		<a class="rig-cell" href="{{ link.url | default: # }}">
+		<img class="rig-img" src="{{ link.image }}">
+		<span class="rig-overlay"></span>
+		{% if link.text %}
+		  <span class="rig-text">{{ link.text | markdownify }}</span>
+		{% endif %}
+		</a>
+	  </li>
+	{% endif %}
+  {% endfor %}
+</ul>
