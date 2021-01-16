@@ -20,10 +20,10 @@ title                    : "FitzGerald Multimedia"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Colin FitzGerald"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+description              : "personal site that hosts my resume and blog posts"
+url                      : "https://colinfitzgerald328.github.io"
+baseurl                  : ""
+repository               : colinfitzgerald328/colinfitzgerald328.github.io
 teaser                   : "/assets/images/DSC_0286-2.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Colin FitzGerald"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/DSC_0286.jpg"
   bio              : "I am a Track and Cross-Country runner for U.C. Berkeley."
   location         : "Los Angeles, California"
   email            :  colinfitzgerald@berkeley.edu
