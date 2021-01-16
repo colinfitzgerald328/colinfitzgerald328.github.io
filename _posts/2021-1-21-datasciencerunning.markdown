@@ -2,7 +2,7 @@
 layout: single
 title:  "Data Science Analysis of Running Form"
 date:   2021-01-21 05:04:00 -0800
-excerpt: "My first project implementing simple data science analysis to GPS data."
+excerpt: "My first project implementing simple data science analysis of GPS data."
 categories: 
   - tutorial
   - pinned
