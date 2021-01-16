@@ -13,14 +13,14 @@ title          : "Ravi Riley"
 title_separator: "|"
 name           : "Ravi Riley"
 description    : "personal site that hosts my resume and projects"
-url            : "https://raviriley.github.io"
+url            : "https://colinfitzgerald328.github.io"
 baseurl        : ""
-repository     : raviriley/raviriley.github.io
+repository     : colinfitzgerald328/colinfitzgerald328.github.io
 #teaser        : # path of fallback teaser image, ie "/assets/images/500x300.png"
 #logo          : # path of logo image to display in the masthead, ie "/assets/images/88x88.png"
 #masthead_title: # overrides the website title displayed in the masthead, use " " for no title
 search         : true
-search_provider: lunr 
+search_provider: lunr
 #algolia search https://mmistakes.github.io/minimal-mistakes/docs/configuration/#algolia
 
 words_per_minute: 225
@@ -33,11 +33,11 @@ timezone     : null # https://en.wikipedia.org/wiki/List_of_tz_database_time_zon
 
 include:
   - _pages
-  
+
 markdown    : kramdown
 highlighter : rouge
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-  
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -60,25 +60,25 @@ plugins:
   - jekyll-sitemap
 
 #Site Author
-github_username: raviriley
+github_username: colinfitzgerald328
 author:
-  name    : "Ravi Riley"
+  name    : "Colin FitzGerald"
   #avatar  : "/assets/images/bio-pic.png" #placeholder image
   avatar  : "/assets/images/portrait.png"
   bio     : "Berkeley EECS student. Founded a 3D printing and modeling business and helped build a software company connecting high school programmers to local businesses."
   #location:
-  email   : "ravi@intoolovation.com"
+  email   : "colinfitzgerald328@gmail.com"
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/raviriley/"
+      url: "https://www.linkedin.com/in/colinfitzgerald328"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/raviriley"
+      url: "https://github.com/colinfitzgerald328"
     - label: "Thingiverse"
       icon: "fas fa-fw fa-link"
       url: "https://thingiverse.com/raviriley"
-      
+
 #Site Footer
 footer:
   links:
@@ -91,7 +91,7 @@ footer:
     - label: "Thingiverse"
       icon: "fas fa-fw fa-link"
       url: "https://thingiverse.com/raviriley"
-      
+
 #Defaults
 defaults:
   # _posts
