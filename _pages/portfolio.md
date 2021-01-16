@@ -31,5 +31,5 @@ gallery:
 
 Here are some pictures that I have captured over the past couple of months. 
 
-{% include gallery caption="These are a few images that I have added to my website so far to showcase my photography skills. I'm always looking to learn and improve." %}
+{% include gallery caption=""Success is a manifestation of your drive."" %}
 
