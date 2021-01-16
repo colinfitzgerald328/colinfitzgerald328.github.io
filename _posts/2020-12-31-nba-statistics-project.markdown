@@ -48,7 +48,7 @@ The data consists of pairs of points from which the correlation coefficient r ca
 
 The scatterplots below are not based on simple random samples and are not foot-ball shaped. However, for the purposes of finding r values, and conducting hypothesis tests on the data, this project assumes the data set is all from a simple random sample of 2020 and 2019  and their scatterplots are foot-ball shaped.
 
-## Distribution of NBA Salaries
+##### Distribution of NBA Salaries
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -68,7 +68,7 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-# Average 19.20 salary
+##### Average 19.20 salary
 mean(nba2020$salary19.20)
 {% endhighlight %}
 
@@ -92,17 +92,17 @@ knitr::opts_chunk$set(
 	message = TRUE,
 	warning = FALSE
 )
-# Average 20.21 Salary
+##### Average 20.21 Salary
 mean(nba2020$salary20.21, na.rm = TRUE)
 {% endhighlight %}
 
 *Created by Jasmine Kamalnathan: This histogram shows the density of NBA players in several salary brackets for the 2020-2021 season. The vertical purple line indicates the average salary in millions of dollars: $9,683,054.*
 
-## Scatterplots of Salary and Body Type, Experience, and Performance Stats Variables from NBA 2020 Statistics
+# Scatterplots of Salary and Body Type, Experience, and Performance Stats Variables from NBA 2020 Statistics
 
-### Body Type
+##### Body Type
 
-#### Salary and Age
+##### Salary and Age
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -128,7 +128,7 @@ r = cor(nba2019$salary, nba2019$age, use="complete.obs")
 
 The correlation coefficient between 2019 salary and age is apprroximately 0.36.
 
-#### Salary and Height
+##### Salary and Height
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -154,7 +154,7 @@ r = cor(nba2019$salary, nba2019$height, use="complete.obs")
 
 The correlation coefficient between 2019 salary and height is apprroximately 0.05.
 
-#### Salary and Weight
+##### Salary and Weight
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -180,9 +180,9 @@ r = cor(nba2019$salary, nba2019$weight, use="complete.obs")
 
 The correlation coefficient between 2019 salary and weight is apprroximately 0.15.
 
-### Experience
+# Experience
 
-#### Salary and Games Played for the 2019 Season
+##### Salary and Games Played for the 2019 Season
 {% highlight ruby %}
 knitr::opts_chunk$set(
 	echo = FALSE,
@@ -207,7 +207,7 @@ r = cor(nba2019$salary, nba2019$gp, use="complete.obs")
 
 The correlation coefficient between 2019 salary and games played is apprroximately 0.32.
 
-#### Salary and Average Minutes per Game
+##### Salary and Average Minutes per Game
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -233,9 +233,9 @@ r = cor(nba2019$salary, nba2019$min, use="complete.obs")
 
 The correlation coefficient between 2019 salary and average minutes played per game is apprroximately 0.60.
 
-### Performance Statistics
+# Performance Statistics
 
-#### Salary and Average Points per Game
+##### Salary and Average Points per Game
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -260,7 +260,7 @@ r = cor(salaryvspts$nba2019.salary,salaryvspts$nba2019.pts)
 
 The correlation coefficient between 2019 salary and average points per game is apprroximately 0.63.
 
-#### Salary and Average Assists per Game
+##### Salary and Average Assists per Game
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -288,7 +288,7 @@ r = cor(salaryvsassists$nba2019.salary,salaryvsassists$nba2019.ast)
 
 The correlation coefficient between 2019 salary and average assists per game is apprroximately 0.52.
 
-#### Salary and Field Goal Percentage
+##### Salary and Field Goal Percentage
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -318,9 +318,9 @@ The correlation coefficient between 2019 salary and field goal percentage is app
 
 # Data Analysis
 
-### Question 1
+##### Question 1
 
-#### Is the difference between 2019-2020 and 2020-2021 average salary significant? - *Jasmine Kamalnathan*
+##### Is the difference between 2019-2020 and 2020-2021 average salary significant? - *Jasmine Kamalnathan*
 
 Null: Average salary for 2019-2020 is $7,561,619 while the average salary for 2020-2021 is $9,683,054. This difference is due to chance. The average salary in 2019-2020 and 2020-2021 is the same.
 
@@ -353,8 +353,8 @@ P (z > 3.059) is about 0.11%.
 
 Reject the null. The difference in 2019-20 and 2020-21 in average salary is not due to chance. There are factors causing there to be a higher average salary in 2020-21 than 2019-20.
 
-### Question 2
-#### Do a player's body type, experience, and performance statistics affect 2019 salary? What are the dominant variables that determine a player’s salary in 2019?
+##### Question 2
+##### Do a player's body type, experience, and performance statistics affect 2019 salary? What are the dominant variables that determine a player’s salary in 2019?
 
 ##### Is the correlation of 0.36 between salary and age real? - *Jasmine Kamalnathan*
 
@@ -588,7 +588,7 @@ P (z >  2.835834) is essentially 0.2%.
 
 We reject the null at the 1% level. The correlation of 0.13 between salary and field goal percentage is real. There is sufficient evidence that there is a linear relationship between salary and field goal percentage.
 
-#### Is there a correlation between average minutes played per game and average points per game? - *Jasmine Kamalnathan*
+##### Is there a correlation between average minutes played per game and average points per game? - *Jasmine Kamalnathan*
 
 {% highlight ruby %}
 knitr::opts_chunk$set(
@@ -654,7 +654,7 @@ Of all variables compared to salary, average minutes played per game and average
 
 This all makes sense. The most dominant variables that relate to salary are average minutes played per game and average points per game. The more points a player scores, the higher they tend to be paid, likely because they are more valuable to the success of the team. The strong correlation between average minutes played per game and average points per game likely exists because the more points a player is able to score, the longer they are kept on the court and off the bench. Of the variables studied, the highest predictor of salary seems to be a player's abilty to score points. The more points scored per game, the higher the salary tends to be.
 
-### References
+##### References
 
 https://thesportjournal.org/article/determinants-of-nba-player-salaries/
 
