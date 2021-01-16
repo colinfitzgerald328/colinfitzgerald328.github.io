@@ -123,7 +123,7 @@ plots.ylabel("Average Stride Length (Centimeters)")
 
 
 
-![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_7_1.png?raw=true)
+![png](/assets/images/output_7_1.png)
 
 
 In the initial visualization of the data, it becomes apparent that the minutes and second display on the x axis isn't very elegant. Consequently, I spent the following lines of code converting the average pace per kilometer from a minutes and seconds version to purely seconds form.
@@ -257,7 +257,7 @@ plots.ylabel("Average Stride Length (Centimeters)")
 
 
 
-![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_17_1.png?raw=true)
+![png](/assets/images/output_17_1.png)
 
 
 Now we have cleaned the data, dropped the unnecessary parts, and have a simple visualization of what we are going to look at in further detail. We have a two column table containing what we would like to analyze for this particular moment. Time for some statistical testing.
@@ -462,7 +462,7 @@ run_with_errors.scatter("Average Running Pace")
 ```
 
 
-![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_32_0.png?raw=true)
+![png](/assets/images/output_32_0.png)
 
 
 # Taking A Closer Look at the Residuals
@@ -475,7 +475,7 @@ run_with_errors.scatter("Average Running Pace", "Error")
 ```
 
 
-![png](https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/blob/master/output_35_0.png?raw=true)
+![png](/assets/images/output_35_0.png)
 
 
 
