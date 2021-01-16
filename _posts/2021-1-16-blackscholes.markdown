@@ -2,7 +2,7 @@
 layout: single
 title:  "Implementing Black Scholes Using Python"
 date:   2021-01-16 05:04:00 -0800
-excerpt: "Econ 136 Problem Set #2: Creating a Black-Scholes Option Price in Python and Verifying That It Works"
+excerpt: "Econ 136 Problem Set #2: Creating a Black-Scholes Option Pricer in Python and Verifying That It Works"
 categories: 
   - tutorial
 
@@ -196,7 +196,7 @@ new_table = new_table.with_column("Time to Expiration of One Year", time_to_expi
 new_table.show()
 ```
 
-## Graph of Time to Expiration of Zero 
+## Graph of Time to Expiration of One Year 
 
 
 <table border="1" class="dataframe">
