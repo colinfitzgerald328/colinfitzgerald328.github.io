@@ -21,7 +21,7 @@ plots.style.use('fivethirtyeight')
 import numpy as np
 ```
 
-## Importing the Data
+# Importing the Data
 
 The data generating process was as follows: I went on my run. Once I finished my run, I saved it. I uploaded the run to my iPhone via bluetooth. Once the running data uploaded, I exported a CSV file of the data to my computer.
 
