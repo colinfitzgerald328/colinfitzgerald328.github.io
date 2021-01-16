@@ -1,5 +1,5 @@
 ---
-title: "Portfolio Page"
+title: "My Portfolio"
 permalink: /portfolio/
 excerpt: "Template design system including logo mark, website design, and branding applications."
 author_profile: false
@@ -21,9 +21,9 @@ gallery:
   - url: /assets/images/DSC_1086.jpg
     image_path: assets/images/DSC_1086.jpg
     alt: "Rock Creek Lake. Location: Mammoth Lakes, California"
-  - url: /assets/images/unsplash-gallery-image-1.jpg
-    image_path: assets/images/unsplash-gallery-image-1.jpg
-    alt: "placeholder image 3"
+  - url: /assets/images/DSC_0276.jpg
+    image_path: assets/images/DSC_0276.jpg
+    alt: "Minaret Vista, Mammoth Lakes, California"
 ---
 
 Here are some pictures that I have captured over the past couple of months. 
