@@ -6,7 +6,7 @@ date: 2016-03-23T11:48:41-04:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/unsplash-gallery-image-2.jpg
+  overlay_image: /assets/images/00-start-IMG_1387-8-X-10-2.jpg
   actions:
     - label: "View"
       url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLdF5uAc6tfjgT1X7Ln4uaecn4J3zys0vr6mV07qF0XdxZoWFZQGPqFZfz2JbrXq4JSLjuFSnIck-j/pubhtml?widget=true&amp;headers=false"
