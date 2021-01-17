@@ -13,7 +13,7 @@ header:
   
 excerpt: "Click the view button below to look at my training log."
 intro: 
-  - excerpt: 'I've had many training influences over the years. I'm always trying to learn as much as I can from others, knowing multiple perspectives are essential to success. Centered with `type="center"`'
+  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-2.jpg
     alt: "placeholder image 1"
@@ -60,3 +60,8 @@ feature_row4:
 
 {% include feature_row %}
 
+{% include feature_row id="feature_row2" type="left" %}
+
+{% include feature_row id="feature_row3" type="right" %}
+
+{% include feature_row id="feature_row4" type="center" %}
