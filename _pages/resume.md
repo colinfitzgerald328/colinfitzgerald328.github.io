@@ -11,7 +11,7 @@ classes: wide
 </object>
 -->
 
-![Resume page 1](/assets/resume/Colin FitzGerald Resume 2021_website.png)
+![Resume page 1](/assets/resume/Colin FitzGerald Resume 2021.jpg)
 
 [Download PDF](/assets/resume/Colin FitzGerald Resume 2021.pdf) 
 <!-- | [View on Overleaf](https://www.overleaf.com/read/yjqwjrxvrtxz) -->
