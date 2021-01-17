@@ -26,7 +26,7 @@ init_printing()
 
 The function below creates our black-scholes option pricer. 
 
-## Function Used to Create Black-Scholes Option Price 
+## Function Used to Create Black-Scholes Option Pricer
 
 
 ```python
