@@ -92,6 +92,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/fitzgeraldmultimedia"
+    - label: "Strava"
+      icon: "fab fa-fw fa-strava"
+      url: "https://www.instagram.com/fitzgeraldmultimedia"
 
 #Defaults
 defaults:
