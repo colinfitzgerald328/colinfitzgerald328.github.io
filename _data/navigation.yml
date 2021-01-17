@@ -10,6 +10,8 @@ main:
 
   - title: "Photography Portfolio"
     url: /portfolio/
+  - title: "Training Log"
+    url: /splash-page/
 
 projects:
   - title: "Intoolovation"
