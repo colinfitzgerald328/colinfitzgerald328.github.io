@@ -10,10 +10,10 @@ header:
   actions:
     - label: "View"
       url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLdF5uAc6tfjgT1X7Ln4uaecn4J3zys0vr6mV07qF0XdxZoWFZQGPqFZfz2JbrXq4JSLjuFSnIck-j/pubhtml?widget=true&amp;headers=false"
-  
+  caption: "[**Unsplash** @vorosbenisop](https://unsplash.com/@vorosbenisop?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge)"
 excerpt: "Click the view button below to look at my training log."
 intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  - excerpt: 'I have yet to add content to the rest of the page so please ignore what is below.'
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-2.jpg
     alt: "placeholder image 1"
