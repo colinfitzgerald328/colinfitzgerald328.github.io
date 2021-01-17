@@ -1,22 +1,10 @@
 ---
-title: "Post: Header Image with OpenGraph Override"
+title: "My Portfolio"
+permalink: /portfolio/
+excerpt: "Template design system including logo mark, website design, and branding applications."
+author_profile: false
 header:
-  image: /assets/images/IMG_2104A-8-X-10.jpg
-  og_image: /assets/images/IMG_2104A-8-X-10.jpg
-categories:
-  - Layout
-  - Uncategorized
-tags:
-  - edge case
-  - image
-  - layout
-last_modified_at: 2017-10-26T15:12:19-04:00
+  image:  /assets/images/DSC_0286.jpg
+  teaser: /assets/images/DSC_0286.jpg
+  caption: "[**Unsplash** @colinfitzgerald328](https://unsplash.com/@colinfitzgerald328)"
 ---
-
-This post has a header image with an OpenGraph override.
-
-```yaml
-header:
-  image: /assets/images/IMG_2104A-8-X-10.jpg
-  og_image: /assets/images/IMG_2104A-8-X-10.jpg
-```
