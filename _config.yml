@@ -75,6 +75,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/colinfitzgerald328"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/fitzgeraldmultimedia"
 
 
 #Site Footer
@@ -86,7 +89,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/colinfitzgerald328"
-
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/fitzgeraldmultimedia"
 
 #Defaults
 defaults:
