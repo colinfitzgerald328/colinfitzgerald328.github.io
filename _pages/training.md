@@ -1,7 +1,5 @@
 ---
-title: "Training Log"
 permalink: /training/
-excerpt: "Template design system including logo mark, website design, and branding applications."
 author_profile: false
 header:
   image:  /assets/images/DSC_0286.jpg
