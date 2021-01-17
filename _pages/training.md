@@ -10,7 +10,7 @@ header:
   actions:
     - label: "View"
       url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLdF5uAc6tfjgT1X7Ln4uaecn4J3zys0vr6mV07qF0XdxZoWFZQGPqFZfz2JbrXq4JSLjuFSnIck-j/pubhtml?widget=true&amp;headers=false"
-  caption: "[**Unsplash** @vorosbenisop](https://unsplash.com/@vorosbenisop?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge)"
+  caption: "[**Unsplash** @colinfitzgerald328](https://unsplash.com/@colinfitzgerald328)"
 excerpt: "Click the view button below to look at my training log."
 intro: 
   - excerpt: 'I have yet to add content to the rest of the page so please ignore what is below.'
