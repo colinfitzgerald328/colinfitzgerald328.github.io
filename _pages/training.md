@@ -13,47 +13,7 @@ header:
   
 excerpt: "Click the view button below to look at my training log."
 intro: 
-  - excerpt: 'I've had many training influences over the years. I enjoy training by myself but training with a group is much better. While we are in a pandemic, I'm enjoying experimenting with my training. Centered with `type="center"`'
-feature_row:
-  - image_path: assets/images/unsplash-gallery-image-2.jpg
-    alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2.jpg
-    #image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "/archive-sample/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-2.jpg
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-feature_row2:
-  - image_path: /assets/images/unsplash-gallery-image-2.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    url: "/archive-sample/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row3:
-  - image_path: /assets/images/unsplash-gallery-image-2.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Right Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Right aligned with `type="right"`'
-    url: "/archive-sample/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row4:
-  - image_path: /assets/images/unsplash-gallery-image-2.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Center Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
-    url: "/archive-sample/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+  - excerpt: 'I've had many training influences over the years. I'm always trying to learn as much as I can from others, knowing multiple perspectives are essential to success. Centered with `type="center"`'
 ---
 
 {% include feature_row id="intro" type="center" %}
