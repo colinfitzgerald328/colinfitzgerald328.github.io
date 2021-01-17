@@ -27,6 +27,10 @@ gallery:
   - url: /assets/images/DSC_0405.jpg
     image_path: assets/images/DSC_0405.jpg
     alt: "Photo captured of my little brother to be featured in his Nike Cross Country Nationals photo."
+  - url: /assets/images/DSC_0053.jpg
+    image_path: assets/images/DSC_0053.jpg
+    alt: "Another shot of my little brother."
+  
 ---
 
 Here are some pictures that I have captured over the past couple of months. 
