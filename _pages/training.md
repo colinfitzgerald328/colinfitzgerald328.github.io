@@ -1,6 +1,6 @@
 ---
-title: "My Portfolio"
-permalink: /portfolio/
+title: "Training"
+permalink: /training/
 excerpt: "Template design system including logo mark, website design, and branding applications."
 author_profile: false
 header:
