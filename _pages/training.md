@@ -13,7 +13,7 @@ header:
   
 excerpt: "Click the view button below to look at my training log."
 intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  - excerpt: 'I've had many training influences over the years. I enjoy training by myself but training with a group is much better. While we are in a pandemic, I'm enjoying experimenting with my training. Centered with `type="center"`'
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-2.jpg
     alt: "placeholder image 1"
