@@ -8,5 +8,5 @@ header:
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
   actions:
     - label: "View My Training Log"
-      url: "https://unsplash.com"
+      url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLdF5uAc6tfjgT1X7Ln4uaecn4J3zys0vr6mV07qF0XdxZoWFZQGPqFZfz2JbrXq4JSLjuFSnIck-j/pubhtml?widget=true&amp;headers=false"
 ---
