@@ -12,6 +12,9 @@ main:
     url: /portfolio/
   - title: "Training Log"
     url: /training/
+  
+  - title: "About"
+    url: /about/
 
 projects:
   - title: "Intoolovation"
