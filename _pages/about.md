@@ -20,4 +20,4 @@ Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your
 
 Minimal Mistakes is designed, developed, and maintained by Michael Rose. Here is a link to the [GitHub page](https://github.com/mmistakes/minimal-mistakes) where you can find all of the sources that power and maintain this website.
 
-The inspiration for my website was from one of my friends who is also a current U.C. Berkeley Student. I learned to and took inspiration from his workflow. Here is a link to [Ravi's website](raviriley.github.io).
+The inspiration for my website was from one of my friends who is also a current U.C. Berkeley Student. I learned to and took inspiration from his workflow. Here is a link to [Ravi's website](https://raviriley.github.io).
