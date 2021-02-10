@@ -1,14 +1,16 @@
 ---
 layout: single
-title:  "Template"
-date:   2019-04-20 16:20:00 -0800
-categories: CATEGORY
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+title:  "Data Science Analysis of Running Form"
+date:   2021-01-14 05:04:00 -0800
+excerpt: "My first project implementing simple data science analysis of GPS data."
+categories: 
+  - tutorial
+  - pinned
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+toc: true
 ---
-
-
-
-
 
 
 
@@ -121,5 +123,18 @@ Notice how as we increase the value of $\kappa$, the graph becomes more splinter
 
 
 
-
+<!-- Parse the Latex divs with Katex-->
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return katex.renderToString(tex, {displayMode: false});
+  });
+  
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+  });
+</script>
  
