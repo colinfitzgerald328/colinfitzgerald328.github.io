@@ -1,16 +1,18 @@
 ---
 layout: single
-title:  "Data Science Analysis of Running Form"
-date:   2021-01-14 05:04:00 -0800
-excerpt: "My first project implementing simple data science analysis of GPS data."
+title:  "Modeling Social Forces in Microsoft Excel"
+date:   2021-02-10 05:04:00 -0800
+excerpt: "Econ 138 PS#3: Modeling Social Forces in Microsoft Excel."
 categories: 
   - tutorial
   - pinned
+toc: true
+---
+
 <!-- Load KaTeX -->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
-toc: true
----
+
 
 
 
@@ -23,7 +25,8 @@ toc: true
  **Goals:**
  
 >  *Reproduce figure 2.7*
- > *Demonstrate how our result changes when we change $\kappa$* 
+
+> *Demonstrate how our result changes when we change $\kappa$* 
 
 **Clarification**
 >The following words are not my own, but that of my professor, Raymond Hawkins. I believe that he does a really good job explaining this process so I included his outline of the steps for the process below. This is not my work, I only wanted to reproduce it because I was so fascinated with this problem set in particular. I find it quite interesting to share small snippets of my studies; it is quite a privilege. 
