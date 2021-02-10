@@ -1,3 +1,17 @@
+---
+layout: single
+title:  "Template"
+date:   2019-04-20 16:20:00 -0800
+categories: CATEGORY
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+---
+
+
+
+
+
+
+
 **Modeling Social Forces in Microsoft Excel**
 
 > We know that we are heavily influenced by the opinions and decisions of others, but how can we create a visual representation of that? 
