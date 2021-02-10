@@ -123,7 +123,7 @@ plots.ylabel("Average Stride Length (Centimeters)")
 
 
 
-![png](/assets/images/output_7_1.png)
+![png](/assets/images/output_7_1_2.png)
 
 
 In the initial visualization of the data, it becomes apparent that the minutes and second display on the x axis isn't very elegant. Consequently, I spent the following lines of code converting the average pace per kilometer from a minutes and seconds version to purely seconds form.
