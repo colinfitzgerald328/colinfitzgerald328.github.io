@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blank
 title:  "Modeling Social Forces in Microsoft Excel"
 date:   2021-02-7 05:04:00 -0800
 excerpt: "Econ 138 PS3: Modeling Social Forces using Microsoft Excel."
