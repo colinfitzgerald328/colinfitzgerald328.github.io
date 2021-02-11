@@ -1,21 +1,30 @@
 ---
-layout: single
-title:  "Modeling Social Forces in Microsoft Excel"
-date:   2021-02-7 05:04:00 -0800
-excerpt: "Econ 138 PS3: Modeling Social Forces in Microsoft Excel."
-categories: 
-  - tutorial
-  - pinned
-
-toc: true
+layout: blank
 --- 
 
----
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
 
----
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#analysis">Analysis</a></li>
+</ul>
 
-<p><strong>Modeling Social Forces in Microsoft Excel</strong></p>
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <p><strong>Modeling Social Forces in Microsoft Excel</strong></p>
 <blockquote>
 <p>We know that we are heavily influenced by the opinions and decisions of others, but how can we create a visual representation of that?</p>
 </blockquote>
@@ -114,12 +123,8 @@ toc: true
 <p>Notice how as we increase the value of <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>κ</mi></mrow><annotation encoding="application/x-tex">\kappa</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathdefault">κ</span></span></span></span></span>, the graph becomes more splintered towards either side. For <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>κ</mi><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\kappa = 0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathdefault">κ</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span></span>, the graph looks very evenly distributed. However, as <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>κ</mi></mrow><annotation encoding="application/x-tex">\kappa</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathdefault">κ</span></span></span></span></span> increases, we see the graph start to split into two distinct sides. This illustrates how, as <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>κ</mi></mrow><annotation encoding="application/x-tex">\kappa</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathdefault">κ</span></span></span></span></span> increases, individuals are more likely to change their opinion to that of the majority. I’ll end this short analysis with a quote from the last slide of lecture:</p>
 <p>"[a] ‘sound’ banker, alas! is not one who foresees danger andavoids it, but one who, when he is ruined, is ruined in aconventional way along with his fellows, so that no one canreally blame him.”– Keynes 1931.</p>
 
+    </div>
+  </div>
+</body>
 
-
-
-
-
-
- 
-
-
+</html>
