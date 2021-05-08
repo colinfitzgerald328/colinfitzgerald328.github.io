@@ -389,7 +389,7 @@ ax.set_title("800m Time")
 
 
     
-![png](output_20_1.png)
+![png](assets/images/Web Scraper/output_20_1.png)
     
 
 
@@ -422,7 +422,7 @@ ax.set_title("1500m Time")
 
 
     
-![png](output_22_1.png)
+![png](assets/images/Web Scraper/output_22_1.png)
     
 
 
@@ -455,7 +455,7 @@ ax.set_title("5000m Time")
 
 
     
-![png](output_24_1.png)
+![png](assets/images/Web Scraper/output_24_1.png)
     
 
 
@@ -488,7 +488,7 @@ ax.set_title("10,000m Time")
 
 
     
-![png](output_26_1.png)
+![png](assets/images/Web Scraper/output_26_1.png)
     
 
 
