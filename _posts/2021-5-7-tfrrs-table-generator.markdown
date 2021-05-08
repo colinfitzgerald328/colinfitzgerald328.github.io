@@ -1,8 +1,8 @@
 ---
 layout: blank
-title:  "Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data"
+title:  "Creating a Web Scraper to Support Statistical Endeavors "
 date:   2021-04-26 05:04:00 -0800
-excerpt: "Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data."
+excerpt: "Implementing a Web Scraper in Python so I can generate tables from the TFRRS website automatically rather than having to store them locally."
 categories: 
   - tutorial
   - pinned
