@@ -379,7 +379,7 @@ ten_thousand = y_value_generator("10,000m")
 ```
 # 800M Kernel Density 
 
-Here's the kernel density for the 800m, years 2012-2021. 2020 is excluded because of the pandemic year. 
+Here's the kernel density for the 800m, years 2012-2021. 2020 is excluded because of the pandemic year. While the overall graph is correct, I have not yet finished properly labeling each output, so for now the x-axis on every graph says "2012" by default. 
 
 
 ```python
@@ -412,7 +412,7 @@ ax.set_title("800m Time")
     
 # 1500M Kernel Density
 
-Here's the kernel density for the 1500m, years 2012-2021. 2020 is discluded because of the pandemic year. 
+Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
 
 ```python
@@ -445,7 +445,7 @@ ax.set_title("1500m Time")
     
 # 5000M Kernel Density
 
-Here's the kernel density for the 5000m, years 2012-2021. 2020 is discluded because of the pandemic year. 
+Here's the kernel density for the 5000m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
 
 ```python
@@ -478,7 +478,7 @@ ax.set_title("5000m Time")
     
 # 10,000M Kernel Density 
 
-Here's the kernel density for the 10,00m, years 2012-2021. 2020 is discluded because of the pandemic year. 
+Here's the kernel density for the 10,000m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
 ```python
 ax = sns.kdeplot(
