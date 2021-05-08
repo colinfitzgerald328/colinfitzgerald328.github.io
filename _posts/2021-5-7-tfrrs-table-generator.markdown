@@ -364,7 +364,7 @@ def y_value_generator(event):
     return base_df
 ```
 
-Well, I guess that worked. Now it's time to make each year's matrix. 
+The function runs properly. Now it's time to generate the matrix for each year. 
 
 
 ```python
@@ -379,7 +379,7 @@ ten_thousand = y_value_generator("10,000m")
 ```
 # 800M Kernel Density 
 
-Here's the kernel density for the 800m, years 2012-2021. 2020 is discluded because of the pandemic year. 
+Here's the kernel density for the 800m, years 2012-2021. 2020 is excluded because of the pandemic year. 
 
 
 ```python
