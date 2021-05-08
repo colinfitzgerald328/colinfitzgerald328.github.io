@@ -349,7 +349,7 @@ Now that we have all of the functions written, let's look at cleaned kernel dens
 For these kernel density plots, we need to compile a list of the times for each event for each year. We will store each year's data in an array. We will compile a large list of all of the numbers. Let's hope that our array is not destroyed in the making.  
 
 
-# Data Matix
+# Data Matrix
 
 ```python
 def y_value_generator(event): 
@@ -364,7 +364,7 @@ def y_value_generator(event):
     return base_df
 ```
 
-The function runs properly. Now it's time to generate the matrix for each year. 
+The function runs properly. I would include the output but for now, take my word that it works. Now it's time to generate the matrix for each year. 
 
 
 ```python
