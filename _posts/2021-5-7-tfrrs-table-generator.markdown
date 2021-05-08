@@ -29,13 +29,16 @@ from ipywidgets.embed import embed_minimal_html
 
 # Creating a Robust Table Generator for Historical TFRRS Data, 2012- Present 
 
-## Author's Note: This page will be updated weekly as new data becomes available. 
+*Author's Note: This page will be updated weekly as new data becomes available.*
 
-### Page last updated: 5/7/2021 at 9:50 P.M. 
+**Page last updated: 5/7/2021 at 9:50 P.M.**
+
+
 The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for the years 2012, until now. The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. The process is somewhat clean. I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
 
 The first function below generates the URL on the TFRRS website. You input a year as a string, and the function will search the TFRRS archive HTML for the correct link to the outdoor performance list for that year. 
 
+# URL Generator Function
 
 ```python
 def url_generator(year): 
@@ -48,8 +51,9 @@ def url_generator(year):
     return "http://" + refined_url[0] + refined_url[1]
 ```
 
-The **table generator** function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
 
+
+The following snippet below is a dictionary that maps a user input's event to the corresponding HTML div class. 
 
 ```python
 event_dictionary = {"100m": "row Men 6", 
@@ -63,7 +67,9 @@ event_dictionary = {"100m": "row Men 6",
 def event_code_generator(str): 
     return event_dictionary[str]
 ```
+# Table Generator Function 
 
+The **table generator** function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
 
 ```python
 def table_generator(url, event): 
@@ -91,6 +97,7 @@ def twenty_twenty_one_table_generator(event):
         table_html_format = i.find("table")
     return table_html_format
 ```
+# Split Minutes and Seconds Function 
 
 The **split minutes and seconds** function turns the time string into a float. For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
 
@@ -102,6 +109,7 @@ def split_minutes_and_seconds(time_str):
         return int(split_list[0])*60 + float(split_list[1])
 ```
 
+# Table Formatter
 
 ```python
 def table_formatter(table): 
@@ -128,7 +136,7 @@ def table_formatter(table):
         new_df["Time"] = [split_minutes_and_seconds(i) for i in new_df["Time"]]
     return new_df
 ```
-
+# TFRRS Table Generator 
 
 ```python
 def tfrrs_table_generator(year, event): 
@@ -333,6 +341,8 @@ Now that we have all of the functions written, let's look at cleaned kernel dens
 For these kernel density plots, we need to compile a list of the times for each event for each year. We will store each year's data in an array. We will compile a large list of all of the numbers. Let's hope that our array is not destroyed in the making.  
 
 
+# Data Matix
+
 ```python
 def y_value_generator(event): 
     rank = np.arange(1, 101, 1)
@@ -359,6 +369,7 @@ five_thousand = y_value_generator("5000m")
 #generate all the values for the years from 2012 until now, for the 10,000m
 ten_thousand = y_value_generator("10,000m")
 ```
+# 800M Kernel Density 
 
 Here's the kernel density for the 800m, years 2012-2021. 2020 is discluded because of the pandemic year. 
 
@@ -389,9 +400,9 @@ ax.set_title("800m Time")
 
 
     
-![png](assets/images/Web Scraper/output_20_1.png)
+![png](/assets/images/Web Scraper/output_20_1.png)
     
-
+# 1500M Kernel Density
 
 Here's the kernel density for the 1500m, years 2012-2021. 2020 is discluded because of the pandemic year. 
 
@@ -422,9 +433,9 @@ ax.set_title("1500m Time")
 
 
     
-![png](assets/images/Web Scraper/output_22_1.png)
+![png](/assets/images/Web Scraper/output_22_1.png)
     
-
+# 5000M Kernel Density
 
 Here's the kernel density for the 5000m, years 2012-2021. 2020 is discluded because of the pandemic year. 
 
@@ -455,12 +466,11 @@ ax.set_title("5000m Time")
 
 
     
-![png](assets/images/Web Scraper/output_24_1.png)
+![png](/assets/images/Web Scraper/output_24_1.png)
     
+# 10,000M Kernel Density 
 
-
-Here's the kernel density for the 1500m, years 2012-2021. 2020 is discluded because of the pandemic year. 
-
+Here's the kernel density for the 10,00m, years 2012-2021. 2020 is discluded because of the pandemic year. 
 
 ```python
 ax = sns.kdeplot(
@@ -488,9 +498,9 @@ ax.set_title("10,000m Time")
 
 
     
-![png](assets/images/Web Scraper/output_26_1.png)
+![png](/assets/images/Web Scraper/output_26_1.png)
     
-
+# Final Remarks
 
 The following code below is part of a larger project. I am in the process of generating independent/explanatory variables for this project, as I want to go more in depth in the future to test the impact of the spikes. I have finals coming up so, naturally, I cannot fully dedicate my time to a project such as this. 
 
