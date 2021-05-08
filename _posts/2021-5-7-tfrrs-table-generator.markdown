@@ -34,7 +34,11 @@ from ipywidgets.embed import embed_minimal_html
 **Page last updated: 5/7/2021 at 9:50 P.M.**
 
 
-The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for the years 2012, until now. The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. The process is somewhat clean. I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
+The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for the years 2012, until now. The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. 
+
+I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. The process is somewhat clean. 
+
+I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
 
 The first function below generates the URL on the TFRRS website. You input a year as a string, and the function will search the TFRRS archive HTML for the correct link to the outdoor performance list for that year. 
 
@@ -69,7 +73,9 @@ def event_code_generator(str):
 ```
 # Table Generator Function 
 
-The **table generator** function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
+The **table generator** function generates a table from the URL created from the input year. 
+
+However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
 
 ```python
 def table_generator(url, event): 
@@ -99,7 +105,9 @@ def twenty_twenty_one_table_generator(event):
 ```
 # Split Minutes and Seconds Function 
 
-The **split minutes and seconds** function turns the time string into a float. For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
+The **split minutes and seconds** function turns the time string into a float. 
+
+For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
 
 
 ```python
@@ -571,3 +579,4 @@ def world_athletics_dob_list_maker(arr):
     return final_births_list
 ```
 
+[Back to Top](#){: .btn .btn--inverse}
