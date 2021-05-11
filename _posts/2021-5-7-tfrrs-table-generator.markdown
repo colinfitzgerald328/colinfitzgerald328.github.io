@@ -574,7 +574,7 @@ ax.set_xlabel("1500m Time in Seconds")
 
 
     
-![png](assets/images/Web Scraper/output_23_1.png)
+![png](/assets/images/Web Scraper/output_23_1.png)
     
 
 
@@ -1164,3 +1164,6 @@ def world_athletics_dob_list_maker(arr):
         final_births_list = np.append(final_births_list, birth_date)
     return final_births_list
 ```
+
+
+[Back to Top](#){: .btn .btn--inverse}
