@@ -2,7 +2,7 @@
 layout: blank
 title:  "Analyzing the Difference Between Collegiate Outdoor Distance Times, 2012 - Present"
 date:   2021-04-26 05:04:00 -0800
-excerpt: "Creatin a web scraper to mine data from the TFRRS website to support Statistical Visualization."
+excerpt: "Creating a web scraper to mine data from the TFRRS website to support Statistical Visualization."
 categories: 
   - tutorial
   - pinned
