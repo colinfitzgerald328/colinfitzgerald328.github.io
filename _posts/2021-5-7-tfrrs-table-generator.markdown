@@ -1094,7 +1094,7 @@ ten_thousand.describe()
 </table>
 </div>
 
-
+# Final Remarks 
 
 The following code below is part of a larger project. I am in the process of generating independent/explanatory variables for this project, as I want to go more in depth in the future to test the impact of the spikes. I have finals coming up so, naturally, I cannot fully dedicate my time to a project such as this. 
 
