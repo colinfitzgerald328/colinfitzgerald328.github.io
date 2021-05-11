@@ -29,20 +29,13 @@ from ipywidgets.embed import embed_minimal_html
 
 # Creating a Robust Table Generator for Historical TFRRS Data, 2012- Present 
 
-*Author's Note: This page will be updated weekly as new data becomes available.*
+## Author's Note: This page will be updated weekly as new data becomes available. 
 
-**Page last updated: 5/7/2021 at 9:50 P.M.**
-
-
-The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for the years 2012, until now. The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. 
-
-I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. The process is somewhat clean. 
-
-I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
+### Page last updated: 5/7/2021 at 9:50 P.M. 
+The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for the years 2012, until now. The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. The process is somewhat clean. I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
 
 The first function below generates the URL on the TFRRS website. You input a year as a string, and the function will search the TFRRS archive HTML for the correct link to the outdoor performance list for that year. 
 
-# URL Generator Function
 
 ```python
 def url_generator(year): 
@@ -55,9 +48,8 @@ def url_generator(year):
     return "http://" + refined_url[0] + refined_url[1]
 ```
 
+The **table generator** function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
 
-
-The following snippet below is a dictionary that maps a user input's event to the corresponding HTML div class. 
 
 ```python
 event_dictionary = {"100m": "row Men 6", 
@@ -71,11 +63,7 @@ event_dictionary = {"100m": "row Men 6",
 def event_code_generator(str): 
     return event_dictionary[str]
 ```
-# Table Generator Function 
 
-The **table generator** function generates a table from the URL created from the input year. 
-
-However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
 
 ```python
 def table_generator(url, event): 
@@ -103,11 +91,8 @@ def twenty_twenty_one_table_generator(event):
         table_html_format = i.find("table")
     return table_html_format
 ```
-# Split Minutes and Seconds Function 
 
-The **split minutes and seconds** function turns the time string into a float. 
-
-For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
+The **split minutes and seconds** function turns the time string into a float. For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
 
 
 ```python
@@ -117,7 +102,6 @@ def split_minutes_and_seconds(time_str):
         return int(split_list[0])*60 + float(split_list[1])
 ```
 
-# Table Formatter
 
 ```python
 def table_formatter(table): 
@@ -144,7 +128,7 @@ def table_formatter(table):
         new_df["Time"] = [split_minutes_and_seconds(i) for i in new_df["Time"]]
     return new_df
 ```
-# TFRRS Table Generator 
+
 
 ```python
 def tfrrs_table_generator(year, event): 
@@ -349,8 +333,6 @@ Now that we have all of the functions written, let's look at cleaned kernel dens
 For these kernel density plots, we need to compile a list of the times for each event for each year. We will store each year's data in an array. We will compile a large list of all of the numbers. Let's hope that our array is not destroyed in the making.  
 
 
-# Data Matrix
-
 ```python
 def y_value_generator(event): 
     rank = np.arange(1, 101, 1)
@@ -364,7 +346,7 @@ def y_value_generator(event):
     return base_df
 ```
 
-The function runs properly. I would include the output but for now, take my word that it works. Now it's time to generate the matrix for each year. 
+Well, I guess that worked. Now it's time to make each year's matrix. 
 
 
 ```python
@@ -377,9 +359,8 @@ five_thousand = y_value_generator("5000m")
 #generate all the values for the years from 2012 until now, for the 10,000m
 ten_thousand = y_value_generator("10,000m")
 ```
-# 800M Kernel Density 
 
-Here's the kernel density for the 800m, years 2012-2021. 2020 is excluded because of the pandemic year. While the overall graph is correct, I have not yet finished properly labeling each output, so for now the x-axis on every graph says "2012" by default. 
+Here's the kernel density for the 800m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
 
 ```python
@@ -396,13 +377,14 @@ sns.kdeplot(data = eight_hundred, x = "2021", ax = ax, fill = True, palette = "c
 
 legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
 ax.legend(legend_list)
-ax.set_title("800m Time")
+ax.set_title("Kernel Density for 2012 - Present (800m)")
+ax.set_xlabel("800m Time in Seconds")
 ```
 
 
 
 
-    Text(0.5, 1.0, '800m Time')
+    Text(0.5, 0, '800m Time in Seconds')
 
 
 
@@ -410,7 +392,157 @@ ax.set_title("800m Time")
     
 ![png](/assets/images/Web Scraper/output_20_1.png)
     
-# 1500M Kernel Density
+
+
+
+```python
+eight_hundred.describe()
+#summary statistics for the 800m 
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rank</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2021</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.00000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>50.500000</td>
+      <td>108.741600</td>
+      <td>109.148700</td>
+      <td>108.85960</td>
+      <td>108.378000</td>
+      <td>108.189200</td>
+      <td>108.419100</td>
+      <td>108.629700</td>
+      <td>108.754000</td>
+      <td>108.740900</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>29.011492</td>
+      <td>1.044447</td>
+      <td>0.850278</td>
+      <td>0.96219</td>
+      <td>1.061886</td>
+      <td>1.155218</td>
+      <td>1.211719</td>
+      <td>1.154088</td>
+      <td>1.128423</td>
+      <td>0.979877</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>104.750000</td>
+      <td>106.200000</td>
+      <td>105.35000</td>
+      <td>105.580000</td>
+      <td>104.630000</td>
+      <td>103.730000</td>
+      <td>103.250000</td>
+      <td>104.760000</td>
+      <td>105.800000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>25.750000</td>
+      <td>108.240000</td>
+      <td>108.670000</td>
+      <td>108.47750</td>
+      <td>107.717500</td>
+      <td>107.335000</td>
+      <td>107.765000</td>
+      <td>108.040000</td>
+      <td>108.275000</td>
+      <td>108.182500</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>50.500000</td>
+      <td>109.030000</td>
+      <td>109.290000</td>
+      <td>109.19500</td>
+      <td>108.545000</td>
+      <td>108.500000</td>
+      <td>108.745000</td>
+      <td>108.990000</td>
+      <td>108.925000</td>
+      <td>108.970000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>75.250000</td>
+      <td>109.495000</td>
+      <td>109.810000</td>
+      <td>109.56500</td>
+      <td>109.252500</td>
+      <td>109.142500</td>
+      <td>109.302500</td>
+      <td>109.452500</td>
+      <td>109.610000</td>
+      <td>109.512500</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>100.000000</td>
+      <td>109.890000</td>
+      <td>110.210000</td>
+      <td>109.90000</td>
+      <td>109.730000</td>
+      <td>109.690000</td>
+      <td>109.830000</td>
+      <td>109.870000</td>
+      <td>110.060000</td>
+      <td>109.950000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
@@ -429,21 +561,172 @@ sns.kdeplot(data = fifteen_hundred, x = "2021", ax = ax, fill = True, palette = 
 
 legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
 ax.legend(legend_list)
-ax.set_title("1500m Time")
+ax.set_title("Kernel Density for 2012 - Present (1500m)")
+ax.set_xlabel("1500m Time in Seconds")
 ```
 
 
 
 
-    Text(0.5, 1.0, '1500m Time')
+    Text(0.5, 0, '1500m Time in Seconds')
 
 
 
 
     
-![png](/assets/images/Web Scraper/output_22_1.png)
+![png](assets/images/Web Scraper/output_23_1.png)
     
-# 5000M Kernel Density
+
+
+
+```python
+fifteen_hundred.describe()
+#summary statistics for the 1500m 
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rank</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2021</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>50.500000</td>
+      <td>223.449200</td>
+      <td>223.508700</td>
+      <td>223.412600</td>
+      <td>222.748600</td>
+      <td>222.981800</td>
+      <td>223.132800</td>
+      <td>222.998600</td>
+      <td>223.486600</td>
+      <td>220.893300</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>29.011492</td>
+      <td>1.957686</td>
+      <td>1.774577</td>
+      <td>1.811622</td>
+      <td>1.611957</td>
+      <td>1.605672</td>
+      <td>1.659264</td>
+      <td>2.259134</td>
+      <td>2.174883</td>
+      <td>2.185034</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>216.770000</td>
+      <td>218.530000</td>
+      <td>216.340000</td>
+      <td>218.350000</td>
+      <td>217.740000</td>
+      <td>215.990000</td>
+      <td>215.010000</td>
+      <td>217.200000</td>
+      <td>215.960000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>25.750000</td>
+      <td>222.592500</td>
+      <td>222.247500</td>
+      <td>222.602500</td>
+      <td>221.987500</td>
+      <td>222.275000</td>
+      <td>222.355000</td>
+      <td>222.402500</td>
+      <td>222.927500</td>
+      <td>219.135000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>50.500000</td>
+      <td>223.970000</td>
+      <td>224.185000</td>
+      <td>223.895000</td>
+      <td>223.185000</td>
+      <td>223.470000</td>
+      <td>223.220000</td>
+      <td>223.805000</td>
+      <td>224.430000</td>
+      <td>221.600000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>75.250000</td>
+      <td>224.980000</td>
+      <td>224.930000</td>
+      <td>224.780000</td>
+      <td>224.010000</td>
+      <td>224.220000</td>
+      <td>224.367500</td>
+      <td>224.597500</td>
+      <td>224.895000</td>
+      <td>222.852500</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>100.000000</td>
+      <td>225.790000</td>
+      <td>225.680000</td>
+      <td>225.330000</td>
+      <td>224.610000</td>
+      <td>224.930000</td>
+      <td>225.440000</td>
+      <td>225.220000</td>
+      <td>225.620000</td>
+      <td>223.390000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 Here's the kernel density for the 5000m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
@@ -462,23 +745,175 @@ sns.kdeplot(data = five_thousand, x = "2021", ax = ax, fill = True, palette = "c
 
 legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
 ax.legend(legend_list)
-ax.set_title("5000m Time")
+ax.set_title("Kernel Density for 2012 - Present (5,000m)")
+ax.set_xlabel("5000m Time in Seconds")
 ```
 
 
 
 
-    Text(0.5, 1.0, '5000m Time')
+    Text(0.5, 0, '5000m Time in Seconds')
 
 
 
 
     
-![png](/assets/images/Web Scraper/output_24_1.png)
+![png](/assets/images/Web Scraper/output_26_1.png)
     
-# 10,000M Kernel Density 
 
-Here's the kernel density for the 10,000m, years 2012-2021. 2020 is not included because of the pandemic year. 
+
+
+```python
+five_thousand.describe()
+#summary statistics for 5000m
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rank</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2021</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>100.000000</td>
+      <td>100.00000</td>
+      <td>100.000000</td>
+      <td>100.00000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>50.500000</td>
+      <td>833.05800</td>
+      <td>834.613000</td>
+      <td>833.60200</td>
+      <td>832.736000</td>
+      <td>832.357000</td>
+      <td>833.640000</td>
+      <td>831.041000</td>
+      <td>831.195000</td>
+      <td>822.846000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>29.011492</td>
+      <td>10.80636</td>
+      <td>10.625248</td>
+      <td>9.40652</td>
+      <td>9.044129</td>
+      <td>8.876655</td>
+      <td>8.766822</td>
+      <td>10.151828</td>
+      <td>9.936428</td>
+      <td>9.245052</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>798.40000</td>
+      <td>795.300000</td>
+      <td>806.90000</td>
+      <td>800.300000</td>
+      <td>804.200000</td>
+      <td>797.500000</td>
+      <td>798.700000</td>
+      <td>805.000000</td>
+      <td>799.900000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>25.750000</td>
+      <td>828.00000</td>
+      <td>830.400000</td>
+      <td>828.90000</td>
+      <td>830.250000</td>
+      <td>828.725000</td>
+      <td>829.600000</td>
+      <td>822.850000</td>
+      <td>825.525000</td>
+      <td>816.425000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>50.500000</td>
+      <td>836.85000</td>
+      <td>837.900000</td>
+      <td>836.00000</td>
+      <td>834.400000</td>
+      <td>834.850000</td>
+      <td>835.750000</td>
+      <td>832.650000</td>
+      <td>834.400000</td>
+      <td>825.650000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>75.250000</td>
+      <td>841.62500</td>
+      <td>842.225000</td>
+      <td>840.47500</td>
+      <td>839.150000</td>
+      <td>838.800000</td>
+      <td>840.275000</td>
+      <td>839.750000</td>
+      <td>839.375000</td>
+      <td>830.400000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>100.000000</td>
+      <td>844.30000</td>
+      <td>846.400000</td>
+      <td>845.10000</td>
+      <td>844.400000</td>
+      <td>842.400000</td>
+      <td>844.200000</td>
+      <td>843.500000</td>
+      <td>843.300000</td>
+      <td>833.400000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. 
+
 
 ```python
 ax = sns.kdeplot(
@@ -494,21 +929,172 @@ sns.kdeplot(data = ten_thousand, x = "2021", ax = ax, fill = True, palette = "cr
 
 legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
 ax.legend(legend_list)
-ax.set_title("10,000m Time")
+ax.set_title("Kernel Density for 2012 - Present (10,000m)")
+ax.set_xlabel("10,000m Time in Seconds")
 ```
 
 
 
 
-    Text(0.5, 1.0, '10,000m Time')
+    Text(0.5, 0, '10,000m Time in Seconds')
 
 
 
 
     
-![png](/assets/images/Web Scraper/output_26_1.png)
+![png](/assets/images/Web Scraper/output_29_1.png)
     
-# Final Remarks
+
+
+
+```python
+ten_thousand.describe()
+#summary statistics for 10,000m
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rank</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2021</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>50.500000</td>
+      <td>1757.587000</td>
+      <td>1766.814000</td>
+      <td>1754.033000</td>
+      <td>1756.877000</td>
+      <td>1758.971000</td>
+      <td>1755.463000</td>
+      <td>1756.511000</td>
+      <td>1746.805000</td>
+      <td>1739.101000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>29.011492</td>
+      <td>28.643347</td>
+      <td>19.773306</td>
+      <td>22.069459</td>
+      <td>21.690103</td>
+      <td>17.572248</td>
+      <td>22.791127</td>
+      <td>22.929263</td>
+      <td>21.014883</td>
+      <td>25.292066</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>1647.900000</td>
+      <td>1672.300000</td>
+      <td>1656.700000</td>
+      <td>1674.200000</td>
+      <td>1672.700000</td>
+      <td>1684.900000</td>
+      <td>1684.400000</td>
+      <td>1691.300000</td>
+      <td>1667.200000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>25.750000</td>
+      <td>1749.250000</td>
+      <td>1760.375000</td>
+      <td>1744.350000</td>
+      <td>1745.875000</td>
+      <td>1749.650000</td>
+      <td>1740.050000</td>
+      <td>1748.475000</td>
+      <td>1735.625000</td>
+      <td>1723.400000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>50.500000</td>
+      <td>1766.700000</td>
+      <td>1771.950000</td>
+      <td>1757.300000</td>
+      <td>1759.800000</td>
+      <td>1759.700000</td>
+      <td>1761.750000</td>
+      <td>1760.000000</td>
+      <td>1753.300000</td>
+      <td>1744.350000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>75.250000</td>
+      <td>1775.775000</td>
+      <td>1780.275000</td>
+      <td>1771.575000</td>
+      <td>1775.625000</td>
+      <td>1772.800000</td>
+      <td>1773.800000</td>
+      <td>1774.075000</td>
+      <td>1763.325000</td>
+      <td>1756.550000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>100.000000</td>
+      <td>1787.900000</td>
+      <td>1787.600000</td>
+      <td>1778.900000</td>
+      <td>1786.600000</td>
+      <td>1782.300000</td>
+      <td>1783.400000</td>
+      <td>1782.600000</td>
+      <td>1772.200000</td>
+      <td>1776.600000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 The following code below is part of a larger project. I am in the process of generating independent/explanatory variables for this project, as I want to go more in depth in the future to test the impact of the spikes. I have finals coming up so, naturally, I cannot fully dedicate my time to a project such as this. 
 
@@ -578,5 +1164,3 @@ def world_athletics_dob_list_maker(arr):
         final_births_list = np.append(final_births_list, birth_date)
     return final_births_list
 ```
-
-[Back to Top](#){: .btn .btn--inverse}
