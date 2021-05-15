@@ -1,3 +1,19 @@
+---
+layout: single
+title:  "Creating a Robust Table Generator for Historical TFRRS Data, 2012 - Present"
+date:   2021-05-15 05:04:00 -0800
+excerpt: "Some data analysis."
+categories: 
+  - tutorial
+  - pinned
+
+toc: true
+---
+
+
+
+
+
 ```python
 #importing all of the necessary modules
 from datascience import * 
