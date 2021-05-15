@@ -301,34 +301,6 @@ The code above is sufficient to create plots for all of the archives, and the ye
 The **TFRRS table generator** is the final product of the functions listed above. It uses the url generator, table creator, and table formatter functions all together to reproduce the dataset from the TFRRS website, in cleaned form. The code below will be used to generate the birth dates of each athlete. This code is still under construction as I research a definitive way to efficiently aquire the birth date of each athlete.  
 
 
-```python
-input_year = widgets.Dropdown(
-    options=["2021", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012"],
-    value='2019',
-    description='Year of Density',
-)
-
-input_event = widgets.Dropdown(
-    options=["100m", "200m", "400m", "800m", "1500m", "5000m", "10,000m"],
-    value='100m',
-    description='Year of Density',
-)
-
-def plotit(input_year, input_event): 
-    data = tfrrs_table_generator(input_year, input_event)
-    sns.kdeplot(data=data, x="Time")
-    
-    
-interactive(plotit, input_year = input_year, input_event = input_event)
-
-#code needs to be updated to account for events such as 100m, errors because of the string converter. Will do so in a future push. Haven't done as of yet though. 
-```
-
-
-    interactive(children=(Dropdown(description='Year of Density', index=1, options=('2021', '2019', '2018', '2017'…
-
-
-The above code generates an interactive widget that you can use to view kernel densities of each year. Since this is written in python and exported to html/ markdown, it is not possible to show its functionality in this posting. However, in the future I plan to make that possible. 
 
 Now that we have all of the functions written, let's look at cleaned kernel density plots for each event, 800m to 10,000m, compared from 2012 until now. 
 
@@ -350,7 +322,7 @@ def y_value_generator(event):
     return base_df
 ```
 
-The code cell above works properly. Now it's time to generate the proper values for each year. 
+The code cell above generates all of the times for every year, from events 800m - 1500m. It works properly. Now it's time to generate the proper values for each year. 
 
 
 ```python
@@ -367,28 +339,10 @@ ten_thousand = y_value_generator("10,000m")
 Here's the kernel density for the 800m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
 
-```python
-ax = sns.kdeplot(
-   data=eight_hundred, x="2012",
-   fill=True, common_norm=False, palette="crest",
-   alpha=.3, linewidth=2, legend = True 
-)
-
-for i in range(2013, 2020): 
-    sns.kdeplot(data=eight_hundred, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-sns.kdeplot(data = eight_hundred, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
-ax.legend(legend_list)
-ax.set_title("Kernel Density for 2012 - Present (800m)")
-ax.set_xlabel("800m Time in Seconds")
-```
 
 
 
-
-    Text(0.5, 0, '800m Time in Seconds')
+    
 
 
 
@@ -551,28 +505,9 @@ eight_hundred.describe()
 Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
 
-```python
-ax = sns.kdeplot(
-   data=fifteen_hundred, x="2012",
-   fill=True, common_norm=False, palette="crest",
-   alpha=.3, linewidth=2, legend = True 
-)
-
-for i in range(2013, 2020): 
-    sns.kdeplot(data=fifteen_hundred, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-sns.kdeplot(data = fifteen_hundred, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
-ax.legend(legend_list)
-ax.set_title("Kernel Density for 2012 - Present (1500m)")
-ax.set_xlabel("1500m Time in Seconds")
-```
 
 
 
-
-    Text(0.5, 0, '1500m Time in Seconds')
 
 
 
@@ -735,28 +670,7 @@ fifteen_hundred.describe()
 Here's the kernel density for the 5000m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
 
-```python
-ax = sns.kdeplot(
-   data=five_thousand, x="2012",
-   fill=True, common_norm=False, palette="crest",
-   alpha=.3, linewidth=2, legend = True 
-)
 
-for i in range(2013, 2020): 
-    sns.kdeplot(data=five_thousand, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-sns.kdeplot(data = five_thousand, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
-ax.legend(legend_list)
-ax.set_title("Kernel Density for 2012 - Present (5,000m)")
-ax.set_xlabel("5000m Time in Seconds")
-```
-
-
-
-
-    Text(0.5, 0, '5000m Time in Seconds')
 
 
 
@@ -919,28 +833,7 @@ five_thousand.describe()
 Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
 
-```python
-ax = sns.kdeplot(
-   data=ten_thousand, x="2012",
-   fill=True, common_norm=False, palette="crest",
-   alpha=.3, linewidth=2, legend = True 
-)
 
-for i in range(2013, 2020): 
-    sns.kdeplot(data=ten_thousand, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-sns.kdeplot(data = ten_thousand, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
-ax.legend(legend_list)
-ax.set_title("Kernel Density for 2012 - Present (10,000m)")
-ax.set_xlabel("10,000m Time in Seconds")
-```
-
-
-
-
-    Text(0.5, 0, '10,000m Time in Seconds')
 
 
 
