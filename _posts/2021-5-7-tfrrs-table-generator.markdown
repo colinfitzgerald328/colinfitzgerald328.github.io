@@ -33,9 +33,11 @@ from ipywidgets.embed import embed_minimal_html
 
 # Creating a Robust Table Generator for Historical TFRRS Data, 2012- Present 
 
-## Author's Note: This page will be updated weekly as new data becomes available. 
+*Author's Note: This page will be updated weekly as new data becomes available.*
 
-### Page last updated: 5/14/2021 at 10:09 P.M. 
+*Page last updated: 5/14/2021 at 10:09 P.M.* 
+
+
 The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for the years 2012, until now. The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. The process is somewhat clean. I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
 
 The first function below generates the URL on the TFRRS website. You input a year as a string, and the function will search the TFRRS archive HTML for the correct link to the outdoor performance list for that year. 
