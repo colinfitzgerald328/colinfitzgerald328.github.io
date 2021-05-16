@@ -33,11 +33,39 @@ from ipywidgets.embed import embed_minimal_html
 
 # Creating a Robust Table Generator for Historical TFRRS Data, 2012- Present 
 
+By Colin FitzGerald 
+
 *Author's Note: This page will be updated weekly as new data becomes available.*
 
 *Page last updated: 5/14/2021 at 10:09 P.M.* 
 
+As I watched the times go up on the board, I couldn't believe my eyes. 
 
+> "That many guys broke 3:40?!"
+
+
+I couldn't believe it. Then again, maybe I could. 
+
+With the release of Nike's new Dragonfly and Air Zoom Victory spikes, the running world has experienced a new depth of speed across the board. The shockingness of the results of each meet parallel those of 2017, when Nike first released the Vaporfly. 
+
+When new shoe technology is released, people are quick to question the credibility of performance. 
+> Are we experiencing advancements in diet, coaching, and training that account for the sheer depth and difference in times?
+> Is there a new miracle drug?
+> How can we explain this insanity?
+
+Those are all questions I, among others, ask myself as a fan of track and field. 
+This year's depth across distance events from 800 meters to 10,000 has been remarkable. 
+Times that used to be considered "other-worldly" are now commonly run in a prelim heat or general qualifying round. 
+
+**Go back to the 2016 Olympic Trials.** The very best runners lined up and went toe to toe in the final of the men's 1500m. The result? A commanding win by Matthew Centrowitz. The time? 3:34.09, with a 53.95 final lap. 
+
+By comparison, Yared Nuguse just soloed a 3:34.68 in the prelims of the Men's 1500m at ACC's. 
+
+**That got me thinking**, is there any way that I can prove that the results of this year are statistically different than those of the past? I went to work and created the project below, which shows the different statistics from 800m to 10,000m, starting in 2012 and ending with this year. 
+
+The project and this page will be updated over time as I continue to do work and develop more overall functionality of the project. Here is what I have so far: 
+
+# The Project 
 The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for the years 2012, until now. The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. The process is somewhat clean. I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
 
 The first function below generates the URL on the TFRRS website. You input a year as a string, and the function will search the TFRRS archive HTML for the correct link to the outdoor performance list for that year. 
