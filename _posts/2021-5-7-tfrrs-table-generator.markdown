@@ -54,19 +54,30 @@ When new shoe technology is released, people are quick to question the credibili
 > How can we explain this insanity?
 
 Those are all questions I, among others, ask myself as a fan of track and field. 
-This year's depth across distance events from 800 meters to 10,000 has been remarkable. 
-Times that used to be considered "other-worldly" are now commonly run in a prelim heat or general qualifying round. 
 
-**Go back to the 2016 Olympic Trials.** The very best runners lined up and went toe to toe in the final of the men's 1500m. The result? A commanding win by Matthew Centrowitz. The time? 3:34.09, with a 53.95 final lap. 
+This year's depth across distance events from 800 meters to 10,000 has been remarkable. 
+Times that used to be considered "other-worldly" are now commonly run in a prelim heat.
+
+Go back to the 2016 Olympic Trials.
+
+ The very best runners lined up and went toe to toe in the final of the men's 1500m. The result? A commanding win by Matthew Centrowitz. The time? 3:34.09, with a 53.95 final lap. 
 
 By comparison, Yared Nuguse just soloed a 3:34.68 in the prelims of the Men's 1500m at ACC's. 
 
-**That got me thinking**, is there any way that I can prove that the results of this year are statistically different than those of the past? I went to work and created the project below, which shows the different statistics from 800m to 10,000m, starting in 2012 and ending with this year. 
+That got me thinking, is there any way that I can prove that the results of this year are statistically different than those of the past? 
+
+I went to work and created the project below, which shows the different statistics from 800m to 10,000m, starting in 2012 and ending with this year. 
 
 The project and this page will be updated over time as I continue to do work and develop more overall functionality of the project. Here is what I have so far: 
 
 # The Project 
-The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for the years 2012, until now. The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. The process is somewhat clean. I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
+The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for every year since 2012. 
+
+The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. 
+
+I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. 
+
+I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
 
 The first function below generates the URL on the TFRRS website. You input a year as a string, and the function will search the TFRRS archive HTML for the correct link to the outdoor performance list for that year. 
 
@@ -82,7 +93,7 @@ def url_generator(year):
     return "http://" + refined_url[0] + refined_url[1]
 ```
 
-The **table generator** function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
+The table generator function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
 
 
 ```python
@@ -126,7 +137,7 @@ def twenty_twenty_one_table_generator(event):
     return table_html_format
 ```
 
-The **split minutes and seconds** function turns the time string into a float. For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
+The split_minutes_and_seconds function turns the time string into a float. For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
 
 
 ```python
@@ -327,9 +338,6 @@ tfrrs_table_generator("2012", "1500m")
 
 
 The code above is sufficient to create plots for all of the archives, and the year 2021. 
-
-The **TFRRS table generator** is the final product of the functions listed above. It uses the url generator, table creator, and table formatter functions all together to reproduce the dataset from the TFRRS website, in cleaned form. The code below will be used to generate the birth dates of each athlete. This code is still under construction as I research a definitive way to efficiently aquire the birth date of each athlete.  
-
 
 
 Now that we have all of the functions written, let's look at cleaned kernel density plots for each event, 800m to 10,000m, compared from 2012 until now. 
