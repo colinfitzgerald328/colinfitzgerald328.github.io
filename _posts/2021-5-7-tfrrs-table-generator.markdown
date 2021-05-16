@@ -875,9 +875,7 @@ Here's the kernel density for the 10,000m, years 2012-2021. 2020 is not included
 
 Once again, the 75th, 50th, and 25th percentiles have been shifted, by 12, 9, and 7 seconds, respectively. Check out the charts and study them for a little bit, and see if you notice anything interesting that you think I might have missed. 
 
-> If you found something in this project interesting, have a criticism/ suggestion on what I can improve, or would like to collaborate on a project, feel free to shoot me an email, colinfitzgerald@berkeley.edu. 
 
-Have a great day. I hope you enjoyed reading this, and thank you for your time. 
 
 
 
@@ -1037,6 +1035,11 @@ ten_thousand.describe()
   </tbody>
 </table>
 </div>
+
+
+> If you found something in this project interesting, have a criticism/ suggestion on what I can improve, or would like to collaborate on a project, feel free to shoot me an email, colinfitzgerald@berkeley.edu. 
+
+Have a great day. I hope you enjoyed reading this, and thank you for your time. 
 
 
 
