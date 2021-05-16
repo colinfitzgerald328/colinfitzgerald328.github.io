@@ -1037,6 +1037,8 @@ ten_thousand.describe()
 </div>
 
 
+## Final Remarks 
+
 > If you found something in this project interesting, have a criticism/ suggestion on what I can improve, or would like to collaborate on a project, feel free to shoot me an email, colinfitzgerald@berkeley.edu. 
 
 Have a great day. I hope you enjoyed reading this, and thank you for your time. 
