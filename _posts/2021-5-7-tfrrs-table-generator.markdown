@@ -334,9 +334,10 @@ The **TFRRS table generator** is the final product of the functions listed above
 
 Now that we have all of the functions written, let's look at cleaned kernel density plots for each event, 800m to 10,000m, compared from 2012 until now. 
 
-**Note: Kernel density estimation is to be used with caution. A more precise mode of analysis can be done other ways, such as using histograms or scikit learn. I chose to use this method for ease of use.** 
+For these kernel density plots, we need to compile a list of the times for each event for each year. We will store each year's data in an array. Finally, we will produce arrays for each year. 
 
-For these kernel density plots, we need to compile a list of the times for each event for each year. We will store each year's data in an array. We will compile a large list of all of the numbers. Let's hope that our array is not destroyed in the making.  
+
+
 
 
 ```python
@@ -352,7 +353,7 @@ def y_value_generator(event):
     return base_df
 ```
 
-The code cell above generates all of the times for every year, from events 800m - 1500m. It works properly. Now it's time to generate the proper values for each year. 
+The code cell above generates all of the times for every year, from events 800m - 10,000m. It works properly. This is verified by the summary statistics print-out for each event. Now it's time to generate the proper values for each year. 
 
 
 ```python
@@ -366,7 +367,9 @@ five_thousand = y_value_generator("5000m")
 ten_thousand = y_value_generator("10,000m")
 ```
 
-Here's the kernel density for the 800m, years 2012-2021. 2020 is not included because of the pandemic year. 
+## 800m Kernel Density 
+
+Here's the kernel density for the 800m, years 2012-2021. 2020 is not included because of the pandemic year. These numbers look quite similar to years past. Keep scrolling or use the side bar to toggle the kernel density plots for the other events. 
 
 
 
@@ -532,7 +535,7 @@ eight_hundred.describe()
 
 
 
-Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. 
+Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. The striking characters of this graph explain the summary statistics below. This distribution looks as though it has been shifted to the left. Not surprisingly, as verified by the summary statistics, the 75th, 50th, and 25th percentiles have been shifted down. The slowest time in the array for 2021 is over two seconds ahead of that of 2019. 
 
 
 
@@ -697,7 +700,7 @@ fifteen_hundred.describe()
 
 
 
-Here's the kernel density for the 5000m, years 2012-2021. 2020 is not included because of the pandemic year. 
+Here's the kernel density for the 5000m, years 2012-2021. 2020 is not included because of the pandemic year. Once again, we see what looks like a kernel density plot that had a linear transformation applied to it. The graph looks like someone physically picked it up and moved it. Compared to 2019, the 2021 75th percentile is about 5.1 seconds faster, the 50th is about 9.1, and the 25th is 9 seconds faster. 
 
 
 
@@ -858,9 +861,15 @@ five_thousand.describe()
 </table>
 </div>
 
+# 10,000m Kernel Density 
 
+Here's the kernel density for the 10,000m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
-Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. 
+Once again, the 75th, 50th, and 25th percentiles have been shifted, by 12, 9, and 7 seconds, respectively. Check out the charts and study them for a little bit, and see if you notice anything interesting that you think I might have missed. 
+
+> If you found something in this project interesting, have a criticism/ suggestion on what I can improve, or would like to collaborate on a project, feel free to shoot me an email, colinfitzgerald@berkeley.edu. 
+
+Have a great day. I hope you enjoyed reading this, and thank you for your time. 
 
 
 
