@@ -533,7 +533,7 @@ eight_hundred.describe()
 </table>
 </div>
 
-
+## 1500m Kernel Density 
 
 Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. The striking characters of this graph explain the summary statistics below. This distribution looks as though it has been shifted to the left. Not surprisingly, as verified by the summary statistics, the 75th, 50th, and 25th percentiles have been shifted down. The slowest time in the array for 2021 is over two seconds ahead of that of 2019. 
 
@@ -698,7 +698,7 @@ fifteen_hundred.describe()
 </table>
 </div>
 
-
+## 5000m Kernel Density 
 
 Here's the kernel density for the 5000m, years 2012-2021. 2020 is not included because of the pandemic year. Once again, we see what looks like a kernel density plot that had a linear transformation applied to it. The graph looks like someone physically picked it up and moved it. Compared to 2019, the 2021 75th percentile is about 5.1 seconds faster, the 50th is about 9.1, and the 25th is 9 seconds faster. 
 
@@ -861,7 +861,7 @@ five_thousand.describe()
 </table>
 </div>
 
-# 10,000m Kernel Density 
+## 10,000m Kernel Density 
 
 Here's the kernel density for the 10,000m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
