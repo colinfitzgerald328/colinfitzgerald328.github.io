@@ -543,7 +543,7 @@ eight_hundred.describe()
 
 ## 1500m Kernel Density 
 
-Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. The striking characters of this graph explain the summary statistics below. This distribution looks as though it has been shifted to the left. Not surprisingly, as verified by the summary statistics, the 75th, 50th, and 25th percentiles have been shifted down. The slowest time in the array for 2021 is over two seconds ahead of that of 2019. 
+Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. The striking characteristics of this graph explain the summary statistics below. This distribution looks as though it has been shifted to the left. Not surprisingly, as verified by the summary statistics, the 75th, 50th, and 25th percentiles have been shifted down. The slowest time in the array for 2021 is over two seconds ahead of that of 2019. 
 
 
 
@@ -1110,3 +1110,4 @@ def world_athletics_dob_list_maker(arr):
 ```
 
 
+[Back to Top](#){: .btn .btn--inverse}
