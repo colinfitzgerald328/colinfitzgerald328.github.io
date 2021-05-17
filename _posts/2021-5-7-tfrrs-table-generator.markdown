@@ -90,8 +90,7 @@ def url_generator(year):
     return "http://" + refined_url[0] + refined_url[1]
 ```
 
-The **table generator** function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
-
+The event_dictionary is a dictionary that maps the TFRRS website div classes of each event to the proper discipline. The event_code_generator function is uses the dictionary and is implemented later in the code. 
 
 ```python
 event_dictionary = {"100m": "row Men 6", 
@@ -105,6 +104,8 @@ event_dictionary = {"100m": "row Men 6",
 def event_code_generator(str): 
     return event_dictionary[str]
 ```
+The table generator function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
+ 
 
 
 ```python
@@ -119,7 +120,7 @@ def table_generator(url, event):
         table_html_format = i.find("table")
     return table_html_format
 ```
-
+The twenty_twenty_one_table_generator function is unique to the year 2021. 
 
 ```python
 def twenty_twenty_one_table_generator(event): 
@@ -387,7 +388,7 @@ The kernel density for the 800m, years 2012-2021.
 
 
 
-
+### 800m Summary Statistics 
 
 
 
@@ -550,7 +551,7 @@ The kernel density for the 800m, years 2012-2021.
 The kernel density for the 1500m, years 2012-2021.
 
 
-
+### 1500m Summary Statistics 
 
 
 
@@ -715,7 +716,7 @@ The kernel density for the 1500m, years 2012-2021.
 The kernel density for the 5000m, years 2012-2021. 
 
 
-
+### 5,000m Summary Statistics 
 
 
 
@@ -881,7 +882,7 @@ The kernel density for the 10,000m, years 2012-2021.
 
 
 
-
+### 10,000m Summary Statistics 
 
 
 <div>
