@@ -372,7 +372,7 @@ The kernel density for the 800m, years 2012-2021.
 
 
 
-
+### 800m Summary Statistics
 
 
 
@@ -394,7 +394,6 @@ The kernel density for the 800m, years 2012-2021.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Rank</th>
       <th>2012</th>
       <th>2013</th>
       <th>2014</th>
@@ -411,7 +410,6 @@ The kernel density for the 800m, years 2012-2021.
       <th>count</th>
       <td>100.000000</td>
       <td>100.000000</td>
-      <td>100.000000</td>
       <td>100.00000</td>
       <td>100.000000</td>
       <td>100.000000</td>
@@ -422,7 +420,6 @@ The kernel density for the 800m, years 2012-2021.
     </tr>
     <tr>
       <th>mean</th>
-      <td>50.500000</td>
       <td>108.741600</td>
       <td>109.148700</td>
       <td>108.85960</td>
@@ -435,7 +432,6 @@ The kernel density for the 800m, years 2012-2021.
     </tr>
     <tr>
       <th>std</th>
-      <td>29.011492</td>
       <td>1.044447</td>
       <td>0.850278</td>
       <td>0.96219</td>
@@ -448,7 +444,6 @@ The kernel density for the 800m, years 2012-2021.
     </tr>
     <tr>
       <th>min</th>
-      <td>1.000000</td>
       <td>104.750000</td>
       <td>106.200000</td>
       <td>105.35000</td>
@@ -461,7 +456,6 @@ The kernel density for the 800m, years 2012-2021.
     </tr>
     <tr>
       <th>25%</th>
-      <td>25.750000</td>
       <td>108.240000</td>
       <td>108.670000</td>
       <td>108.47750</td>
@@ -474,7 +468,6 @@ The kernel density for the 800m, years 2012-2021.
     </tr>
     <tr>
       <th>50%</th>
-      <td>50.500000</td>
       <td>109.030000</td>
       <td>109.290000</td>
       <td>109.19500</td>
@@ -487,7 +480,6 @@ The kernel density for the 800m, years 2012-2021.
     </tr>
     <tr>
       <th>75%</th>
-      <td>75.250000</td>
       <td>109.495000</td>
       <td>109.810000</td>
       <td>109.56500</td>
@@ -500,7 +492,6 @@ The kernel density for the 800m, years 2012-2021.
     </tr>
     <tr>
       <th>max</th>
-      <td>100.000000</td>
       <td>109.890000</td>
       <td>110.210000</td>
       <td>109.90000</td>
@@ -536,7 +527,7 @@ The kernel density for the 1500m, years 2012-2021.
 
 
 
-
+### 1500m Summary Statistics 
 
 
 
@@ -558,7 +549,6 @@ The kernel density for the 1500m, years 2012-2021.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Rank</th>
       <th>2012</th>
       <th>2013</th>
       <th>2014</th>
@@ -582,11 +572,9 @@ The kernel density for the 1500m, years 2012-2021.
       <td>100.000000</td>
       <td>100.000000</td>
       <td>100.000000</td>
-      <td>100.000000</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>50.500000</td>
       <td>223.449200</td>
       <td>223.508700</td>
       <td>223.412600</td>
@@ -599,7 +587,6 @@ The kernel density for the 1500m, years 2012-2021.
     </tr>
     <tr>
       <th>std</th>
-      <td>29.011492</td>
       <td>1.957686</td>
       <td>1.774577</td>
       <td>1.811622</td>
@@ -612,7 +599,6 @@ The kernel density for the 1500m, years 2012-2021.
     </tr>
     <tr>
       <th>min</th>
-      <td>1.000000</td>
       <td>216.770000</td>
       <td>218.530000</td>
       <td>216.340000</td>
@@ -625,7 +611,6 @@ The kernel density for the 1500m, years 2012-2021.
     </tr>
     <tr>
       <th>25%</th>
-      <td>25.750000</td>
       <td>222.592500</td>
       <td>222.247500</td>
       <td>222.602500</td>
@@ -638,7 +623,6 @@ The kernel density for the 1500m, years 2012-2021.
     </tr>
     <tr>
       <th>50%</th>
-      <td>50.500000</td>
       <td>223.970000</td>
       <td>224.185000</td>
       <td>223.895000</td>
@@ -651,7 +635,6 @@ The kernel density for the 1500m, years 2012-2021.
     </tr>
     <tr>
       <th>75%</th>
-      <td>75.250000</td>
       <td>224.980000</td>
       <td>224.930000</td>
       <td>224.780000</td>
@@ -664,7 +647,6 @@ The kernel density for the 1500m, years 2012-2021.
     </tr>
     <tr>
       <th>max</th>
-      <td>100.000000</td>
       <td>225.790000</td>
       <td>225.680000</td>
       <td>225.330000</td>
@@ -700,7 +682,7 @@ The kernel density for the 1500m, years 2012-2021.
 The kernel density for the 5000m, years 2012-2021. 
 
 
-
+### 5,000m Summary Statistics 
 
 
 
@@ -723,7 +705,6 @@ The kernel density for the 5000m, years 2012-2021.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Rank</th>
       <th>2012</th>
       <th>2013</th>
       <th>2014</th>
@@ -738,7 +719,6 @@ The kernel density for the 5000m, years 2012-2021.
   <tbody>
     <tr>
       <th>count</th>
-      <td>100.000000</td>
       <td>100.00000</td>
       <td>100.000000</td>
       <td>100.00000</td>
@@ -751,7 +731,6 @@ The kernel density for the 5000m, years 2012-2021.
     </tr>
     <tr>
       <th>mean</th>
-      <td>50.500000</td>
       <td>833.05800</td>
       <td>834.613000</td>
       <td>833.60200</td>
@@ -764,7 +743,6 @@ The kernel density for the 5000m, years 2012-2021.
     </tr>
     <tr>
       <th>std</th>
-      <td>29.011492</td>
       <td>10.80636</td>
       <td>10.625248</td>
       <td>9.40652</td>
@@ -777,7 +755,6 @@ The kernel density for the 5000m, years 2012-2021.
     </tr>
     <tr>
       <th>min</th>
-      <td>1.000000</td>
       <td>798.40000</td>
       <td>795.300000</td>
       <td>806.90000</td>
@@ -790,7 +767,6 @@ The kernel density for the 5000m, years 2012-2021.
     </tr>
     <tr>
       <th>25%</th>
-      <td>25.750000</td>
       <td>828.00000</td>
       <td>830.400000</td>
       <td>828.90000</td>
@@ -803,7 +779,6 @@ The kernel density for the 5000m, years 2012-2021.
     </tr>
     <tr>
       <th>50%</th>
-      <td>50.500000</td>
       <td>836.85000</td>
       <td>837.900000</td>
       <td>836.00000</td>
@@ -816,7 +791,6 @@ The kernel density for the 5000m, years 2012-2021.
     </tr>
     <tr>
       <th>75%</th>
-      <td>75.250000</td>
       <td>841.62500</td>
       <td>842.225000</td>
       <td>840.47500</td>
@@ -829,7 +803,6 @@ The kernel density for the 5000m, years 2012-2021.
     </tr>
     <tr>
       <th>max</th>
-      <td>100.000000</td>
       <td>844.30000</td>
       <td>846.400000</td>
       <td>845.10000</td>
@@ -865,7 +838,7 @@ The kernel density for the 5000m, years 2012-2021.
 The kernel density for the 10,000m, years 2012-2021. 
 
 
-
+### 10,000m Summary Statistics 
 
 
 
@@ -887,7 +860,6 @@ The kernel density for the 10,000m, years 2012-2021.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Rank</th>
       <th>2012</th>
       <th>2013</th>
       <th>2014</th>
@@ -911,11 +883,9 @@ The kernel density for the 10,000m, years 2012-2021.
       <td>100.000000</td>
       <td>100.000000</td>
       <td>100.000000</td>
-      <td>100.000000</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>50.500000</td>
       <td>1757.587000</td>
       <td>1766.814000</td>
       <td>1754.033000</td>
@@ -928,7 +898,6 @@ The kernel density for the 10,000m, years 2012-2021.
     </tr>
     <tr>
       <th>std</th>
-      <td>29.011492</td>
       <td>28.643347</td>
       <td>19.773306</td>
       <td>22.069459</td>
@@ -941,7 +910,6 @@ The kernel density for the 10,000m, years 2012-2021.
     </tr>
     <tr>
       <th>min</th>
-      <td>1.000000</td>
       <td>1647.900000</td>
       <td>1672.300000</td>
       <td>1656.700000</td>
@@ -954,7 +922,6 @@ The kernel density for the 10,000m, years 2012-2021.
     </tr>
     <tr>
       <th>25%</th>
-      <td>25.750000</td>
       <td>1749.250000</td>
       <td>1760.375000</td>
       <td>1744.350000</td>
@@ -967,7 +934,6 @@ The kernel density for the 10,000m, years 2012-2021.
     </tr>
     <tr>
       <th>50%</th>
-      <td>50.500000</td>
       <td>1766.700000</td>
       <td>1771.950000</td>
       <td>1757.300000</td>
@@ -980,7 +946,6 @@ The kernel density for the 10,000m, years 2012-2021.
     </tr>
     <tr>
       <th>75%</th>
-      <td>75.250000</td>
       <td>1775.775000</td>
       <td>1780.275000</td>
       <td>1771.575000</td>
@@ -993,7 +958,6 @@ The kernel density for the 10,000m, years 2012-2021.
     </tr>
     <tr>
       <th>max</th>
-      <td>100.000000</td>
       <td>1787.900000</td>
       <td>1787.600000</td>
       <td>1778.900000</td>
