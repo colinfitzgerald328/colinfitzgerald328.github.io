@@ -338,34 +338,6 @@ The code above is sufficient to create plots for all of the archives, and the ye
 
 
 
-```python
-input_year = widgets.Dropdown(
-    options=["2021", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012"],
-    value='2019',
-    description='Year of Density',
-)
-
-input_event = widgets.Dropdown(
-    options=["100m", "200m", "400m", "800m", "1500m", "5000m", "10,000m"],
-    value='100m',
-    description='Year of Density',
-)
-
-def plotit(input_year, input_event): 
-    data = tfrrs_table_generator(input_year, input_event)
-    sns.kdeplot(data=data, x="Time")
-    
-    
-interactive(plotit, input_year = input_year, input_event = input_event)
-
-#code needs to be updated to account for events such as 100m, errors because of the string converter. Will do so in a future push. Haven't done as of yet though. 
-```
-
-
-    interactive(children=(Dropdown(description='Year of Density', index=1, options=('2021', '2019', '2018', '2017'…
-
-
-The above code generates an interactive widget that you can use to view kernel densities of each year. Since this is written in python and exported to html/ markdown, it is not possible to show its functionality in this posting. However, in the future I plan to make that possible. 
 
 Now that we have all of the functions written, let's look at cleaned kernel density plots for each event, 800m to 10,000m, compared from 2012 until now. 
 
