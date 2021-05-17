@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Creating a Robust Table Generator for Historical TFRRS Data, 2012 - Present"
+title:  "Collegiate Track and Field Data, Summarized"
 date:   2021-05-15 05:04:00 -0800
 excerpt: "Some data analysis. Project updates daily to weekly depending on my availability."
 categories: 
@@ -10,24 +10,8 @@ categories:
 toc: true
 ---
 
-```python
-#importing all of the necessary modules
-from datascience import * 
-from bs4 import BeautifulSoup
-import requests
-import pandas as pd
-import numpy as np
-import re
-import matplotlib.pyplot as plt 
-%matplotlib inline 
-from urllib.request import Request, urlopen 
-from bs4 import BeautifulSoup as soup
-from ipywidgets import widgets, interactive
-import seaborn as sns 
-from ipywidgets.embed import embed_minimal_html
-```
 
-# Creating a Robust Table Generator for Historical TFRRS Data, 2012- Present 
+# Statistical Updates - Collegiate Track and Field 
 
 By Colin FitzGerald
 
@@ -67,6 +51,7 @@ I went to work and created the project below, which shows the different statisti
 The project and this page will be updated over time as I continue to do work and develop more overall functionality of the project. Here is what I have so far: 
 
 # The Project 
+ 
 
 The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for every year since 2012. 
 
@@ -90,8 +75,8 @@ def url_generator(year):
     return "http://" + refined_url[0] + refined_url[1]
 ```
 
-The **table generator** function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
 
+The event_dictionary maps the TFRRS website HTML "div" classes to their respective disciplines. The event_code_generator is the function that, as you will see later in the code, implements that dictionary. Having the event dictionary allows our table generator to be more robust and abstract. 
 
 ```python
 event_dictionary = {"100m": "row Men 6", 
@@ -105,7 +90,7 @@ event_dictionary = {"100m": "row Men 6",
 def event_code_generator(str): 
     return event_dictionary[str]
 ```
-
+The table generator function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
 
 ```python
 def table_generator(url, event): 
@@ -119,7 +104,7 @@ def table_generator(url, event):
         table_html_format = i.find("table")
     return table_html_format
 ```
-
+The twenty_twenty_one table generator was built specifically for this year, because that information is contained on a different base URL, and is currently updating on a weekly or daily basis. 
 
 ```python
 def twenty_twenty_one_table_generator(event): 
@@ -134,7 +119,7 @@ def twenty_twenty_one_table_generator(event):
     return table_html_format
 ```
 
-The **split minutes and seconds** function turns the time string into a float. For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
+The split minutes and seconds function turns the time string into a float. For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
 
 
 ```python
@@ -143,7 +128,7 @@ def split_minutes_and_seconds(time_str):
         split_list = (time_str.split(":"))
         return int(split_list[0])*60 + float(split_list[1])
 ```
-
+The table formatter creates the tables themselves. 
 
 ```python
 def table_formatter(table): 
@@ -170,7 +155,7 @@ def table_formatter(table):
         new_df["Time"] = [split_minutes_and_seconds(i) for i in new_df["Time"]]
     return new_df
 ```
-
+The TFRRS table generator function combines all of the above functions to properly create the table for a specific year and event. 
 
 ```python
 def tfrrs_table_generator(year, event): 
@@ -186,7 +171,7 @@ def tfrrs_table_generator(year, event):
 tfrrs_table_generator("2012", "1500m")
 ```
 
-
+Heres an example: 
 
 
 <div>
