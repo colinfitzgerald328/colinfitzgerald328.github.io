@@ -2,17 +2,13 @@
 layout: single
 title:  "Creating a Robust Table Generator for Historical TFRRS Data, 2012 - Present"
 date:   2021-05-15 05:04:00 -0800
-excerpt: "Some data analysis."
+excerpt: "Some data analysis. Project updates daily to weekly depending on my availability."
 categories: 
   - tutorial
   - pinned
 
 toc: true
 ---
-
-
-
-
 
 ```python
 #importing all of the necessary modules
@@ -33,11 +29,11 @@ from ipywidgets.embed import embed_minimal_html
 
 # Creating a Robust Table Generator for Historical TFRRS Data, 2012- Present 
 
-By Colin FitzGerald 
+By Colin FitzGerald
 
-*Author's Note: This page will be updated weekly as new data becomes available.*
+*Author's Note: This page will be updated weekly as new data becomes available.* 
 
-*Page last updated: 5/14/2021 at 10:09 P.M.* 
+*Page last updated: 5/16/2021 at 10:09 P.M.*
 
 As I watched the times go up on the board, I couldn't believe my eyes. 
 
@@ -71,13 +67,14 @@ I went to work and created the project below, which shows the different statisti
 The project and this page will be updated over time as I continue to do work and develop more overall functionality of the project. Here is what I have so far: 
 
 # The Project 
+
 The TFRRS website has an archive page that contains the NCAA Track and Field Outdoor Final Qualifying lists for every year since 2012. 
 
 The following functions reproduce those tables from the TFRRS website into pandas dataframes that can be directly manipulated for the purpose of data visualization. 
 
 I decided to do the data collection process this way so that I do not have to download each dataset to my computer, but rather I can pull it for each year directly to python. 
 
-I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks. 
+I spent time studying the TFRRS website in order to properly configure my web scraper. The following functions are a cleaned and robust version of several python jupyter notebooks.  
 
 The first function below generates the URL on the TFRRS website. You input a year as a string, and the function will search the TFRRS archive HTML for the correct link to the outdoor performance list for that year. 
 
@@ -93,7 +90,7 @@ def url_generator(year):
     return "http://" + refined_url[0] + refined_url[1]
 ```
 
-The table generator function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
+The **table generator** function generates a table from the URL created from the input year. However, the table is a bunch of gobbldy-gook html, so we need a couple more functions to recover the original table. I also created a separate one for the year 2021, because that data is still updating as the season completes. This way, as meets are completed and new data is uploaded to TFRRS, my functions will automatically update. 
 
 
 ```python
@@ -137,7 +134,7 @@ def twenty_twenty_one_table_generator(event):
     return table_html_format
 ```
 
-The split_minutes_and_seconds function turns the time string into a float. For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
+The **split minutes and seconds** function turns the time string into a float. For example, a time such as "3:39.7" would be converted to 219.7. The reason for this is that it makes the data visualization process easier. The function by itself does not make much sense because it is used in conjunction with the table formatter function. 
 
 
 ```python
@@ -340,12 +337,39 @@ tfrrs_table_generator("2012", "1500m")
 The code above is sufficient to create plots for all of the archives, and the year 2021. 
 
 
+
+```python
+input_year = widgets.Dropdown(
+    options=["2021", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012"],
+    value='2019',
+    description='Year of Density',
+)
+
+input_event = widgets.Dropdown(
+    options=["100m", "200m", "400m", "800m", "1500m", "5000m", "10,000m"],
+    value='100m',
+    description='Year of Density',
+)
+
+def plotit(input_year, input_event): 
+    data = tfrrs_table_generator(input_year, input_event)
+    sns.kdeplot(data=data, x="Time")
+    
+    
+interactive(plotit, input_year = input_year, input_event = input_event)
+
+#code needs to be updated to account for events such as 100m, errors because of the string converter. Will do so in a future push. Haven't done as of yet though. 
+```
+
+
+    interactive(children=(Dropdown(description='Year of Density', index=1, options=('2021', '2019', '2018', '2017'…
+
+
+The above code generates an interactive widget that you can use to view kernel densities of each year. Since this is written in python and exported to html/ markdown, it is not possible to show its functionality in this posting. However, in the future I plan to make that possible. 
+
 Now that we have all of the functions written, let's look at cleaned kernel density plots for each event, 800m to 10,000m, compared from 2012 until now. 
 
-For these kernel density plots, we need to compile a list of the times for each event for each year. We will store each year's data in an array. Finally, we will produce arrays for each year. 
-
-
-
+For these kernel density plots, we need to compile a list of the times for each event for each year. We will store each year's data in an array. Finally, we will produce arrays for each year.   
 
 
 ```python
@@ -361,7 +385,7 @@ def y_value_generator(event):
     return base_df
 ```
 
-The code cell above generates all of the times for every year, from events 800m - 10,000m. It works properly. This is verified by the summary statistics print-out for each event. Now it's time to generate the proper values for each year. 
+The code cell above generates all of the times for every year, from events 800m - 10,000m. It works properly. This is verified by the summary statistics print-out for each event. Now it's time to generate the proper values for each year.  
 
 
 ```python
@@ -377,13 +401,29 @@ ten_thousand = y_value_generator("10,000m")
 
 ## 800m Kernel Density 
 
-Here's the kernel density for the 800m, years 2012-2021. 2020 is not included because of the pandemic year. These numbers look quite similar to years past. Keep scrolling or use the side bar to toggle the kernel density plots for the other events. 
+
+```python
+ax = sns.kdeplot(
+   data=eight_hundred, x="2012",
+   fill=True, common_norm=False, palette="crest",
+   alpha=.3, linewidth=2, legend = True 
+)
+
+for i in range(2013, 2020): 
+    sns.kdeplot(data=eight_hundred, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
+
+sns.kdeplot(data = eight_hundred, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
+
+legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
+ax.legend(legend_list)
+ax.set_title("Kernel Density for 2012 - Present (800m)")
+ax.set_xlabel("800m Time in Seconds")
+```
 
 
 
 
-
-    
+    Text(0.5, 0, '800m Time in Seconds')
 
 
 
@@ -392,6 +432,8 @@ Here's the kernel density for the 800m, years 2012-2021. 2020 is not included be
 ![png](/assets/images/Web Scraper/output_20_1.png)
     
 
+
+The kernel density for the 800m, years 2012-2021. 
 
 
 ```python
@@ -444,7 +486,7 @@ eight_hundred.describe()
       <td>100.000000</td>
       <td>100.000000</td>
       <td>100.000000</td>
-      <td>100.00000</td>
+      <td>100.000000</td>
     </tr>
     <tr>
       <th>mean</th>
@@ -457,7 +499,7 @@ eight_hundred.describe()
       <td>108.419100</td>
       <td>108.629700</td>
       <td>108.754000</td>
-      <td>108.69340</td>
+      <td>108.403100</td>
     </tr>
     <tr>
       <th>std</th>
@@ -470,7 +512,7 @@ eight_hundred.describe()
       <td>1.211719</td>
       <td>1.154088</td>
       <td>1.128423</td>
-      <td>0.99457</td>
+      <td>1.019719</td>
     </tr>
     <tr>
       <th>min</th>
@@ -483,7 +525,7 @@ eight_hundred.describe()
       <td>103.730000</td>
       <td>103.250000</td>
       <td>104.760000</td>
-      <td>105.80000</td>
+      <td>105.160000</td>
     </tr>
     <tr>
       <th>25%</th>
@@ -496,7 +538,7 @@ eight_hundred.describe()
       <td>107.765000</td>
       <td>108.040000</td>
       <td>108.275000</td>
-      <td>108.15250</td>
+      <td>107.927500</td>
     </tr>
     <tr>
       <th>50%</th>
@@ -509,7 +551,7 @@ eight_hundred.describe()
       <td>108.745000</td>
       <td>108.990000</td>
       <td>108.925000</td>
-      <td>108.96500</td>
+      <td>108.755000</td>
     </tr>
     <tr>
       <th>75%</th>
@@ -522,7 +564,7 @@ eight_hundred.describe()
       <td>109.302500</td>
       <td>109.452500</td>
       <td>109.610000</td>
-      <td>109.45500</td>
+      <td>109.190000</td>
     </tr>
     <tr>
       <th>max</th>
@@ -535,28 +577,52 @@ eight_hundred.describe()
       <td>109.830000</td>
       <td>109.870000</td>
       <td>110.060000</td>
-      <td>109.93000</td>
+      <td>109.530000</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-## 1500m Kernel Density 
-
-Here's the kernel density for the 1500m, years 2012-2021. 2020 is not included because of the pandemic year. The striking characteristics of this graph explain the summary statistics below. This distribution looks as though it has been shifted to the left. Not surprisingly, as verified by the summary statistics, the 75th, 50th, and 25th percentiles have been shifted down. The slowest time in the array for 2021 is over two seconds ahead of that of 2019. 
 
 
+### 800m Analysis
+2020 is not included because of the pandemic year. As results continue to be run and we head into the post season, let's take note. While the average of this year is not an outlier compared to years past, the depth of the percentiles shows a shift down, to a concentration of faster times. Right now, this year's data is most comparable to 2016. 
+
+## 1500m Kernel Density  
+
+
+```python
+ax = sns.kdeplot(
+   data=fifteen_hundred, x="2012",
+   fill=True, common_norm=False, palette="crest",
+   alpha=.3, linewidth=2, legend = True 
+)
+
+for i in range(2013, 2020): 
+    sns.kdeplot(data=fifteen_hundred, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
+
+sns.kdeplot(data = fifteen_hundred, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
+
+legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
+ax.legend(legend_list)
+ax.set_title("Kernel Density for 2012 - Present (1500m)")
+ax.set_xlabel("1500m Time in Seconds")
+```
 
 
 
+
+    Text(0.5, 0, '1500m Time in Seconds')
 
 
 
 
     
-![png](/assets/images/Web Scraper/output_23_1.png)
+![png](/assets/images/Web Scraper/output_25_1.png)
     
 
+
+The kernel density for the 1500m, years 2012-2021.
 
 
 ```python
@@ -622,7 +688,7 @@ fifteen_hundred.describe()
       <td>223.132800</td>
       <td>222.998600</td>
       <td>223.486600</td>
-      <td>220.893300</td>
+      <td>220.620800</td>
     </tr>
     <tr>
       <th>std</th>
@@ -635,7 +701,7 @@ fifteen_hundred.describe()
       <td>1.659264</td>
       <td>2.259134</td>
       <td>2.174883</td>
-      <td>2.185034</td>
+      <td>2.130243</td>
     </tr>
     <tr>
       <th>min</th>
@@ -648,7 +714,7 @@ fifteen_hundred.describe()
       <td>215.990000</td>
       <td>215.010000</td>
       <td>217.200000</td>
-      <td>215.960000</td>
+      <td>214.680000</td>
     </tr>
     <tr>
       <th>25%</th>
@@ -661,7 +727,7 @@ fifteen_hundred.describe()
       <td>222.355000</td>
       <td>222.402500</td>
       <td>222.927500</td>
-      <td>219.135000</td>
+      <td>218.990000</td>
     </tr>
     <tr>
       <th>50%</th>
@@ -674,7 +740,7 @@ fifteen_hundred.describe()
       <td>223.220000</td>
       <td>223.805000</td>
       <td>224.430000</td>
-      <td>221.600000</td>
+      <td>221.165000</td>
     </tr>
     <tr>
       <th>75%</th>
@@ -687,7 +753,7 @@ fifteen_hundred.describe()
       <td>224.367500</td>
       <td>224.597500</td>
       <td>224.895000</td>
-      <td>222.852500</td>
+      <td>222.430000</td>
     </tr>
     <tr>
       <th>max</th>
@@ -700,26 +766,53 @@ fifteen_hundred.describe()
       <td>225.440000</td>
       <td>225.220000</td>
       <td>225.620000</td>
-      <td>223.390000</td>
+      <td>223.150000</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-## 5000m Kernel Density 
-
-Here's the kernel density for the 5000m, years 2012-2021. 2020 is not included because of the pandemic year. Once again, we see what looks like a kernel density plot that had a linear transformation applied to it. The graph looks like someone physically picked it up and moved it. Compared to 2019, the 2021 75th percentile is about 5.1 seconds faster, the 50th is about 9.1, and the 25th is 9 seconds faster. 
 
 
+### 1500m Analysis
 
+2020 is not included because of the pandemic year. The striking characteristics of this graph explain the summary statistics below. This distribution looks as though it has been shifted to the left. Not surprisingly, as verified by the summary statistics, the 75th, 50th, and 25th percentiles have been shifted down. The slowest time in the array for 2021 is over two seconds ahead of that of 2019.
+
+## 5,000m Kernel Density 
+
+
+```python
+ax = sns.kdeplot(
+   data=five_thousand, x="2012",
+   fill=True, common_norm=False, palette="crest",
+   alpha=.3, linewidth=2, legend = True 
+)
+
+for i in range(2013, 2020): 
+    sns.kdeplot(data=five_thousand, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
+
+sns.kdeplot(data = five_thousand, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
+
+legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
+ax.legend(legend_list)
+ax.set_title("Kernel Density for 2012 - Present (5,000m)")
+ax.set_xlabel("5000m Time in Seconds")
+```
+
+
+
+
+    Text(0.5, 0, '5000m Time in Seconds')
 
 
 
 
     
-![png](/assets/images/Web Scraper/output_26_1.png)
+![png](/assets/images/Web Scraper/output_30_1.png)
     
 
+
+The kernel density for the 5000m, years 2012-2021. 
 
 
 ```python
@@ -785,7 +878,7 @@ five_thousand.describe()
       <td>833.640000</td>
       <td>831.041000</td>
       <td>831.195000</td>
-      <td>822.846000</td>
+      <td>821.896000</td>
     </tr>
     <tr>
       <th>std</th>
@@ -798,7 +891,7 @@ five_thousand.describe()
       <td>8.766822</td>
       <td>10.151828</td>
       <td>9.936428</td>
-      <td>9.245052</td>
+      <td>8.773674</td>
     </tr>
     <tr>
       <th>min</th>
@@ -837,7 +930,7 @@ five_thousand.describe()
       <td>835.750000</td>
       <td>832.650000</td>
       <td>834.400000</td>
-      <td>825.650000</td>
+      <td>824.700000</td>
     </tr>
     <tr>
       <th>75%</th>
@@ -850,7 +943,7 @@ five_thousand.describe()
       <td>840.275000</td>
       <td>839.750000</td>
       <td>839.375000</td>
-      <td>830.400000</td>
+      <td>828.650000</td>
     </tr>
     <tr>
       <th>max</th>
@@ -863,30 +956,53 @@ five_thousand.describe()
       <td>844.200000</td>
       <td>843.500000</td>
       <td>843.300000</td>
-      <td>833.400000</td>
+      <td>832.100000</td>
     </tr>
   </tbody>
 </table>
 </div>
 
+
+
+### 5,000m Analysis
+
+2020 is not included because of the pandemic year. Once again, we see what looks like a kernel density plot that had a linear transformation applied to it. The graph looks like someone physically picked it up and moved it. Compared to 2019, the 2021 75th percentile is about 5.1 seconds faster, the 50th is about 9.1, and the 25th is 9 seconds faster. 
+
 ## 10,000m Kernel Density 
 
-Here's the kernel density for the 10,000m, years 2012-2021. 2020 is not included because of the pandemic year. 
 
-Once again, the 75th, 50th, and 25th percentiles have been shifted, by 12, 9, and 7 seconds, respectively. Check out the charts and study them for a little bit, and see if you notice anything interesting that you think I might have missed. 
+```python
+ax = sns.kdeplot(
+   data=ten_thousand, x="2012",
+   fill=True, common_norm=False, palette="crest",
+   alpha=.3, linewidth=2, legend = True 
+)
+
+for i in range(2013, 2020): 
+    sns.kdeplot(data=ten_thousand, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
+
+sns.kdeplot(data = ten_thousand, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
+
+legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
+ax.legend(legend_list)
+ax.set_title("Kernel Density for 2012 - Present (10,000m)")
+ax.set_xlabel("10,000m Time in Seconds")
+```
 
 
 
 
-
+    Text(0.5, 0, '10,000m Time in Seconds')
 
 
 
 
     
-![png](/assets/images/Web Scraper/output_29_1.png)
+![png](/assets/images/Web Scraper/output_35_1.png)
     
 
+
+The kernel density for the 10,000m, years 2012-2021. 
 
 
 ```python
@@ -952,7 +1068,7 @@ ten_thousand.describe()
       <td>1755.463000</td>
       <td>1756.511000</td>
       <td>1746.805000</td>
-      <td>1738.610000</td>
+      <td>1733.517000</td>
     </tr>
     <tr>
       <th>std</th>
@@ -965,7 +1081,7 @@ ten_thousand.describe()
       <td>22.791127</td>
       <td>22.929263</td>
       <td>21.014883</td>
-      <td>24.703406</td>
+      <td>21.015766</td>
     </tr>
     <tr>
       <th>min</th>
@@ -991,7 +1107,7 @@ ten_thousand.describe()
       <td>1740.050000</td>
       <td>1748.475000</td>
       <td>1735.625000</td>
-      <td>1723.400000</td>
+      <td>1722.050000</td>
     </tr>
     <tr>
       <th>50%</th>
@@ -1004,7 +1120,7 @@ ten_thousand.describe()
       <td>1761.750000</td>
       <td>1760.000000</td>
       <td>1753.300000</td>
-      <td>1744.350000</td>
+      <td>1737.700000</td>
     </tr>
     <tr>
       <th>75%</th>
@@ -1017,7 +1133,7 @@ ten_thousand.describe()
       <td>1773.800000</td>
       <td>1774.075000</td>
       <td>1763.325000</td>
-      <td>1756.550000</td>
+      <td>1750.675000</td>
     </tr>
     <tr>
       <th>max</th>
@@ -1030,14 +1146,31 @@ ten_thousand.describe()
       <td>1783.400000</td>
       <td>1782.600000</td>
       <td>1772.200000</td>
-      <td>1775.000000</td>
+      <td>1759.500000</td>
     </tr>
   </tbody>
 </table>
 </div>
 
 
+
+### 10,000m Analysis
+
+2020 is not included because of the pandemic year. 
+
+Once again, the 75th, 50th, and 25th percentiles have been shifted, by 12, 9, and 7 seconds, respectively. Check out the charts and study them for a little bit, and see if you notice anything interesting that you think I might have missed. 
+
 ## Final Remarks 
+
+I've been analyzing this data since April and it's been a joy to run the kernel density plots each week. It's always a joyous feeling to make predictions and see them come to life in real world scenarios. 
+
+I was talking the ear off of my family members since the first indoor races of the season, telling them that I thought that the spikes would blow open track and field times. According to the data, we are witnessing a new era in track and field. 
+
+While I still give much credit to the athletes for working extremely hard during quarantine, Nike has also done an amazing job with innovation. 
+
+The addition of ZoomX foam to spikes has been transformational, and I think the outdoor seasons in years to come should be quite thrilling. I feel quite confident in saying that I think a world record is possible in the 1500m this year. 
+
+I figured that the new spikes would cause a linear transformation to the dataset densities, and that has been corroborated by each and every plot. It's truly astounding. 
 
 > If you found something in this project interesting, have a criticism/ suggestion on what I can improve, or would like to collaborate on a project, feel free to shoot me an email, colinfitzgerald@berkeley.edu. 
 
@@ -1045,74 +1178,7 @@ Have a great day. I hope you enjoyed reading this, and thank you for your time.
 
 
 
-The following code below is part of a larger project. I am in the process of generating independent/explanatory variables for this project, as I want to go more in depth in the future to test the impact of the spikes. I have finals coming up so, naturally, I cannot fully dedicate my time to a project such as this. 
 
-
-```python
-#create a unique url for each athlete in the above dataframe 
-def world_athletics_name_creator(df, column_name): 
-    name_list = []
-    for i in range(0, len(df[column_name])):
-        split_name = df[column_name][i].split(" ")
-        url_name = split_name[1] + "+" + split_name[0]
-        url_name = url_name + "&countryCode=&disciplineCode=&gender=&environment="
-        name_list.append(url_name)
-    return name_list 
-```
-
-
-```python
-#append a base url to the unique athlete's url and produce a final list of those 
-def world_athletics_url_generator(list, base_url):
-    final_list = []
-    for i in range(0, len(list)): 
-        final_url = base_url + list[i] 
-        final_list = np.append(final_list, final_url)
-    return final_list 
-```
-
-
-```python
-#use each athlete's generated url to scrape the birth date from their profile.
-def world_athletics_dob_list_maker(arr): 
-    final_births_list = []
-    for i in range(0, len(arr)):
-        page = requests.get(arr[i])
-        soup = BeautifulSoup(page.content, "html.parser")
-        records_table = soup.find_all("table", attrs={"class": "records-table"})
-        table1 = records_table[0]
-        # the head will form our column names
-        body = table1.find_all("tr")
-        # Head values (Column names) are the first items of the body list
-        head = body[0] # 0th item is the header row
-        body_rows = body[1:] # All other items becomes the rest of the rows
-        headings = []
-        for item in head.find_all("th"): # loop through all th elements
-            # convert the th elements to text and strip "\n"
-                item = str(item)
-                cleaned = item.replace("<th>\n", "")
-                even_further = cleaned.replace("\n                    </th>", "")
-                final = even_further.strip()
-            # append the clean column name to headings
-                headings.append(final)
-        all_rows = [] # will be a list for list for all rows
-        for row_num in range(len(body_rows)): # A row at a time
-            row = [] # this will old entries for one row
-            for row_item in body_rows[row_num].find_all("td"): #loop through all row entries
-                # row_item.text removes the tags from the entries
-                # the following regex is to remove \xa0 and \n and comma from row_item.text
-                # xa0 encodes the flag, \n is the newline and comma separates thousands in numbers
-                aa = re.sub("(\xa0)|(\n)|,","",row_item.text)
-                aa_stripped = aa.strip()
-                #append aa to row - note one row entry is being appended
-                row.append(aa_stripped)
-            # append one row to all_rows
-            all_rows.append(row)
-        new_df = pd.DataFrame(data=all_rows,columns=headings)
-        birth_date = new_df["Date of Birth"][0]
-        final_births_list = np.append(final_births_list, birth_date)
-    return final_births_list
-```
 
 
 [Back to Top](#){: .btn .btn--inverse}
