@@ -402,28 +402,6 @@ ten_thousand = y_value_generator("10,000m")
 ## 800m Kernel Density 
 
 
-```python
-ax = sns.kdeplot(
-   data=eight_hundred, x="2012",
-   fill=True, common_norm=False, palette="crest",
-   alpha=.3, linewidth=2, legend = True 
-)
-
-for i in range(2013, 2020): 
-    sns.kdeplot(data=eight_hundred, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-sns.kdeplot(data = eight_hundred, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
-ax.legend(legend_list)
-ax.set_title("Kernel Density for 2012 - Present (800m)")
-ax.set_xlabel("800m Time in Seconds")
-```
-
-
-
-
-    Text(0.5, 0, '800m Time in Seconds')
 
 
 
@@ -591,28 +569,6 @@ eight_hundred.describe()
 ## 1500m Kernel Density  
 
 
-```python
-ax = sns.kdeplot(
-   data=fifteen_hundred, x="2012",
-   fill=True, common_norm=False, palette="crest",
-   alpha=.3, linewidth=2, legend = True 
-)
-
-for i in range(2013, 2020): 
-    sns.kdeplot(data=fifteen_hundred, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-sns.kdeplot(data = fifteen_hundred, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
-ax.legend(legend_list)
-ax.set_title("Kernel Density for 2012 - Present (1500m)")
-ax.set_xlabel("1500m Time in Seconds")
-```
-
-
-
-
-    Text(0.5, 0, '1500m Time in Seconds')
 
 
 
@@ -781,28 +737,6 @@ fifteen_hundred.describe()
 ## 5,000m Kernel Density 
 
 
-```python
-ax = sns.kdeplot(
-   data=five_thousand, x="2012",
-   fill=True, common_norm=False, palette="crest",
-   alpha=.3, linewidth=2, legend = True 
-)
-
-for i in range(2013, 2020): 
-    sns.kdeplot(data=five_thousand, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-sns.kdeplot(data = five_thousand, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
-ax.legend(legend_list)
-ax.set_title("Kernel Density for 2012 - Present (5,000m)")
-ax.set_xlabel("5000m Time in Seconds")
-```
-
-
-
-
-    Text(0.5, 0, '5000m Time in Seconds')
 
 
 
@@ -971,28 +905,6 @@ five_thousand.describe()
 ## 10,000m Kernel Density 
 
 
-```python
-ax = sns.kdeplot(
-   data=ten_thousand, x="2012",
-   fill=True, common_norm=False, palette="crest",
-   alpha=.3, linewidth=2, legend = True 
-)
-
-for i in range(2013, 2020): 
-    sns.kdeplot(data=ten_thousand, x=str(i),ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-sns.kdeplot(data = ten_thousand, x = "2021", ax = ax, fill = True, palette = "crest", alpha = .3, linewidth = 2, legend = True)
-
-legend_list = ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"]
-ax.legend(legend_list)
-ax.set_title("Kernel Density for 2012 - Present (10,000m)")
-ax.set_xlabel("10,000m Time in Seconds")
-```
-
-
-
-
-    Text(0.5, 0, '10,000m Time in Seconds')
 
 
 
