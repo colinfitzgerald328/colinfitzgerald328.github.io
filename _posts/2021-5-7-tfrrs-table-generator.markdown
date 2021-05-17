@@ -386,10 +386,7 @@ ten_thousand = y_value_generator("10,000m")
 The kernel density for the 800m, years 2012-2021. 
 
 
-```python
-eight_hundred.describe()
-#summary statistics for the 800m 
-```
+
 
 
 
@@ -553,10 +550,7 @@ eight_hundred.describe()
 The kernel density for the 1500m, years 2012-2021.
 
 
-```python
-fifteen_hundred.describe()
-#summary statistics for the 1500m 
-```
+
 
 
 
@@ -721,10 +715,7 @@ fifteen_hundred.describe()
 The kernel density for the 5000m, years 2012-2021. 
 
 
-```python
-five_thousand.describe()
-#summary statistics for 5000m
-```
+
 
 
 
@@ -889,10 +880,6 @@ five_thousand.describe()
 The kernel density for the 10,000m, years 2012-2021. 
 
 
-```python
-ten_thousand.describe()
-#summary statistics for 10,000m
-```
 
 
 
