@@ -4,7 +4,7 @@ title:  "Where is the U.S. Economy Headed in 2021?"
 date:   2021-07-8 05:04:00 -0800
 excerpt: "The U.S. economy has been on one of the most turbulent rides in history. After a major recession, it grew strongly for several years but then slowed sharply and fell into another recession, which ended almost eight years ago. How will it perform in the future? The question is not simple to answer because economics is an unpredictable science. "
 categories: 
-  - tutorial
+  - econ
 
 
 toc: true
