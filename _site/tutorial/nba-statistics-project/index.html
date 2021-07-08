@@ -1,0 +1,1208 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<meta name="google-site-verification" content="0Yuz_oShbR2WljkGIaORc8TqhaRZycJiqvasc5bSc4A" />
+
+<!-- begin _includes/seo.html --><title>NBA Statistics Analyzed for Stat 20 Final Project | Colin FitzGerald</title>
+<meta name="description" content="The final project for my introductory statistics course.">
+
+
+  <meta name="author" content="Colin FitzGerald">
+  
+  <meta property="article:author" content="Colin FitzGerald">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Colin FitzGerald">
+<meta property="og:title" content="NBA Statistics Analyzed for Stat 20 Final Project">
+<meta property="og:url" content="http://localhost:4000/tutorial/nba-statistics-project/">
+
+
+  <meta property="og:description" content="The final project for my introductory statistics course.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-12-31T05:04:00-08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorial/nba-statistics-project/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Colin FitzGerald",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Colin FitzGerald Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Colin FitzGerald
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/">Photography Portfolio</a>
+            </li><li class="masthead__menu-item">
+              <a href="/training/">Training Log</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/FitzGerald-Colin-Homework%206-01.jpg" alt="Colin FitzGerald" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Colin FitzGerald</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Berkeley Economics and Data Science student. Aspiring researcher.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/fitzgeraldmultimedia" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+          
+            <li><a href="https://www.strava.com/athletes/37592514" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-strava" aria-hidden="true"></i><span class="label">Strava</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:colinfitzgerald328@gmail.com">
+            <meta itemprop="email" content="colinfitzgerald328@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="NBA Statistics Analyzed for Stat 20 Final Project">
+    <meta itemprop="description" content="The final project for my introductory statistics course.">
+    <meta itemprop="datePublished" content="2020-12-31T05:04:00-08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">NBA Statistics Analyzed for Stat 20 Final Project
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#introduction">Introduction</a></li><li><a href="#background">Background</a></li><li><a href="#variables">Variables</a></li><li><a href="#study-questions">Study Questions</a></li><li><a href="#exploratory-data-analysis--description-of-data">Exploratory Data Analysis &amp; Description of Data</a></li><li><a href="#distribution-of-nba-salaries">Distribution of NBA Salaries</a></li><li><a href="#scatterplots-of-salary-and-body-type-experience-and-performance-stats-variables-from-nba-2020-statistics">Scatterplots of Salary and Body Type, Experience, and Performance Stats Variables from NBA 2020 Statistics</a></li><li><a href="#body-type">Body Type</a></li><li><a href="#salary-and-age">Salary and Age</a></li><li><a href="#salary-and-height">Salary and Height</a></li><li><a href="#salary-and-weight">Salary and Weight</a></li><li><a href="#experience">Experience</a></li><li><a href="#salary-and-games-played-for-the-2019-season">Salary and Games Played for the 2019 Season</a></li><li><a href="#salary-and-average-minutes-per-game">Salary and Average Minutes per Game</a></li><li><a href="#performance-statistics">Performance Statistics</a></li><li><a href="#salary-and-average-points-per-game">Salary and Average Points per Game</a></li><li><a href="#salary-and-average-assists-per-game">Salary and Average Assists per Game</a></li><li><a href="#salary-and-field-goal-percentage">Salary and Field Goal Percentage</a></li><li><a href="#data-analysis">Data Analysis</a></li><li><a href="#question-1">Question 1</a></li><li><a href="#is-the-difference-between-2019-2020-and-2020-2021-average-salary-significant---jasmine-kamalnathan">Is the difference between 2019-2020 and 2020-2021 average salary significant? - Jasmine Kamalnathan</a></li><li><a href="#question-2">Question 2</a></li><li><a href="#do-a-players-body-type-experience-and-performance-statistics-affect-2019-salary-what-are-the-dominant-variables-that-determine-a-players-salary-in-2019">Do a player’s body type, experience, and performance statistics affect 2019 salary? What are the dominant variables that determine a player’s salary in 2019?</a></li><li><a href="#is-the-correlation-of-036-between-salary-and-age-real---jasmine-kamalnathan">Is the correlation of 0.36 between salary and age real? - Jasmine Kamalnathan</a></li><li><a href="#is-the-correlation-of-005-between-salary-and-height-real---victoria-ng">Is the correlation of 0.05 between salary and height real? - Victoria Ng</a></li><li><a href="#is-the-correlation-of-015-between-salary-and-weight-real---stanley-quiros">Is the correlation of 0.15 between salary and weight real? - Stanley Quiros</a></li><li><a href="#is-the-correlation-of-032-between-salary-and-games-played-real---daniel-vermeulen">Is the correlation of 0.32 between salary and games played real? - Daniel Vermeulen</a></li><li><a href="#is-the-correlation-of-060-between-salary-and-average-minutes-played-per-game-real---ruoyi-yang">Is the correlation of 0.60 between salary and average minutes played per game real? - Ruoyi Yang</a></li><li><a href="#is-the-correlation-of-063-between-salary-and-average-points-per-game-real-colin-fitzgerald">Is the correlation of 0.63 between salary and average points per game real? Colin FitzGerald</a></li><li><a href="#is-the-correlation-of-052-between-salary-and-average-assists-per-game-real-colin-fitzgerald">Is the correlation of 0.52 between salary and average assists per game real? Colin FitzGerald</a></li><li><a href="#is-the-correlation-of-013-between-salary-and-field-goal-percentage-real-colin-fitzgerald">Is the correlation of 0.13 between salary and field goal percentage real? Colin FitzGerald</a></li><li><a href="#is-there-a-correlation-between-average-minutes-played-per-game-and-average-points-per-game---jasmine-kamalnathan">Is there a correlation between average minutes played per game and average points per game? - Jasmine Kamalnathan</a></li><li><a href="#is-the-correlation-of-088-between-average-points-per-game-and-average-minutes-per-game-real--jasmine-kamalnathan">Is the correlation of 0.88 between average points per game and average minutes per game real? -Jasmine Kamalnathan</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+
+<span class="n">nba2019</span><span class="o">=</span><span class="n">read</span><span class="p">.</span><span class="nf">csv</span><span class="p">(</span><span class="s2">"/Users/colinfitzgerald/Downloads/nba19.csv"</span><span class="p">)</span>
+<span class="n">nba2020</span><span class="o">=</span><span class="n">read</span><span class="p">.</span><span class="nf">csv</span><span class="p">(</span><span class="s2">"/Users/colinfitzgerald/Downloads/nba20.csv"</span><span class="p">)</span></code></pre></figure>
+
+<h1 id="introduction">Introduction</h1>
+
+<h1 id="background">Background</h1>
+
+<p>NBA players make millions of dollars each year. However, not all players get played the same. For example, during the basketball season of 2013-14, Kobe Bryant of the LA Lakers was paid $30.4 million whereas Dwight Howard earned $20.5 million. The average person may guess that Kobe Bryant simply is a “better player” so deserves a higher salary. This makes sense, but what factors exactly make one player more valuable than another?</p>
+
+<h1 id="variables">Variables</h1>
+
+<p>To explore this question we relied on the 2019 NBA data set which contains several variables including the performance statistics, height, weight, and age of players from different teams along with their salaries. We analyzed the data based on 3 categories:</p>
+
+<p><em>(1) Body Type</em></p>
+
+<p><em>(2) Experience Variables</em></p>
+
+<p><em>(3) Performance Statistics</em></p>
+
+<p>Body Type is measured by the age, height, and weight of the players. Experience is measured by games played (gp) and average minutes played per game (min) during the 2019 season. Performance statistics is measured by average points scored per game (pts), averages assists per game (ast), and field goal percenage (fgp) for the 2019 basketball season.</p>
+
+<h1 id="study-questions">Study Questions</h1>
+<p>Question 1: Is the difference between 2019-2020 and 2020-2021 average salary significant?</p>
+
+<p>Question 2: Do a player’s body type, experience, and performance statistics affect salary? What are the dominant variables that determine a player’s salary?</p>
+
+<h1 id="exploratory-data-analysis--description-of-data">Exploratory Data Analysis &amp; Description of Data</h1>
+
+<p>The data consists of pairs of points from which the correlation coefficient r can be computed when the scatterplot is football shaped. This is when the data is linear with no outliers, when x &amp; y follow the normal curve, and when the data is homoscedastic (when all the vertical strips in a scatter plot show similar amounts of spread).</p>
+
+<p>The scatterplots below are not based on simple random samples and are not foot-ball shaped. However, for the purposes of finding r values, and conducting hypothesis tests on the data, this project assumes the data set is all from a simple random sample of 2020 and 2019  and their scatterplots are foot-ball shaped.</p>
+
+<h1 id="distribution-of-nba-salaries">Distribution of NBA Salaries</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">nba2020</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary19</span><span class="o">.</span><span class="mi">20</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">y</span><span class="o">=..</span><span class="n">density</span><span class="o">..</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_histogram</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s2">"light blue"</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_vline</span><span class="p">(</span><span class="n">xintercept</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">nba2020</span><span class="vg">$salary19</span><span class="o">.</span><span class="mi">20</span><span class="p">)</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"NBA 2019-20 Salaries"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="c1"># Average 19.20 salary</span>
+<span class="n">mean</span><span class="p">(</span><span class="n">nba2020</span><span class="vg">$salary19</span><span class="o">.</span><span class="mi">20</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Jasmine Kamalnathan: This histogram shows the density of NBA players in several salary brackets for the 2019-2020 season. The vertical blue line indicates the average salary in millions of dollars: $7,561,619.</em></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">nba2020</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary20</span><span class="o">.</span><span class="mi">21</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">y</span><span class="o">=..</span><span class="n">density</span><span class="o">..</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_histogram</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"purple"</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s2">"lavender"</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_vline</span><span class="p">(</span><span class="n">xintercept</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">nba2020</span><span class="vg">$salary20</span><span class="o">.</span><span class="mi">21</span><span class="p">,</span> <span class="n">na</span><span class="p">.</span><span class="nf">rm</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">)</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"purple"</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"NBA 2020-21 Salaries"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="c1"># Average 20.21 Salary</span>
+<span class="n">mean</span><span class="p">(</span><span class="n">nba2020</span><span class="vg">$salary20</span><span class="o">.</span><span class="mi">21</span><span class="p">,</span> <span class="n">na</span><span class="p">.</span><span class="nf">rm</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Jasmine Kamalnathan: This histogram shows the density of NBA players in several salary brackets for the 2020-2021 season. The vertical purple line indicates the average salary in millions of dollars: $9,683,054.</em></p>
+
+<h1 id="scatterplots-of-salary-and-body-type-experience-and-performance-stats-variables-from-nba-2020-statistics">Scatterplots of Salary and Body Type, Experience, and Performance Stats Variables from NBA 2020 Statistics</h1>
+
+<h1 id="body-type">Body Type</h1>
+
+<h1 id="salary-and-age">Salary and Age</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nba2019</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">age</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_point</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_smooth</span><span class="p">(</span><span class="nb">method</span><span class="o">=</span><span class="s2">"lm"</span><span class="p">,</span> <span class="n">se</span><span class="o">=</span><span class="no">F</span><span class="p">)</span><span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Scatterplot of NBA 2019 Salary vs Age"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"(Age)"</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Jasmine Kamalnathan</em></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$age</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span></code></pre></figure>
+
+<p>The correlation coefficient between 2019 salary and age is apprroximately 0.36.</p>
+
+<h1 id="salary-and-height">Salary and Height</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nba2019</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">height</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_point</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_smooth</span><span class="p">(</span><span class="nb">method</span><span class="o">=</span><span class="s2">"lm"</span><span class="p">,</span> <span class="n">se</span><span class="o">=</span><span class="no">F</span><span class="p">)</span><span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Scatterplot of NBA 2019 Salary vs Height"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Height (inches)"</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Victoria Ng</em></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$height</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span></code></pre></figure>
+
+<p>The correlation coefficient between 2019 salary and height is apprroximately 0.05.</p>
+
+<h1 id="salary-and-weight">Salary and Weight</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nba2019</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">weight</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_point</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_smooth</span><span class="p">(</span><span class="nb">method</span><span class="o">=</span><span class="s2">"lm"</span><span class="p">,</span> <span class="n">se</span><span class="o">=</span><span class="no">F</span><span class="p">)</span><span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Scatterplot of NBA 2019 Salary vs Weight"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Weight (pounds)"</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Stanley Quiros</em></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$weight</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span></code></pre></figure>
+
+<p>The correlation coefficient between 2019 salary and weight is apprroximately 0.15.</p>
+
+<h1 id="experience">Experience</h1>
+
+<h1 id="salary-and-games-played-for-the-2019-season">Salary and Games Played for the 2019 Season</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nba2019</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">gp</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_point</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"darkseagreen4"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_smooth</span><span class="p">(</span><span class="nb">method</span><span class="o">=</span><span class="s2">"lm"</span><span class="p">,</span> <span class="n">se</span><span class="o">=</span><span class="no">F</span><span class="p">)</span><span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Scatterplot of NBA 2019 Salary vs Games Played"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Games Played (per player)"</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Daniel Vermeulen</em></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$gp</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span></code></pre></figure>
+
+<p>The correlation coefficient between 2019 salary and games played is apprroximately 0.32.</p>
+
+<h1 id="salary-and-average-minutes-per-game">Salary and Average Minutes per Game</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nba2019</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">min</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_point</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_smooth</span><span class="p">(</span><span class="nb">method</span><span class="o">=</span><span class="s2">"lm"</span><span class="p">,</span> <span class="n">se</span><span class="o">=</span><span class="no">F</span><span class="p">)</span><span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Scatterplot of NBA 2019 Salary vs Minutes Played"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Minutes Played"</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Ruoyi Yang</em></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$min</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span></code></pre></figure>
+
+<p>The correlation coefficient between 2019 salary and average minutes played per game is apprroximately 0.60.</p>
+
+<h1 id="performance-statistics">Performance Statistics</h1>
+
+<h1 id="salary-and-average-points-per-game">Salary and Average Points per Game</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">nba2019</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">pts</span><span class="p">))</span><span class="o">+</span><span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">)</span><span class="o">+</span><span class="n">geom_smooth</span><span class="p">(</span><span class="nb">method</span><span class="o">=</span><span class="n">lm</span><span class="p">,</span><span class="n">se</span><span class="o">=</span><span class="no">F</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">"red"</span><span class="p">)</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Scatterplot of NBA 2019 Salary vs Points"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Points"</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Colin FitzGerald</em></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">salaryvspts</span><span class="o">=</span><span class="n">data</span><span class="p">.</span><span class="nf">frame</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span><span class="n">nba2019</span><span class="vg">$pts</span><span class="p">)</span>
+<span class="n">salaryvspts</span><span class="o">=</span><span class="n">na</span><span class="p">.</span><span class="nf">omit</span><span class="p">(</span><span class="n">salaryvspts</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">salaryvspts</span><span class="vg">$nba2019</span><span class="p">.</span><span class="nf">salary</span><span class="p">,</span><span class="n">salaryvspts</span><span class="vg">$nba2019</span><span class="p">.</span><span class="nf">pts</span><span class="p">)</span></code></pre></figure>
+
+<p>The correlation coefficient between 2019 salary and average points per game is apprroximately 0.63.</p>
+
+<h1 id="salary-and-average-assists-per-game">Salary and Average Assists per Game</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nba2019</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">ast</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_smooth</span><span class="p">(</span><span class="nb">method</span><span class="o">=</span><span class="s2">"lm"</span><span class="p">,</span> <span class="n">se</span><span class="o">=</span><span class="no">F</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">"red"</span><span class="p">)</span><span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Scatterplot of NBA 2019 Salary vs Assists"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Assists"</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Colin FitzGerald</em></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">salaryvsassists</span><span class="o">=</span><span class="n">data</span><span class="p">.</span><span class="nf">frame</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span><span class="n">nba2019</span><span class="vg">$ast</span><span class="p">)</span>
+<span class="n">salaryvsassists</span><span class="o">=</span><span class="n">na</span><span class="p">.</span><span class="nf">omit</span><span class="p">(</span><span class="n">salaryvsassists</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">salaryvsassists</span><span class="vg">$nba2019</span><span class="p">.</span><span class="nf">salary</span><span class="p">,</span><span class="n">salaryvsassists</span><span class="vg">$nba2019</span><span class="p">.</span><span class="nf">ast</span><span class="p">)</span></code></pre></figure>
+
+<p>The correlation coefficient between 2019 salary and average assists per game is apprroximately 0.52.</p>
+
+<h1 id="salary-and-field-goal-percentage">Salary and Field Goal Percentage</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nba2019</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">salary</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">fgp</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_point</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_smooth</span><span class="p">(</span><span class="nb">method</span><span class="o">=</span><span class="s2">"lm"</span><span class="p">,</span> <span class="n">se</span><span class="o">=</span><span class="no">F</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">"red"</span><span class="p">)</span><span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Scatterplot of NBA 2019 Salary vs Field Goal Percentage"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Salary (millions of dollars)"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Field Goal Percentage"</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Created by Colin FitzGerald</em></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">salaryvsfgp</span><span class="o">=</span><span class="n">data</span><span class="p">.</span><span class="nf">frame</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span><span class="n">nba2019</span><span class="vg">$fgp</span><span class="p">)</span>
+<span class="n">salaryvsfgp</span><span class="o">=</span><span class="n">na</span><span class="p">.</span><span class="nf">omit</span><span class="p">(</span><span class="n">salaryvsfgp</span><span class="p">)</span>
+<span class="n">cor</span><span class="p">(</span><span class="n">salaryvsfgp</span><span class="vg">$nba2019</span><span class="p">.</span><span class="nf">salary</span><span class="p">,</span><span class="n">salaryvsfgp</span><span class="vg">$nba2019</span><span class="p">.</span><span class="nf">fgp</span><span class="p">)</span></code></pre></figure>
+
+<p>The correlation coefficient between 2019 salary and field goal percentage is apprroximately 0.13.</p>
+
+<h1 id="data-analysis">Data Analysis</h1>
+
+<h1 id="question-1">Question 1</h1>
+
+<h1 id="is-the-difference-between-2019-2020-and-2020-2021-average-salary-significant---jasmine-kamalnathan">Is the difference between 2019-2020 and 2020-2021 average salary significant? - <em>Jasmine Kamalnathan</em></h1>
+
+<p>Null: Average salary for 2019-2020 is $7,561,619 while the average salary for 2020-2021 is $9,683,054. This difference is due to chance. The average salary in 2019-2020 and 2020-2021 is the same.</p>
+
+<p>Alternative: The difference between 2019-2020 and 2020-2021 average salary is not due to chance. The 2020-2021 season has a higher average salary than 2019-2020.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="c1">#There are 464 filled observations in salary19.20.</span>
+<span class="no">SD19</span><span class="o">.</span><span class="mi">20</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">nba2020</span><span class="vg">$salary19</span><span class="o">.</span><span class="mi">20</span><span class="p">)</span>
+<span class="no">SEsum19</span><span class="o">.</span><span class="mi">20</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">464</span><span class="p">)</span> <span class="o">*</span> <span class="no">SD19</span><span class="o">.</span><span class="mi">20</span>
+<span class="no">SEavg19</span><span class="o">.</span><span class="mi">20</span> <span class="o">=</span> <span class="no">SEsum19</span><span class="o">.</span><span class="mi">20</span><span class="o">/</span><span class="mi">464</span>
+
+<span class="c1">#There are 319 filled observations in salary20.21 excluding emply cells (n/a).</span>
+<span class="no">SD20</span><span class="o">.</span><span class="mi">21</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">nba2020</span><span class="vg">$salary20</span><span class="o">.</span><span class="mi">21</span><span class="p">,</span> <span class="n">na</span><span class="p">.</span><span class="nf">rm</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">)</span>
+<span class="no">SEsum20</span><span class="o">.</span><span class="mi">21</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">319</span><span class="p">)</span> <span class="o">*</span> <span class="no">SD20</span><span class="o">.</span><span class="mi">21</span>
+<span class="no">SEavg20</span><span class="o">.</span><span class="mi">21</span> <span class="o">=</span> <span class="no">SEsum20</span><span class="o">.</span><span class="mi">21</span><span class="o">/</span><span class="mi">319</span>
+
+<span class="no">SEdifference</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="no">SEavg19</span><span class="o">.</span><span class="mi">20</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="no">SEavg20</span><span class="o">.</span><span class="mi">21</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">nba2020</span><span class="vg">$salary20</span><span class="o">.</span><span class="mi">21</span><span class="p">,</span> <span class="n">na</span><span class="p">.</span><span class="nf">rm</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">)</span> <span class="o">-</span> <span class="n">mean</span><span class="p">(</span><span class="n">nba2020</span><span class="vg">$salary19</span><span class="o">.</span><span class="mi">20</span><span class="p">)</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="no">SEdifference</span>
+
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">z</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt; 3.059) is about 0.11%.</p>
+
+<p>Reject the null. The difference in 2019-20 and 2020-21 in average salary is not due to chance. There are factors causing there to be a higher average salary in 2020-21 than 2019-20.</p>
+
+<h1 id="question-2">Question 2</h1>
+<h1 id="do-a-players-body-type-experience-and-performance-statistics-affect-2019-salary-what-are-the-dominant-variables-that-determine-a-players-salary-in-2019">Do a player’s body type, experience, and performance statistics affect 2019 salary? What are the dominant variables that determine a player’s salary in 2019?</h1>
+
+<h1 id="is-the-correlation-of-036-between-salary-and-age-real---jasmine-kamalnathan">Is the correlation of 0.36 between salary and age real? - <em>Jasmine Kamalnathan</em></h1>
+
+<p>Null: There is no correlation between the salary of players and their age.</p>
+
+<p>Alternative: There is a real relationship between the salary of players and their age.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+
+<span class="c1">#Finding SE corresponding to the slope of the regression</span>
+<span class="n">ageR</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$age</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span>
+  <span class="c1">#removes ages where salary was n/a</span>
+  <span class="n">newnba2019</span> <span class="o">=</span> <span class="n">filter</span><span class="p">(</span><span class="n">nba2019</span><span class="p">,</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">#SE for slope of reg line = (sqrt(1-r^2)*SDy)/(sqrt(n-2)*SDx)</span>
+<span class="no">SDnba2019age</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$age</span><span class="p">)</span>
+<span class="no">SDnba2019salary</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$salary</span><span class="p">)</span>
+
+<span class="no">SEsalaryvsage</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ageR</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019age</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">470</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019salary</span><span class="p">)</span>
+<span class="n">ageM</span> <span class="o">=</span> <span class="n">ageR</span><span class="o">*</span><span class="no">SDnba2019age</span><span class="o">/</span><span class="no">SDnba2019salary</span>
+
+<span class="n">zage</span> <span class="o">=</span> <span class="p">(</span><span class="n">ageM</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span> <span class="no">SEsalaryvsage</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">zage</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt; 8.301833) = 0%</p>
+
+<p>We reject the null. The correlation of 0.35 between salary and age is real.</p>
+
+<h1 id="is-the-correlation-of-005-between-salary-and-height-real---victoria-ng">Is the correlation of 0.05 between salary and height real? - <em>Victoria Ng</em></h1>
+
+<p>Null: There is no real correlation between the salary of players and their heights.</p>
+
+<p>Alternative: There is a real relationship between the salary of players and their heights.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="c1">#Finding SE corresponding to the slope of the regression</span>
+<span class="n">heightR</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$height</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span>
+<span class="c1">#SE for slope of reg line = (sqrt(1-r^2)*SDy)/(sqrt(n-2)*SDx)</span>
+<span class="no">SDnba2019height</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$height</span><span class="p">)</span>
+<span class="no">SDnba2019salary</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$salary</span><span class="p">)</span>
+
+<span class="no">SEsalaryvsheight</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">heightR</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019height</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">470</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019salary</span><span class="p">)</span>
+<span class="n">heightM</span> <span class="o">=</span> <span class="n">heightR</span><span class="o">*</span><span class="no">SDnba2019height</span><span class="o">/</span><span class="no">SDnba2019salary</span>
+
+<span class="n">zheight</span> <span class="o">=</span> <span class="p">(</span><span class="n">heightM</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span> <span class="no">SEsalaryvsheight</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">zheight</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt; 1.166586) is about 12%.</p>
+
+<p>We cannot reject the null. The correlation of 0.05 between salary and height is not real.</p>
+
+<h1 id="is-the-correlation-of-015-between-salary-and-weight-real---stanley-quiros">Is the correlation of 0.15 between salary and weight real? - <em>Stanley Quiros</em></h1>
+
+<p>Null: There is no correlation between the salary of players and their weights.</p>
+
+<p>Alternative: There is a real relationship between the salary of players and their weights.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">weightR</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$weight</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span>
+<span class="no">SDnba2019weight</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$weight</span><span class="p">)</span>
+<span class="no">SDnba2019salary</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$salary</span><span class="p">)</span>
+
+<span class="no">SEsalaryvsweight</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">weightR</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019weight</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">470</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019salary</span><span class="p">)</span>
+<span class="n">weightM</span> <span class="o">=</span> <span class="n">weightR</span><span class="o">*</span><span class="no">SDnba2019weight</span><span class="o">/</span><span class="no">SDnba2019salary</span>
+
+<span class="n">zweight</span> <span class="o">=</span> <span class="p">(</span><span class="n">weightM</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span> <span class="no">SEsalaryvsweight</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">zweight</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt; 1.166586) is about 0.06%.</p>
+
+<p>We reject the null. The correlation of 0.15 between salary and weight is real.</p>
+
+<h1 id="is-the-correlation-of-032-between-salary-and-games-played-real---daniel-vermeulen">Is the correlation of 0.32 between salary and games played real? - <em>Daniel Vermeulen</em></h1>
+
+<p>Null: It is due to chance. There is no correlation between the salary of players and the number of games played.</p>
+
+<p>Alternative: It is not due to chance. There is a real relationship between the salary of players and the number of games played.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+
+<span class="n">gpR</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$gp</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span>
+<span class="no">SDnba2019gp</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">filter</span><span class="p">(</span><span class="n">nba2019</span><span class="p">,</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="vg">$gp</span><span class="p">)</span>
+<span class="no">SDnba2019salary</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">filter</span><span class="p">(</span><span class="n">nba2019</span><span class="p">,</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="vg">$salary</span><span class="p">)</span>
+
+<span class="no">SEsalaryvsgp</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">gpR</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019gp</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">470</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019salary</span><span class="p">)</span>
+<span class="n">gpM</span> <span class="o">=</span> <span class="n">gpR</span><span class="o">*</span><span class="no">SDnba2019gp</span><span class="o">/</span><span class="no">SDnba2019salary</span>
+<span class="n">zgp</span> <span class="o">=</span> <span class="p">(</span><span class="n">gpM</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span> <span class="no">SEsalaryvsgp</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">zgp</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt; 7.26176) is essentially 0%.</p>
+
+<p>Since the P-value is so small, we reject the null. This means that the correlation of 0.32 between player salary and the number of games played is real.</p>
+
+<h1 id="is-the-correlation-of-060-between-salary-and-average-minutes-played-per-game-real---ruoyi-yang">Is the correlation of 0.60 between salary and average minutes played per game real? - <em>Ruoyi Yang</em></h1>
+
+<p>Null: There is no correlation between the salary of players and average minutes played per game.</p>
+
+<p>Alternative: There is a real relationship between the salary of players and average minutes played per game.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="c1">#Finding SE corresponding to the slope of the regression</span>
+<span class="n">minR</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$min</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span>
+<span class="c1">#SE for slope of reg line = (sqrt(1-r^2)*SDy)/(sqrt(n-2)*SDx)</span>
+<span class="no">SDnba2019min</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$min</span><span class="p">)</span>
+<span class="no">SDnba2019salary</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$salary</span><span class="p">)</span>
+
+<span class="no">SEsalaryvsmin</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">minR</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019min</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">470</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019salary</span><span class="p">)</span>
+<span class="n">minM</span> <span class="o">=</span> <span class="n">minR</span><span class="o">*</span><span class="no">SDnba2019min</span><span class="o">/</span><span class="no">SDnba2019salary</span>
+
+<span class="n">zmin</span> <span class="o">=</span> <span class="p">(</span><span class="n">minM</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span> <span class="no">SEsalaryvsmin</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">zmin</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt; 16.16437) is essentially 0%.</p>
+
+<p>We reject the null. The correlation of 0.60 between salary and average minutes played per game is real.</p>
+
+<h1 id="is-the-correlation-of-063-between-salary-and-average-points-per-game-real-colin-fitzgerald">Is the correlation of 0.63 between salary and average points per game real? <em>Colin FitzGerald</em></h1>
+
+<p>Null: There is no linear relationship between the salary of players and average points per game.</p>
+
+<p>Alternative: There is a real linear relationship between the salary of players and average points per game.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="c1">#Finding SE corresponding to the slope of the regression</span>
+<span class="n">ptsR</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$pts</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span>
+<span class="c1">#SE for slope of reg line = (sqrt(1-r^2)*SDy)/(sqrt(n-2)*SDx)</span>
+<span class="no">SDnba2019pts</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$pts</span><span class="p">)</span>
+<span class="no">SDnba2019salary</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$salary</span><span class="p">)</span>
+
+<span class="no">SEsalaryvspts</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ptsR</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019pts</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">470</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019salary</span><span class="p">)</span>
+<span class="n">ptsM</span> <span class="o">=</span> <span class="n">ptsR</span><span class="o">*</span><span class="no">SDnba2019pts</span><span class="o">/</span><span class="no">SDnba2019salary</span>
+
+<span class="n">zpts</span> <span class="o">=</span> <span class="p">(</span><span class="n">ptsM</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span> <span class="no">SEsalaryvspts</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">zpts</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt;  17.77685) is essentially 0%.</p>
+
+<p>We reject the null. The p-value of 0% is highly statistically significant. The correlation of 0.63 between salary and average points per game is real. There is sufficient evidence that there is a linear relationship between salary and average points scored per game.</p>
+
+<h1 id="is-the-correlation-of-052-between-salary-and-average-assists-per-game-real-colin-fitzgerald">Is the correlation of 0.52 between salary and average assists per game real? <em>Colin FitzGerald</em></h1>
+
+<p>Null: There isn’t a linear relationship between the salary of players and average assists per game.</p>
+
+<p>Alternative: There is a real linear relationship between the salary of players and average assists per game.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="c1">#Finding SE corresponding to the slope of the regression</span>
+<span class="n">astR</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$ast</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span>
+<span class="c1">#SE for slope of reg line = (sqrt(1-r^2)*SDy)/(sqrt(n-2)*SDx)</span>
+<span class="no">SDnba2019ast</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$ast</span><span class="p">)</span>
+<span class="no">SDnba2019salary</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$salary</span><span class="p">)</span>
+
+<span class="no">SEsalaryvsast</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">astR</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019ast</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">470</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019salary</span><span class="p">)</span>
+<span class="n">astM</span> <span class="o">=</span> <span class="n">astR</span><span class="o">*</span><span class="no">SDnba2019ast</span><span class="o">/</span><span class="no">SDnba2019salary</span>
+
+<span class="n">zast</span> <span class="o">=</span> <span class="p">(</span><span class="n">astM</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span> <span class="no">SEsalaryvsast</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">zast</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt;  13.12086) is essentially 0%.</p>
+
+<p>We reject the null. The p-value of 0% is highly statistically significant. The correlation of 0.52 between salary and average assists per game is real. There is sufficient evidence that there is a linear relationship between salary and average assists per game.</p>
+
+<h1 id="is-the-correlation-of-013-between-salary-and-field-goal-percentage-real-colin-fitzgerald">Is the correlation of 0.13 between salary and field goal percentage real? <em>Colin FitzGerald</em></h1>
+
+<p>Null: There isn’t a linear relationship between the salary of players and field goal percentage.</p>
+
+<p>Alternative: There is a real linear relationship between the salary of players and field goal percentage.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="c1">#Finding SE corresponding to the slope of the regression</span>
+<span class="n">fgpR</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$salary</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$fgp</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span>
+<span class="c1">#SE for slope of reg line = (sqrt(1-r^2)*SDy)/(sqrt(n-2)*SDx)</span>
+<span class="no">SDnba2019fgp</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$fgp</span><span class="p">,</span> <span class="n">na</span><span class="p">.</span><span class="nf">rm</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">)</span>
+<span class="no">SDnba2019salary</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$salary</span><span class="p">)</span>
+
+<span class="no">SEsalaryvsfgp</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">fgpR</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019fgp</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">470</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019salary</span><span class="p">)</span>
+<span class="n">fgpM</span> <span class="o">=</span> <span class="n">fgpR</span><span class="o">*</span><span class="no">SDnba2019fgp</span><span class="o">/</span><span class="no">SDnba2019salary</span>
+
+<span class="n">zfgp</span> <span class="o">=</span> <span class="p">(</span><span class="n">fgpM</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span> <span class="no">SEsalaryvsfgp</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">zfgp</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt;  2.835834) is essentially 0.2%.</p>
+
+<p>We reject the null at the 1% level. The correlation of 0.13 between salary and field goal percentage is real. There is sufficient evidence that there is a linear relationship between salary and field goal percentage.</p>
+
+<h1 id="is-there-a-correlation-between-average-minutes-played-per-game-and-average-points-per-game---jasmine-kamalnathan">Is there a correlation between average minutes played per game and average points per game? - <em>Jasmine Kamalnathan</em></h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nba2019</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pts</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">min</span><span class="p">))</span> <span class="o">+</span>
+  <span class="n">geom_point</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span>
+  <span class="n">geom_smooth</span><span class="p">(</span><span class="nb">method</span><span class="o">=</span><span class="s2">"lm"</span><span class="p">,</span> <span class="n">se</span><span class="o">=</span><span class="no">F</span><span class="p">)</span><span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Scatterplot of NBA 2019 Points and Minutes Played"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Points (average per game)"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Minutes (average per game)"</span><span class="p">)</span>
+
+<span class="n">mingpr</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$pts</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$min</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span></code></pre></figure>
+
+<p>The correlation between average points per game and average minutes per game is of 0.88.</p>
+
+<h1 id="is-the-correlation-of-088-between-average-points-per-game-and-average-minutes-per-game-real--jasmine-kamalnathan">Is the correlation of 0.88 between average points per game and average minutes per game real? -<em>Jasmine Kamalnathan</em></h1>
+
+<p>Null: There is no correlation between average points per game and average minutes per game.</p>
+
+<p>Alternative: There is a real relationship between average points per game and average minutes per game.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">knitr</span><span class="o">::</span><span class="n">opts_chunk</span><span class="vg">$set</span><span class="p">(</span>
+	<span class="n">echo</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+	<span class="n">message</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">,</span>
+	<span class="n">warning</span> <span class="o">=</span> <span class="no">FALSE</span>
+<span class="p">)</span>
+<span class="c1">#Finding SE corresponding to the slope of the regression</span>
+<span class="n">minptsR</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="n">nba2019</span><span class="vg">$min</span><span class="p">,</span> <span class="n">nba2019</span><span class="vg">$pts</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s2">"complete.obs"</span><span class="p">)</span>
+<span class="c1">#SE for slope of reg line = (sqrt(1-r^2)*SDy)/(sqrt(n-2)*SDx)</span>
+<span class="no">SDnba2019pts</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$pts</span><span class="p">,</span> <span class="n">na</span><span class="p">.</span><span class="nf">rm</span> <span class="o">=</span> <span class="no">TRUE</span><span class="p">)</span>
+<span class="no">SDnba2019min</span> <span class="o">=</span> <span class="n">sd</span><span class="p">(</span><span class="n">newnba2019</span><span class="vg">$min</span><span class="p">)</span>
+
+<span class="no">SEptsvsmin</span> <span class="o">=</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">minptsR</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019min</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">470</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="no">SDnba2019pts</span><span class="p">)</span>
+<span class="n">minptsM</span> <span class="o">=</span> <span class="n">minptsR</span><span class="o">*</span><span class="no">SDnba2019min</span><span class="o">/</span><span class="no">SDnba2019pts</span>
+
+<span class="n">zminpts</span> <span class="o">=</span> <span class="p">(</span><span class="n">minptsM</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span> <span class="no">SEptsvsmin</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">pnorm</span><span class="p">(</span><span class="n">zminpts</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span></code></pre></figure>
+
+<p>P (z &gt;  39.78833) is essentially 0.2%.</p>
+
+<p>We reject the null. The correlation of 0.88 between between average points per game and average minutes per game.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>This research project aimed to answer:</p>
+
+<p><em>Question 1: Is the difference between 2019-2020 and 2020-2021 average salary significant?</em></p>
+
+<p>The two sample hypthosis test using the SE difference between 2019-2020 and 2020-2021 average salary showed the the difference between the average salaries in both seasons is real.</p>
+
+<p><em>Question 2: Do a player’s body type, experience, and performance statistics affect salary? What are the dominant variables that determine a player’s salary?</em></p>
+
+<p>Body Type: The correlation between age and salary and weight and salary are real. The correlation between age and salary is 0.35 and the correlation between salary and weight is 0.15. While these correlations are real, the correlation between weight and salary doesn’t seem very important given that the correlation isn’t very strong. The correlation between height and salary is very small at 0.05, and so there is no real relationship between the two variables. Age is the most dominant “body type” variable analyzed that is a partial predictor salary.</p>
+
+<p>Performance Statistics: The correlation between all performance statistics variables and salary are real. The correlation between salary and games played in the 2019 season is 0.32 and the correlation between salary and average minutes played per game is 0.62. While both of these correlations are real, average minutes played per game is the more dominant “performance statistic” variable analyzed that is a partial predictor of salary.</p>
+
+<p>Experience: The correlation between all experience variables and salary are real. The correlation between average points per game and salary, assists per game and salary, and field goal percentage and salary is 0.63,0.52, and 0.15 respectively. While all of these correlations are real, only the correlations beteen average points per game and salary and assists per game and salary seem important, since the correlation between field goal percentage and salary is weak. Average points per game is the most dominant “experience” variable analyzed that is a partial predictor salary.</p>
+
+<p>Of all variables compared to salary, average minutes played per game and average points per game are the strongest predictors of salary. There turned out to be a strong correlation of 0.88 between minutes played per game and average points per game. A hypothesis test for the slope of this regression line was conducted and that strong correlation is real.</p>
+
+<p>This all makes sense. The most dominant variables that relate to salary are average minutes played per game and average points per game. The more points a player scores, the higher they tend to be paid, likely because they are more valuable to the success of the team. The strong correlation between average minutes played per game and average points per game likely exists because the more points a player is able to score, the longer they are kept on the court and off the bench. Of the variables studied, the highest predictor of salary seems to be a player’s abilty to score points. The more points scored per game, the higher the salary tends to be.</p>
+
+<h1 id="references">References</h1>
+
+<p>https://thesportjournal.org/article/determinants-of-nba-player-salaries/</p>
+
+<p><a href="#" class="btn btn--inverse">Back to Top</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-12-31T05:04:00-08:00">December 31, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=NBA+Statistics+Analyzed+for+Stat+20+Final+Project%20http%3A%2F%2Flocalhost%3A4000%2Ftutorial%2Fnba-statistics-project%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftutorial%2Fnba-statistics-project%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftutorial%2Fnba-statistics-project%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/tutorial/threshold-development/" class="pagination--pager" title="Threshold Development From 2017 to 2020
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/tfrrs-table-generator/" rel="permalink">Collegiate Track and Field Data, Summarized
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          10 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Some data analysis. Project updates daily to weekly depending on my availability.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/collegiate-running-data/" rel="permalink">Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/PricklyPearInvitational/" rel="permalink">Prickly Pear Invitational Split Analysis
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Visualizing the 400m splits of each athlete in the Men’s 3000m run at the Prickly Pear Invitational.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/socialforces/" rel="permalink">Modeling Social Forces in Microsoft Excel
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Econ 138 PS3: Modeling Social Forces using Microsoft Excel.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://github.com/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.instagram.com/fitzgeraldmultimedia" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://www.strava.com/athletes/37592514" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-strava" aria-hidden="true"></i> Strava</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Colin FitzGerald. Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

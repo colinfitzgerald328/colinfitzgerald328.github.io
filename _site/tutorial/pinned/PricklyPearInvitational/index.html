@@ -1,0 +1,745 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<meta name="google-site-verification" content="0Yuz_oShbR2WljkGIaORc8TqhaRZycJiqvasc5bSc4A" />
+
+<!-- begin _includes/seo.html --><title>Prickly Pear Invitational Split Analysis | Colin FitzGerald</title>
+<meta name="description" content="Visualizing the 400m splits of each athlete in the Men’s 3000m run at the Prickly Pear Invitational.">
+
+
+  <meta name="author" content="Colin FitzGerald">
+  
+  <meta property="article:author" content="Colin FitzGerald">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Colin FitzGerald">
+<meta property="og:title" content="Prickly Pear Invitational Split Analysis">
+<meta property="og:url" content="http://localhost:4000/tutorial/pinned/PricklyPearInvitational/">
+
+
+  <meta property="og:description" content="Visualizing the 400m splits of each athlete in the Men’s 3000m run at the Prickly Pear Invitational.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-02-07T05:04:00-08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorial/pinned/PricklyPearInvitational/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Colin FitzGerald",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Colin FitzGerald Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Colin FitzGerald
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/">Photography Portfolio</a>
+            </li><li class="masthead__menu-item">
+              <a href="/training/">Training Log</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/FitzGerald-Colin-Homework%206-01.jpg" alt="Colin FitzGerald" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Colin FitzGerald</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Berkeley Economics and Data Science student. Aspiring researcher.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/fitzgeraldmultimedia" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+          
+            <li><a href="https://www.strava.com/athletes/37592514" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-strava" aria-hidden="true"></i><span class="label">Strava</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:colinfitzgerald328@gmail.com">
+            <meta itemprop="email" content="colinfitzgerald328@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Prickly Pear Invitational Split Analysis">
+    <meta itemprop="description" content="Visualizing the 400m splits of each athlete in the Men’s 3000m run at the Prickly Pear Invitational.">
+    <meta itemprop="datePublished" content="2021-02-07T05:04:00-08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Prickly Pear Invitational Split Analysis
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              
+
+            </nav>
+          </aside>
+        
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> 
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">datascience</span> <span class="kn">import</span> <span class="o">*</span> 
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> 
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p3</span> <span class="o">=</span> <span class="n">Table</span><span class="p">.</span><span class="n">read_table</span><span class="p">(</span><span class="s">"p3.csv"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p3</span>
+</code></pre></div></div>
+
+<table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Split</th> <th>Marc Scott (1) </th> <th>Grant Fisher (2)</th> <th>Sean McGorty (3) </th> <th>Joe Klecker (4) </th> <th>Morgan McDonald (5)  </th> <th>Evan Jager (6)</th> <th>Woody Kincaid (7)</th> <th>Brian Barazza (8)</th> <th>Kieran Tuntivate (9)</th> <th>Biya Simbassa (10)</th> <th>John Reniewicki (11)</th> <th>Johnny Gregorek (12)</th> <th>Chris Derrick (13</th> <th>Joey Berriatua (14) </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>600  </td> <td>63.148         </td> <td>64.052          </td> <td>64.253           </td> <td>64.715          </td> <td>64.648               </td> <td>64.809        </td> <td>64.542           </td> <td>63.754           </td> <td>64.651              </td> <td>63.903            </td> <td>63.775              </td> <td>63.873              </td> <td>64.755           </td> <td>63.257              </td>
+        </tr>
+        <tr>
+            <td>1000 </td> <td>62.634         </td> <td>62.422          </td> <td>62.128           </td> <td>62.113          </td> <td>62.719               </td> <td>62.125        </td> <td>62.386           </td> <td>62.306           </td> <td>62.69               </td> <td>62.378            </td> <td>62.253              </td> <td>62.676              </td> <td>62.353           </td> <td>62.702              </td>
+        </tr>
+        <tr>
+            <td>1400 </td> <td>62.755         </td> <td>62.221          </td> <td>62.336           </td> <td>62.32           </td> <td>62.542               </td> <td>62.415        </td> <td>62.658           </td> <td>62.535           </td> <td>62.502              </td> <td>62.451            </td> <td>62.894              </td> <td>62.542              </td> <td>62.658           </td> <td>62.743              </td>
+        </tr>
+        <tr>
+            <td>1800 </td> <td>62.325         </td> <td>62.254          </td> <td>61.551           </td> <td>61.855          </td> <td>62.413               </td> <td>61.936        </td> <td>62.527           </td> <td>62.52            </td> <td>61.999              </td> <td>62.686            </td> <td>62.734              </td> <td>62.218              </td> <td>63.25            </td> <td>62.805              </td>
+        </tr>
+        <tr>
+            <td>2200 </td> <td>60.841         </td> <td>60.918          </td> <td>60.84            </td> <td>60.92           </td> <td>61.457               </td> <td>61.232        </td> <td>62.478           </td> <td>61.193           </td> <td>62.603              </td> <td>61.586            </td> <td>62.705              </td> <td>61.349              </td> <td>64.259           </td> <td>63.521              </td>
+        </tr>
+        <tr>
+            <td>2600 </td> <td>59.649         </td> <td>59.637          </td> <td>59.835           </td> <td>59.653          </td> <td>58.97                </td> <td>60.134        </td> <td>63.363           </td> <td>61.002           </td> <td>63.759              </td> <td>62.7              </td> <td>64.268              </td> <td>61.935              </td> <td>64.843           </td> <td>71.49               </td>
+        </tr>
+        <tr>
+            <td>3000 </td> <td>54.627         </td> <td>55.556          </td> <td>56.051           </td> <td>57.357          </td> <td>58.769               </td> <td>59.514        </td> <td>57.395           </td> <td>63.534           </td> <td>59.76               </td> <td>62.303            </td> <td>60.217              </td> <td>64.277              </td> <td>65.555           </td> <td>70.306              </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p3</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="s">"Split"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Distance (Meters)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Split Time in Seconds"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text(0, 0.5, 'Split Time in Seconds')
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_5_1.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p3</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="s">"Split"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Distance (Meters)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Split Time in Seconds"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">62</span><span class="p">,</span> <span class="mi">65</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(62.0, 65.0)
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_6_1.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p3</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="s">"Split"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Distance (Meters)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Split Time in Seconds"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1400</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">61.5</span><span class="p">,</span> <span class="mi">63</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(61.5, 63.0)
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_7_1.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p3</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="s">"Split"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Distance (Meters)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Split Time in Seconds"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">1400</span><span class="p">,</span> <span class="mi">1800</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="mf">63.5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(61.0, 63.5)
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_8_1.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p3</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="s">"Split"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Distance (Meters)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Split Time in Seconds"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">1800</span><span class="p">,</span> <span class="mi">2200</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mf">64.5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(60.0, 64.5)
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_9_1.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p3</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="s">"Split"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Distance (Meters)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Split Time in Seconds"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">2200</span><span class="p">,</span> <span class="mi">2600</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">58.5</span><span class="p">,</span> <span class="mi">65</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(58.5, 65.0)
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_10_1.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p3</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="s">"Split"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Distance (Meters)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Split Time in Seconds"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">2600</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">54</span><span class="p">,</span> <span class="mi">65</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(54.0, 65.0)
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_11_1.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-02-07T05:04:00-08:00">February 7, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Prickly+Pear+Invitational+Split+Analysis%20http%3A%2F%2Flocalhost%3A4000%2Ftutorial%2Fpinned%2FPricklyPearInvitational%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftutorial%2Fpinned%2FPricklyPearInvitational%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftutorial%2Fpinned%2FPricklyPearInvitational%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorial/pinned/socialforces/" class="pagination--pager" title="Modeling Social Forces in Microsoft Excel
+">Previous</a>
+    
+    
+      <a href="/tutorial/pinned/collegiate-running-data/" class="pagination--pager" title="Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/tfrrs-table-generator/" rel="permalink">Collegiate Track and Field Data, Summarized
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          10 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Some data analysis. Project updates daily to weekly depending on my availability.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/collegiate-running-data/" rel="permalink">Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/socialforces/" rel="permalink">Modeling Social Forces in Microsoft Excel
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Econ 138 PS3: Modeling Social Forces using Microsoft Excel.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/blackscholes/" rel="permalink">Implementing Black Scholes Using Python
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Econ 136 Problem Set #2: Creating a Black-Scholes Option Pricer in Python and Verifying That It Works
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://github.com/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.instagram.com/fitzgeraldmultimedia" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://www.strava.com/athletes/37592514" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-strava" aria-hidden="true"></i> Strava</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Colin FitzGerald. Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

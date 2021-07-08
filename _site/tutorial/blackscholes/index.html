@@ -1,0 +1,1008 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<meta name="google-site-verification" content="0Yuz_oShbR2WljkGIaORc8TqhaRZycJiqvasc5bSc4A" />
+
+<!-- begin _includes/seo.html --><title>Implementing Black Scholes Using Python | Colin FitzGerald</title>
+<meta name="description" content="Econ 136 Problem Set #2: Creating a Black-Scholes Option Pricer in Python and Verifying That It Works">
+
+
+  <meta name="author" content="Colin FitzGerald">
+  
+  <meta property="article:author" content="Colin FitzGerald">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Colin FitzGerald">
+<meta property="og:title" content="Implementing Black Scholes Using Python">
+<meta property="og:url" content="http://localhost:4000/tutorial/blackscholes/">
+
+
+  <meta property="og:description" content="Econ 136 Problem Set #2: Creating a Black-Scholes Option Pricer in Python and Verifying That It Works">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-01-16T05:04:00-08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorial/blackscholes/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Colin FitzGerald",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Colin FitzGerald Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Colin FitzGerald
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/">Photography Portfolio</a>
+            </li><li class="masthead__menu-item">
+              <a href="/training/">Training Log</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/FitzGerald-Colin-Homework%206-01.jpg" alt="Colin FitzGerald" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Colin FitzGerald</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Berkeley Economics and Data Science student. Aspiring researcher.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/fitzgeraldmultimedia" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+          
+            <li><a href="https://www.strava.com/athletes/37592514" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-strava" aria-hidden="true"></i><span class="label">Strava</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:colinfitzgerald328@gmail.com">
+            <meta itemprop="email" content="colinfitzgerald328@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Implementing Black Scholes Using Python">
+    <meta itemprop="description" content="Econ 136 Problem Set #2: Creating a Black-Scholes Option Pricer in Python and Verifying That It Works">
+    <meta itemprop="datePublished" content="2021-01-16T05:04:00-08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Implementing Black Scholes Using Python
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#implementing-black-scholes-using-python">Implementing Black Scholes Using Python</a><ul><li><a href="#function-used-to-create-black-scholes-option-pricer">Function Used to Create Black-Scholes Option Pricer</a></li><li><a href="#initial-table">Initial Table</a></li><li><a href="#table-of-time-to-expiration-of-one-year">Table of Time to Expiration of One Year</a></li><li><a href="#graph-of-time-to-expiration-of-both-one-and-zero-years">Graph of Time to Expiration of Both One and Zero Years</a></li><li><a href="#graph-of-all-three-times-to-expiration">Graph of All Three Times to Expiration</a></li><li><a href="#final-graph">Final Graph</a></li><li><a href="#conclusion">Conclusion</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="implementing-black-scholes-using-python">Implementing Black Scholes Using Python</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#importing all of the necessary modules that we are going to use 
+</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="n">si</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="n">sy</span>
+<span class="kn">from</span> <span class="nn">sympy.stats</span> <span class="kn">import</span> <span class="n">Normal</span><span class="p">,</span> <span class="n">cdf</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">init_printing</span>
+<span class="n">init_printing</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>The function below creates our black-scholes option pricer.</p>
+
+<h2 id="function-used-to-create-black-scholes-option-pricer">Function Used to Create Black-Scholes Option Pricer</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">black_scholes</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">option</span> <span class="o">=</span> <span class="s">'call'</span><span class="p">):</span>
+    
+    <span class="c1">#S: spot price
+</span>    <span class="c1">#K: strike price
+</span>    <span class="c1">#T: time to maturity
+</span>    <span class="c1">#r: interest rate
+</span>    <span class="c1">#sigma: volatility of underlying asset
+</span>    
+    <span class="n">d1</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">S</span> <span class="o">/</span> <span class="n">K</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">S</span> <span class="o">/</span> <span class="n">K</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+    
+    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">'call'</span><span class="p">:</span> 
+        <span class="n">call</span> <span class="o">=</span> <span class="p">(</span><span class="n">S</span> <span class="o">*</span> <span class="n">si</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-</span> <span class="n">K</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">si</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">d2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">call</span> 
+    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">'put'</span><span class="p">:</span>
+        <span class="n">put</span> <span class="o">=</span> <span class="p">(</span><span class="n">K</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">si</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">d2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-</span> <span class="n">S</span> <span class="o">*</span> <span class="n">si</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">d1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">put</span> 
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">black_scholes</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.2783</span><span class="p">,</span> <span class="n">option</span> <span class="o">=</span> <span class="s">'call'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_4_0.png" alt="png" /></p>
+
+<p>This cell verifies that our black-scholes option pricer is working properly. The goal was to verify that our pricer spits out the same call price that is given on our lecture slides.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">from</span> <span class="nn">datascience</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># These lines set up graphing capabilities.
+</span><span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">style</span><span class="p">.</span><span class="n">use</span><span class="p">(</span><span class="s">'fivethirtyeight'</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="p">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s">'ignore'</span><span class="p">,</span> <span class="nb">FutureWarning</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="n">widgets</span>
+</code></pre></div></div>
+
+<p>Now, we will build a table and use our option pricer to graph our results.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">new_table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">().</span><span class="n">with_column</span><span class="p">(</span><span class="s">"Level of Underlying"</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">new_table</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="initial-table">Initial Table</h2>
+
+<table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Level of Underlying</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0                  </td>
+        </tr>
+        <tr>
+            <td>10                 </td>
+        </tr>
+        <tr>
+            <td>20                 </td>
+        </tr>
+        <tr>
+            <td>30                 </td>
+        </tr>
+        <tr>
+            <td>40                 </td>
+        </tr>
+        <tr>
+            <td>50                 </td>
+        </tr>
+        <tr>
+            <td>60                 </td>
+        </tr>
+        <tr>
+            <td>70                 </td>
+        </tr>
+        <tr>
+            <td>80                 </td>
+        </tr>
+        <tr>
+            <td>90                 </td>
+        </tr>
+        <tr>
+            <td>100                </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#making sure that our Black-Scholes Option pricer works correctly, so we run a sample output and verify with the slide deck from class
+#our given inputs are the following: 
+</span>    
+    <span class="c1">#S: spot price
+</span>    <span class="c1">#K: strike price
+</span>    <span class="c1">#T: time to maturity
+</span>    <span class="c1">#r: interest rate
+</span>    <span class="c1">#sigma: volatility of underlying asset
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">black_scholes</span><span class="p">(</span><span class="mf">0.0001</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.39115</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_11_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">time_to_expiration_of_one_year_array</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span> 
+    <span class="n">time_to_expiration_of_one_year_array</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">time_to_expiration_of_one_year_array</span><span class="p">,</span> <span class="n">black_scholes</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.39115</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ipython-input-2-76ac2c17deda&gt;:9: RuntimeWarning: divide by zero encountered in log
+  d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
+&lt;ipython-input-2-76ac2c17deda&gt;:10: RuntimeWarning: divide by zero encountered in log
+  d2 = (np.log(S / K) + (r - 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">time_to_expiration_of_one_year_array</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([0.00000000e+00, 1.08176967e-04, 7.77138496e-02, 1.07658328e+00,
+       4.30794966e+00, 9.99974419e+00, 1.75336194e+01, 2.62035114e+01,
+       3.55074908e+01, 4.51478326e+01, 5.49623485e+01])
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">new_table</span> <span class="o">=</span> <span class="n">new_table</span><span class="p">.</span><span class="n">with_column</span><span class="p">(</span><span class="s">"Time to Expiration of One Year"</span><span class="p">,</span> <span class="n">time_to_expiration_of_one_year_array</span><span class="p">)</span>
+<span class="n">new_table</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="table-of-time-to-expiration-of-one-year">Table of Time to Expiration of One Year</h2>
+
+<table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Level of Underlying</th> <th>Time to Expiration of One Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0                  </td> <td>0                             </td>
+        </tr>
+        <tr>
+            <td>10                 </td> <td>0.000108177                   </td>
+        </tr>
+        <tr>
+            <td>20                 </td> <td>0.0777138                     </td>
+        </tr>
+        <tr>
+            <td>30                 </td> <td>1.07658                       </td>
+        </tr>
+        <tr>
+            <td>40                 </td> <td>4.30795                       </td>
+        </tr>
+        <tr>
+            <td>50                 </td> <td>9.99974                       </td>
+        </tr>
+        <tr>
+            <td>60                 </td> <td>17.5336                       </td>
+        </tr>
+        <tr>
+            <td>70                 </td> <td>26.2035                       </td>
+        </tr>
+        <tr>
+            <td>80                 </td> <td>35.5075                       </td>
+        </tr>
+        <tr>
+            <td>90                 </td> <td>45.1478                       </td>
+        </tr>
+        <tr>
+            <td>100                </td> <td>54.9623                       </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">no_time_to_expiration_array</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span> 
+    <span class="n">no_time_to_expiration_array</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">no_time_to_expiration_array</span><span class="p">,</span> <span class="n">black_scholes</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mf">0.0000001</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.39115</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ipython-input-2-76ac2c17deda&gt;:9: RuntimeWarning: divide by zero encountered in log
+  d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
+&lt;ipython-input-2-76ac2c17deda&gt;:10: RuntimeWarning: divide by zero encountered in log
+  d2 = (np.log(S / K) + (r - 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">no_time_to_expiration_array</span> 
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+       0.00000000e+00, 2.46755821e-03, 1.00000005e+01, 2.00000005e+01,
+       3.00000005e+01, 4.00000005e+01, 5.00000005e+01])
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">new_table</span> <span class="o">=</span> <span class="n">new_table</span><span class="p">.</span><span class="n">with_column</span><span class="p">(</span><span class="s">"Time to Expiration of None"</span><span class="p">,</span> <span class="n">no_time_to_expiration_array</span> <span class="p">)</span>
+<span class="n">new_table</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="graph-of-time-to-expiration-of-both-one-and-zero-years">Graph of Time to Expiration of Both One and Zero Years</h2>
+
+<table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Level of Underlying</th> <th>Time to Expiration of One Year</th> <th>Time to Expiration of None</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0                  </td> <td>0                             </td> <td>0                         </td>
+        </tr>
+        <tr>
+            <td>10                 </td> <td>0.000108177                   </td> <td>0                         </td>
+        </tr>
+        <tr>
+            <td>20                 </td> <td>0.0777138                     </td> <td>0                         </td>
+        </tr>
+        <tr>
+            <td>30                 </td> <td>1.07658                       </td> <td>0                         </td>
+        </tr>
+        <tr>
+            <td>40                 </td> <td>4.30795                       </td> <td>0                         </td>
+        </tr>
+        <tr>
+            <td>50                 </td> <td>9.99974                       </td> <td>0.00246756                </td>
+        </tr>
+        <tr>
+            <td>60                 </td> <td>17.5336                       </td> <td>10                        </td>
+        </tr>
+        <tr>
+            <td>70                 </td> <td>26.2035                       </td> <td>20                        </td>
+        </tr>
+        <tr>
+            <td>80                 </td> <td>35.5075                       </td> <td>30                        </td>
+        </tr>
+        <tr>
+            <td>90                 </td> <td>45.1478                       </td> <td>40                        </td>
+        </tr>
+        <tr>
+            <td>100                </td> <td>54.9623                       </td> <td>50                        </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">new_table</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="s">"Level of Underlying"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_18_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">three_year_array</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span> 
+    <span class="n">three_year_array</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">three_year_array</span><span class="p">,</span> <span class="n">black_scholes</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.39115</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ipython-input-2-76ac2c17deda&gt;:9: RuntimeWarning: divide by zero encountered in log
+  d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
+&lt;ipython-input-2-76ac2c17deda&gt;:10: RuntimeWarning: divide by zero encountered in log
+  d2 = (np.log(S / K) + (r - 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">three_year_array</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([ 0.        ,  0.12653854,  1.75641839,  5.77813145, 11.7582735 ,
+       19.0826488 , 27.28807781, 36.06767126, 45.22466791, 54.63318365,
+       64.21192494])
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">new_table</span> <span class="o">=</span> <span class="n">new_table</span><span class="p">.</span><span class="n">with_column</span><span class="p">(</span><span class="s">"Time to Expiration of Three Years"</span><span class="p">,</span> <span class="n">three_year_array</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">new_table</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="graph-of-all-three-times-to-expiration">Graph of All Three Times to Expiration</h2>
+
+<table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Level of Underlying</th> <th>Time to Expiration of One Year</th> <th>Time to Expiration of None</th> <th>Time to Expiration of Three Years</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0                  </td> <td>0                             </td> <td>0                         </td> <td>0                                </td>
+        </tr>
+        <tr>
+            <td>10                 </td> <td>0.000108177                   </td> <td>0                         </td> <td>0.126539                         </td>
+        </tr>
+        <tr>
+            <td>20                 </td> <td>0.0777138                     </td> <td>0                         </td> <td>1.75642                          </td>
+        </tr>
+        <tr>
+            <td>30                 </td> <td>1.07658                       </td> <td>0                         </td> <td>5.77813                          </td>
+        </tr>
+        <tr>
+            <td>40                 </td> <td>4.30795                       </td> <td>0                         </td> <td>11.7583                          </td>
+        </tr>
+        <tr>
+            <td>50                 </td> <td>9.99974                       </td> <td>0.00246756                </td> <td>19.0826                          </td>
+        </tr>
+        <tr>
+            <td>60                 </td> <td>17.5336                       </td> <td>10                        </td> <td>27.2881                          </td>
+        </tr>
+        <tr>
+            <td>70                 </td> <td>26.2035                       </td> <td>20                        </td> <td>36.0677                          </td>
+        </tr>
+        <tr>
+            <td>80                 </td> <td>35.5075                       </td> <td>30                        </td> <td>45.2247                          </td>
+        </tr>
+        <tr>
+            <td>90                 </td> <td>45.1478                       </td> <td>40                        </td> <td>54.6332                          </td>
+        </tr>
+        <tr>
+            <td>100                </td> <td>54.9623                       </td> <td>50                        </td> <td>64.2119                          </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">new_table</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="s">"Level of Underlying"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Level of Underlying (Arbitrary) '</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Price (Arbitrary) '</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text(0, 0.5, 'Price (Arbitrary) ')
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_23_1.png" alt="png" /></p>
+
+<h2 id="final-graph">Final Graph</h2>
+
+<p>This is the final graph that we were supposed to replicate from our lecture slides. Mission accomplished! We can see that, at option expiration, the graph of the underlying and price has the sharp, rigid slope that we were looking for. In contrast, the other two curves are just that, curved. That is exactly what we would expect with the given inputs.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">black_scholes</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">option</span> <span class="o">=</span> <span class="s">'call'</span><span class="p">):</span>
+    
+    <span class="c1">#S: spot price
+</span>    <span class="c1">#K: strike price
+</span>    <span class="c1">#T: time to maturity
+</span>    <span class="c1">#r: interest rate
+</span>    <span class="c1">#sigma: volatility of underlying asset
+</span>    
+    <span class="n">d1</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">S</span> <span class="o">/</span> <span class="n">K</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">S</span> <span class="o">/</span> <span class="n">K</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+    
+    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">'call'</span><span class="p">:</span> 
+        <span class="n">call</span> <span class="o">=</span> <span class="p">(</span><span class="n">S</span> <span class="o">*</span> <span class="n">si</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-</span> <span class="n">K</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">si</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">d2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">call</span> 
+    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">'put'</span><span class="p">:</span>
+        <span class="n">put</span> <span class="o">=</span> <span class="p">(</span><span class="n">K</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">si</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">d2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-</span> <span class="n">S</span> <span class="o">*</span> <span class="n">si</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">d1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">put</span> 
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">black_scholes</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.2783</span><span class="p">,</span> <span class="n">option</span> <span class="o">=</span> <span class="s">'call'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_26_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">black_scholes</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.2783</span><span class="p">,</span> <span class="n">option</span> <span class="o">=</span> <span class="s">'call'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_27_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">black_scholes</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.2783</span><span class="p">,</span> <span class="n">option</span> <span class="o">=</span> <span class="s">'put'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_28_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">black_scholes</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">option</span> <span class="o">=</span> <span class="s">'call'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/output_29_0.png" alt="png" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>These last few lines were further verification of our option pricer. We tested different volatilities and spot prices, and also looked at the different prices associated with calls and puts.</p>
+
+<p><a href="#" class="btn btn--inverse">Back to Top</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-16T05:04:00-08:00">January 16, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Implementing+Black+Scholes+Using+Python%20http%3A%2F%2Flocalhost%3A4000%2Ftutorial%2Fblackscholes%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftutorial%2Fblackscholes%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftutorial%2Fblackscholes%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorial/pinned/datasciencerunning/" class="pagination--pager" title="Data Science Analysis of Running Form
+">Previous</a>
+    
+    
+      <a href="/tutorial/pinned/socialforces/" class="pagination--pager" title="Modeling Social Forces in Microsoft Excel
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/tfrrs-table-generator/" rel="permalink">Collegiate Track and Field Data, Summarized
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          10 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Some data analysis. Project updates daily to weekly depending on my availability.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/collegiate-running-data/" rel="permalink">Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/PricklyPearInvitational/" rel="permalink">Prickly Pear Invitational Split Analysis
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Visualizing the 400m splits of each athlete in the Men’s 3000m run at the Prickly Pear Invitational.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorial/pinned/socialforces/" rel="permalink">Modeling Social Forces in Microsoft Excel
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Econ 138 PS3: Modeling Social Forces using Microsoft Excel.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://github.com/colinfitzgerald328" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.instagram.com/fitzgeraldmultimedia" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://www.strava.com/athletes/37592514" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-strava" aria-hidden="true"></i> Strava</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Colin FitzGerald. Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
