@@ -16,7 +16,11 @@ description    : "personal site that hosts my resume and projects"
 url            : "https://colinfitzgerald328.github.io"
 baseurl        : ""
 repository     : colinfitzgerald328/colinfitzgerald328.github.io
-google_analytics: "G-DNF9SHSTXX" 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-DNF9SHSTXX"
+    anonymize_ip: false # default
 #teaser        : # path of fallback teaser image, ie "/assets/images/500x300.png"
 #logo          : # path of logo image to display in the masthead, ie "/assets/images/88x88.png"
 #masthead_title: # overrides the website title displayed in the masthead, use " " for no title
