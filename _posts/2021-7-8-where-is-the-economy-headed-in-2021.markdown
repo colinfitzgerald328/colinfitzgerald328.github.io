@@ -52,7 +52,7 @@ Economic sentiment rebounded over the last two weeks, ending a slide that lasted
 Economics teachers and writers have had a shot at predicting where the economy is headed in the near future. Below are predictions of three economics/finance experts:
 
 ## 1. Paul Krugman
-### *Nobel laureate economist; professor of economics, Princeton University; columnist for The New York Times.*
+*Nobel laureate economist; professor of economics, Princeton University; columnist for The New York Times.*
 
 "Despite some growing pains, the U.S. economy is clearly on a vaccine-and-stimulus-fueled tear, with just about every measure indicating rapid recovery from the pandemic slump.
 
@@ -63,7 +63,7 @@ Overall, we’re clearly in a much better place economically than we were just a
 (https://www.nytimes.com/2021/06/24/opinion/economy-truth-republicans.html)
 
 ## 2. Jeff Nielson
-### *Economics writer; editor of Bullion Bulls Canada*
+*Economics writer; editor of Bullion Bulls Canada*
 
 On inflation, Nielson contends that "Folkerts-Landau’s report is a cynical exercise: pretending that central banks are choosing to accept something that they are helpless to prevent. Understanding this requires a more sophisticated understanding of inflation.
 
@@ -95,7 +95,7 @@ The most immediate manifestation of the shift in macro policy is that the fear o
 (https://talkmarkets.com/content/economics--politics/inflation-capitulation-signals-dollars-demise-golds-rise?post=315401)
 
 ## 3. David Rosenberg 
-### *Chief economist and strategist, Gluskin Sheff & Associates Inc.; economics columnist for the Toronto Sun and author of the daily economic report "Morning Briefing"*       
+*Chief economist and strategist, Gluskin Sheff & Associates Inc.; economics columnist for the Toronto Sun and author of the daily economic report "Morning Briefing"*       
 
 "It is not surprising to us, given our in-house views on inflation, but it appears that equity investors are hitting the pause button when it comes to the reflation trade. As per the latest update of our “inflation” index, the seemingly unrelenting surge from November till May has come to an end, having flatlined for the past month and a half.
 
