@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: blank
+permalink: /training/
 title: "My Training Log"
 ---
 <style type="text/css">
