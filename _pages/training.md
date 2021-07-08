@@ -1,5 +1,5 @@
 ---
-layout: blank
+layout: single
 title: "My Training Log"
 ---
 <style type="text/css">
