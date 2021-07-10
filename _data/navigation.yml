@@ -12,6 +12,8 @@ main:
     url: /portfolio/
   - title: "Training Log"
     url: /training/
+  - title: "Running Pace Calculator"
+    url: https://my-first-web-app-319405.uc.r.appspot.com/
   
   - title: "About"
     url: /about/
