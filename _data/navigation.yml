@@ -8,28 +8,12 @@ main:
   - title: "Blog"
     url: /blog/
 
-  - title: "Photography Portfolio"
+  - title: "Portfolio"
     url: /portfolio/
   - title: "Training Log"
     url: /training/
-  - title: "Running Pace Calculator"
+  - title: "Pace Calculator"
     url: https://my-first-web-app-319405.uc.r.appspot.com/
   
   - title: "About"
     url: /about/
-
-projects:
-  - title: "Intoolovation"
-    url: https://intoolovation.com
-    
-  - title: "Layout Gallery"
-    url: /layout-gallery/
-
-  - title: "CV Enterprises"
-    url: https://cv-enterprises.github.io/
-    
-  - title: "Markdown Showcase"
-    url: /archive-sample/
-    
-  - title: "Chrome New Tab Countdown Extension"
-    url: /#/
