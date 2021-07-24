@@ -8,10 +8,6 @@ I used to struggle with negativity... "
 categories: 
   - personal growth
   - pinned 
-
-
-toc: true
-toc_sticky: true 
 ---
 
 Freeing your soul is both one of the most difficult and rewarding things to do. 
