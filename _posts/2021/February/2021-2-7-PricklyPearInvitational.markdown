@@ -4,8 +4,7 @@ title:  "Prickly Pear Invitational Split Analysis"
 date:   2021-02-7 05:04:00 -0800
 excerpt: "Visualizing the 400m splits of each athlete in the Men's 3000m run at the Prickly Pear Invitational."
 categories: 
-  - tutorial
-  - pinned
+  - data science
 
 toc: true
 ---

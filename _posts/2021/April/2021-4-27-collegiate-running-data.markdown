@@ -4,8 +4,7 @@ title:  "Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m
 date:   2021-04-26 05:04:00 -0800
 excerpt: "Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data."
 categories: 
-  - tutorial
-  - pinned
+  - data science
 
 toc: true
 --- 

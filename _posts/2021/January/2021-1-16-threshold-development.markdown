@@ -4,7 +4,7 @@ title:  "Threshold Development From 2017 to 2020"
 date:   2021-01-10 05:04:00 -0800
 excerpt: "Writing a brief history of my running threshold progress over the years."
 categories: 
-  - tutorial
+  - running
  
 
 toc: true
