@@ -4,7 +4,7 @@ title:  "Finding Myself During Quarantine"
 date:   2021-07-24 05:04:00 -0800
 excerpt: "Freeing your soul is both one of the most difficult and rewarding things to do. 
 
-I used to struggle with negativity. "
+I used to struggle with negativity... "
 categories: 
   - personal growth
   - pinned 
@@ -14,8 +14,6 @@ toc: true
 toc_sticky: true 
 ---
 
-## A Short Synopsis of How I Grew During Quarantine
-
 Freeing your soul is both one of the most difficult and rewarding things to do. 
 
 I used to struggle with negativity. 
@@ -24,13 +22,13 @@ My mind was filled with thoughts telling myself that I had no self worth, lacked
 
  Then I read The Book of Joy. 
 
+ ![jpeg](/assets/images/Extra_Images/bookofjoy.jpeg)
+
 That book had a profound impact on how I approach life on a daily basis. 
 
 For so long I struggled to battle my mind and keep the resounding negativity at bay. 
 
 But I found solace in The Book of Joy. A chapter here and there kept my head on straight.  It kept me going and kept me focused.  
-
-![jpeg](/assets/images/Extra_Images/bookofjoy.jpeg)
 
 Now, people see me and say, “What are you smiling about? Why do you look so happy?”
 
