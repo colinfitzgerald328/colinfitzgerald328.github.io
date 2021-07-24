@@ -17,7 +17,11 @@ last_modified_at: 2020-10-28T14:51:23-04:00
 
 My name is Colin FitzGerald. 
 
-I am currently a student at the University of California, Berkeley. 
+![jpeg](/assets/images/Extra_Images/picture of me for website about page.jpeg)
+
+My story started with running. Ever since I was a little kid, I loved to run. I brought intense passion and dedication to the sport I loved so dearly, and I was lucky enough to have it translate into acceptance into virtually any university of my choice. I
+
+I chose to attend the University of California, Berkeley, where I am currently a student-athlete. 
 
 My major is Economics while my minor is in Data Science.
 
