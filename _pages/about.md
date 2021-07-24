@@ -19,7 +19,7 @@ My name is Colin FitzGerald.
 
 ![jpeg](/assets/images/Extra_Images/picture of me for website about page.jpeg)
 
-My story started with running. Ever since I was a little kid, I loved to run. I brought intense passion and dedication to the sport I loved so dearly, and I was lucky enough to have it translate into acceptance into virtually any university of my choice. I
+My story started with running. Ever since I was a little kid, I loved to run. I brought intense passion and dedication to the sport I loved so dearly, and I was lucky enough to have it translate into acceptance into virtually any university of my choice.
 
 I chose to attend the University of California, Berkeley, where I am currently a student-athlete. 
 
