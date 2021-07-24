@@ -9,9 +9,9 @@ main:
     url: /blog/
 
   - title: "Portfolio"
-    url: /portfolio/
+    url: https://unsplash.com/@colinfitzgerald328
   - title: "Training Log"
-    url: /training/
+    url: https://www.strava.com/athletes/84239936
   - title: "Pace Calculator"
     url: https://my-first-web-app-319405.uc.r.appspot.com/
   
