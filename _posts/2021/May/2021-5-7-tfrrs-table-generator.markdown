@@ -4,7 +4,7 @@ title:  "Collegiate Track and Field Data, Summarized"
 date:   2021-05-15 05:04:00 -0800
 excerpt: "Some data analysis. Project updates daily to weekly depending on my availability."
 categories: 
-  - tutorial
+  - data science
   - pinned
 
 toc: true
