@@ -15,8 +15,22 @@ layouts_gallery:
 last_modified_at: 2020-10-28T14:51:23-04:00
 ---
 
-Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+My name is Colin FitzGerald. 
 
-Minimal Mistakes is designed, developed, and maintained by Michael Rose. Here is a link to the [GitHub page](https://github.com/mmistakes/minimal-mistakes) where you can find all of the sources that power and maintain this website.
+I am currently a student at the University of California, Berkeley. 
+
+My major is Economics while my minor is in Data Science.
+
+During quarantine, I decided to learn to code since I didn't have any prior experience. 
+
+I was awful at first. I struggled and couldn't grasp even the most basic concepts. However, I was persistent and patient with myself. 
+
+Slowly, I am becoming more confident in my ability to code. I find it interesting; to me, it's one huge puzzle. 
+
+I started small with simple python projects and dabbled a little bit in R. 
+
+As I have continued through the years, I find myself enjoying coding more and more. One day, I hope to contribute to projects that can change the world. Until then, I'm working hard to learn as much as I can. 
+
+My time in coding is split between Website projects and Data Science as of now. 
 
 The inspiration for my website was from one of my friends who is also a current U.C. Berkeley Student. I learned to and took inspiration from his workflow. Here is a link to [Ravi's website](https://raviriley.github.io).
