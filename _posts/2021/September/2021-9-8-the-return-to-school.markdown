@@ -30,8 +30,6 @@ A major part of my identity was now gone; it was time to officially start over.
 
 Academically, my identity switched to full-time student. 
 
-The change had officially begun. 
-
 During the summer of 2020, I took the maximum course load. 
 
 I knocked out Econometrics and Microeconomics, two upper-division requirements for my major. In my free time, I learned to code in Python. I also made the decision to add Data Science as my minor; I was no longer afraid of quant-heavy courses. 
