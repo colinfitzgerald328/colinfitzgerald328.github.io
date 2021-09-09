@@ -40,3 +40,5 @@ On August 21, 2020, I returned to U.C. Berkeley for the first time in 538 days. 
 I am approaching this final year with thanks. 
 
 From the bottom of my heart, I want to thank everyone that has helped me make it this far in life. My life is so easy and I’m so blessed. I would be nothing without all of you guys. Without we, I do not exist. I’m not looking back anymore, it’s all eyes forward from here.
+
+![png]/assets/images/Extra_Images/Screen Shot 2021-09-08 at 7.13.47 PM.png
