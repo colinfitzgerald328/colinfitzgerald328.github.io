@@ -18,7 +18,7 @@ Prior to the pandemic, I, like many of my peers, lived the Division 1 Student-At
 
 Running was my identity. While I was both student and athlete, I was more focused on being an athlete. I forwent career opportunities in favor of prioritizing athletic success. 
 
-When the pandemic hit, I took a 180-degree turn. Here I will note that I know I wasn't the only one to do so. 
+When the pandemic hit, I, alongside many others, took a 180-degree turn. 
 
 For the first time in many of our lives, the so-called "music" had stopped. 
 
