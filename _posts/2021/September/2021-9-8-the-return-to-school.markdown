@@ -12,7 +12,7 @@ toc: true
 
 So what's it like to return to NCAA competition and in-person learning for the first time in 538 days? It's a bit odd, I can tell you that much. 
 
-I spent much of quarantine in solace, accompanied by my family. 
+I spent much of quarantine in the solace of my family. 
 
 Prior to the pandemic, I, like many of my peers, lived the Division 1 Student-Athlete lifestyle. 
 
