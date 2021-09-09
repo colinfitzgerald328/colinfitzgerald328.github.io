@@ -21,9 +21,11 @@ Running was my identity. While I was both student and athlete, I was more focuse
 
 When the pandemic hit, I did a complete 180. And I know I wasn't the only one to do so. For the first time in many of our lives, the so-called "music" had stopped. 
 
-We were forced to look inwards and truly consider our life choices for the first time ever. Ferociously, I applied to internships. Previously consisting of running, that part of my identity was stripped away.
+We were forced to look inwards and truly consider our life choices for the first time ever. Ferociously, I applied to internships. 
 
-Academically, my identity switched from student-athlete to full-time student. 
+A major part of my identity was now gone. It was time to officially start over. 
+
+Academically, my identity switched to full-time student. 
 
 During the summer of 2020, I took the maximum course load, knocking out Econometrics and Microeconomics, two upper-division requirements for my major. In my freetime, I learned to code using Python and made the decision to add Data Science as my minor. I was no longer afraid of quant-heavy courses. All the while, I was still running 75 miles per week. The difference was, I was on my own now. 
 
