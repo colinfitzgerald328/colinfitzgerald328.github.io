@@ -2,7 +2,7 @@
 layout: single
 title:  "The Return to School"
 date:   2021-09-8 05:04:00 -0800
-excerpt: "So what's it like to return to NCAA competition and in-person learning for the first time in 538 days? It's a bit odd, I can tell you that much. "
+excerpt: "What's it like to return to NCAA competition and in-person learning for the first time in 538 days? It's a bit of a shock, I can tell you that much. "
 categories: 
   - personal
   - pinned
@@ -10,7 +10,7 @@ categories:
 toc: true
 ---
 
-So what's it like to return to NCAA competition and in-person learning for the first time in 538 days? It's a bit odd, I can tell you that much. 
+What's it like to return to NCAA competition and in-person learning for the first time in 538 days? It's a bit of a shock, I can tell you that much. 
 
 I spent much of quarantine in the solace of my family. 
 
