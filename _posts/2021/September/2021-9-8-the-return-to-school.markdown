@@ -16,31 +16,51 @@ I spent much of quarantine in the solace of my family.
 
 Prior to the pandemic, I, like many of my peers, lived the Division 1 Student-Athlete lifestyle. 
 
-Running was my identity. While I was both student and athlete, I was more focused on being an athlete, forgoing career opportunities in favor of prioritizing athletic success. 
+Running was my identity. While I was both student and athlete, I was more focused on being an athlete. I forwent career opportunities in favor of prioritizing athletic success. 
 
-When the pandemic hit, I did a complete 180. I know I wasn't the only one to do so. For the first time in many of our lives, the so-called "music" had stopped. 
+When the pandemic hit, I took a 180-degree turn. Here I will note that I know I wasn't the only one to do so. 
 
-We were forced to look inwards and truly consider our life choices for the first time ever. Ferociously, I applied to internships. 
+For the first time in many of our lives, the so-called "music" had stopped. 
 
-A major part of my identity was now gone. It was time to officially start over. 
+We were forced to look inwards and truly consider our life choices and their longterm impact on our future. 
+
+Ferociously, I began to apply to every internship imaginable. 
+
+A major part of my identity was now gone; it was time to officially start over. 
 
 Academically, my identity switched to full-time student. 
 
-During the summer of 2020, I took the maximum course load, knocking out Econometrics and Microeconomics, two upper-division requirements for my major. In my free time, I learned to code using Python. I also made the decision to add Data Science as my minor; I was no longer afraid of quant-heavy courses. I might also mention here that I was still running 75 miles per week. The difference was, I was on my own now. 
+The change had officially begun. 
+
+During the summer of 2020, I took the maximum course load. 
+
+I knocked out Econometrics and Microeconomics, two upper-division requirements for my major. In my free time, I learned to code in Python. I also made the decision to add Data Science as my minor; I was no longer afraid of quant-heavy courses. 
+
+I might also mention here that I was still running 75 miles per week. The difference was, I was on my own now. 
 
 During the Fall and Spring of 2020, I completed my entire Economics degree, save for one final course. At the same time, I worked on completing the prerequisite courses for the Data Science minor. 
 
-In the Spring of 2020, I started to, once again, seek professional opportunities. I found luck in the OCFO, a Berkeley-affiliated club that I joined and used to hone some basic Microsoft Excel skills. Slowly, I began to add real experience to my resume. 
+In the Spring of 2020, I started to, once again, seek professional opportunities. I found luck in the OCFO, a Berkeley-affiliated club that I joined and used to hone some basic Microsoft Excel skills. 
+
+Slowly, I began to add real experience to my resume. 
 
 I completed three rounds of interviews during that semester and landed my first internship position. 
 
-In the summer of 2020, I worked full-time at CoreVest Finance, a mortgage-lending firm. Applying my data science and statistics skills, I successfully built the company a machine learning algorithm to predict loan-closing status with 97.8% accuracy during my ten weeks with the firm. 
+In the summer of 2020, I worked full-time at CoreVest Finance, a mortgage-lending firm. Applying my data science and statistics skills, I successfully built the company a machine learning algorithm to predict loan-closing status with 97.8% accuracy.
 
-On August 21, 2020, I returned to U.C. Berkeley for the first time in 538 days. If you do the math, that's almost 1.5 years. The best part? I returned in shape, ready to run, and complete my final year at the school. 
+On August 21, 2020, I returned to U.C. Berkeley for the first time in 538 days. Almost 1.5 years later, I returned in shape, ready to run, and complete my final year at the school. 
 
-I am approaching this final year with thanks. 
+I approach this final year with thanks. 
 
-From the bottom of my heart, I want to thank everyone that has helped me make it this far in life. My life is so easy and I’m so blessed. I would be nothing without all of you guys. Without we, I do not exist. I’m not looking back anymore, it’s all eyes forward from here.
+From the bottom of my heart, I want to thank everyone that has helped me make it this far in life. 
+
+My life is so easy and I’m so blessed. 
+
+I would be nothing without all of you guys. 
+
+Without a we, there is no me. 
+
+I’m not looking backwards anymore, my vision is forwards. 
 
 ![png](/assets/images/Extra_Images/Screen Shot 2021-09-08 at 7.13.47 PM.png)
 
