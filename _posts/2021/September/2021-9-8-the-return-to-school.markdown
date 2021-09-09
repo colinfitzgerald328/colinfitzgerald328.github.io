@@ -18,7 +18,7 @@ Prior to the pandemic, I, like many of my peers, lived the Division 1 Student-At
 
 Running was my identity. While I was both student and athlete, I was more focused on being an athlete, forgoing career opportunities in favor of prioritizing athletic success. 
 
-When the pandemic hit, I did a complete 180. And I know I wasn't the only one to do so. For the first time in many of our lives, the so-called "music" had stopped. 
+When the pandemic hit, I did a complete 180. I know I wasn't the only one to do so. For the first time in many of our lives, the so-called "music" had stopped. 
 
 We were forced to look inwards and truly consider our life choices for the first time ever. Ferociously, I applied to internships. 
 
@@ -26,7 +26,7 @@ A major part of my identity was now gone. It was time to officially start over.
 
 Academically, my identity switched to full-time student. 
 
-During the summer of 2020, I took the maximum course load, knocking out Econometrics and Microeconomics, two upper-division requirements for my major. In my freetime, I learned to code using Python and made the decision to add Data Science as my minor. I was no longer afraid of quant-heavy courses. All the while, I was still running 75 miles per week. The difference was, I was on my own now. 
+During the summer of 2020, I took the maximum course load, knocking out Econometrics and Microeconomics, two upper-division requirements for my major. In my free time, I learned to code using Python. I also made the decision to add Data Science as my minor; I was no longer afraid of quant-heavy courses. I might also mention here that I was still running 75 miles per week. The difference was, I was on my own now. 
 
 During the Fall and Spring of 2020, I completed my entire Economics degree, save for one final course. At the same time, I worked on completing the prerequisite courses for the Data Science minor. 
 
