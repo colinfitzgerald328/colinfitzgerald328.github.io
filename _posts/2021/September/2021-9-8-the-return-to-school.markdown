@@ -43,4 +43,4 @@ From the bottom of my heart, I want to thank everyone that has helped me make it
 
 ![png](/assets/images/Extra_Images/Screen Shot 2021-09-08 at 7.13.47 PM.png)
 
-Photo Credit goes to [Catherine Hayne for KLC Fotos.](https://www.catharynhaynephotography.com/)
+Photo Credit goes to [Catharyn Hayne for KLC Fotos.](https://www.catharynhaynephotography.com/)
