@@ -9,7 +9,6 @@ categories:
 
 toc: true
 ---
-# The Return to School
 
 So what's it like to return to NCAA competition and in-person learning for the first time in 538 days? It's a bit odd, I can tell you that much. 
 
