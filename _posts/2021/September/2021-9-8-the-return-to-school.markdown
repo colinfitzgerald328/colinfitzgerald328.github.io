@@ -41,4 +41,6 @@ I am approaching this final year with thanks.
 
 From the bottom of my heart, I want to thank everyone that has helped me make it this far in life. My life is so easy and I’m so blessed. I would be nothing without all of you guys. Without we, I do not exist. I’m not looking back anymore, it’s all eyes forward from here.
 
-![png]/assets/images/Extra_Images/Screen Shot 2021-09-08 at 7.13.47 PM.png
+![png](/assets/images/Extra_Images/Screen Shot 2021-09-08 at 7.13.47 PM.png)
+
+Photo Credit goes to [Catherine Hayne for KLC Fotos.](https://www.catharynhaynephotography.com/)
