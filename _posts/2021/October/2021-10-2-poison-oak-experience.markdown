@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "A mental dialogue of my poison oak experiences."
+title:  "A mental dialogue of my poison oak experiences"
 date:   2021-09-8 05:04:00 -0800
 excerpt: "What's it like to be on prednisone for poison oak."
 categories: 
