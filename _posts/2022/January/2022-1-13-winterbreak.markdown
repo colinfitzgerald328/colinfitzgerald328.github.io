@@ -1,11 +1,11 @@
 ---
 layout: single
 title:  "Winter Break Update"
-date:   2021-01-14 05:04:00 -0800
+date:   2022-01-13 05:04:00 -0800
 excerpt: "What I've been up to during my final winter break while in college."
 categories: 
-  - Life Updates
-pinned: true
+  - life updates
+  - pinned
 
 toc: true
 ---
