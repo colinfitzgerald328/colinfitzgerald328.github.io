@@ -19,7 +19,7 @@ I will be graduating this semester, so I need to have a job locked down for when
 ## Budgeting plans for the semester
 I’ve learned that it’s a lot easier to feel financially secure if you plan your budget out and have a mental account of what is going to be coming in and out of your bank account for the next five to six months. 
 
-Investing Plans for the semester. 
+## Investing Plans for the semester 
 With a modest return in safe assets, I’ve found that I can put some money into the stock market and make enough back over the coming months to cover a week or two of groceries. While this doesn’t sound like a lot, saving money here and there can ease a lot of burden down the road. 
 
 ## Having fun
