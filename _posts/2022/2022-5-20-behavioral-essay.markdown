@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Behavioral Economics, An Introspective"
-date:   2022-01-13 05:04:00 -0800
+date:   2022-05-20 05:04:00 -0800
 excerpt: "A commentary on the state of behavioral economics research."
 categories: 
   - economics
