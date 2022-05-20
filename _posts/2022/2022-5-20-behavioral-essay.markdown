@@ -30,5 +30,26 @@ The solution to the aforementioned issues with research-based policy lies in cha
 
 In conclusion, perverse research incentives and a toxic research culture combine to form a pathway to data fabrication or research missteps. The problem with this is the fact that it causes public policy makers to lose money in their attempts to make informed policy decisions based on behavioral economics research. There needs to be a paradigm shift in research culture where we restructure the rewards and incentives in research. Whereas we have previously rewarded the number of publications, thus emphasizing quantitative metrics, it is more important to strengthen the communal culture of research, allow researchers to take their time, and strictly follow processes in order to ensure ethical research practice. 
 
+Works Cited
+Clayton, Aubrey. “How Eugenics Shaped Statistics.” Nautilus | Science Connected, 14 Sept. 2021, https://nautil.us/how-eugenics-shaped-statistics-9365/. 
+
+“Data-Dredging Bias.” Catalog of Bias, 27 Nov. 2020, https://catalogofbias.org/biases/data-dredging-bias/. 
+
+Dewald, William G., et al. “Replication in Empirical Economics: The Journal of Money, Credit and Banking Project.” The American Economic Review, vol. 76, no. 4, 1986, pp. 587–603, http://www.jstor.org/stable/1806061. Accessed 28 Apr. 2022.
+
+Duvendack, M., Palmer-Jones, R. W., & Reed, W. R. (2015, May 1). Replications in economics: A progress report · Econ Journal Watch : Replication, Data Sharing, publication bias. Econ Journal Watch. Retrieved March 18, 2022, from https://econjwatch.org/articles/replications-in-economics-a-progress-report 
+
+Edwards, Marc A., and Siddhartha Roy. “Academic Research in the 21st Century: Maintaining Scientific Integrity in a Climate of Perverse Incentives and Hypercompetition.” Environmental Engineering Science, vol. 34, no. 1, 2017, pp. 51–61., doi:10.1089/ees.2016.0223. 
+
+Kristal, Ariella, et al. “When We're Wrong, It's Our Responsibility as Scientists to Say So.” Scientific American Blog Network, Scientific American, 21 Mar. 2020, blogs.scientificamerican.com/observations/when-were-wrong-its-our-responsibility-as-scientists-to-say-so/. 
+
+Nosek, Brian A., et al. “Scientific Utopia: II. Restructuring Incentives and Practices to Promote Truth Over Publishability.” Perspectives on Psychological Science, vol. 7, no. 6, Nov. 2012, pp. 615–631., doi:10.1177/1745691612459058. 
+
+Nosek, Brian A., et al. “Transparency and Openness Promotion (TOP) Guidelines.” OSF Preprints, 5 Oct. 2016. Web.
+
+Simonsohn, Uri, et al. “[98] Evidence of Fraud in an Influential Field Experiment about Dishonesty.” Data Colada, 25 Aug. 2021, https://datacolada.org/98. 
+
+Smith, George Davey, and Shah Ebrahim. “Data Dredging, Bias, or Confounding.” BMJ (Clinical Research Ed.), BMJ, 21 Dec. 2002, www.ncbi.nlm.nih.gov/pmc/articles/PMC1124898/. 
+
 
 
