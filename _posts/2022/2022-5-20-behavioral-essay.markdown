@@ -36,7 +36,7 @@ In conclusion, perverse research incentives and a toxic research culture combine
 ### Works Cited
 
 
-Clayton, Aubrey. “How Eugenics Shaped Statistics.” Nautilus | Science Connected, 14 Sept. 2021, https://nautil.us/how-eugenics-shaped-statistics-9365/. 
+Clayton, Aubrey. “How Eugenics Shaped Statistics.” Nautilus, Science Connected, 14 Sept. 2021, https://nautil.us/how-eugenics-shaped-statistics-9365/. 
 
 “Data-Dredging Bias.” Catalog of Bias, 27 Nov. 2020, https://catalogofbias.org/biases/data-dredging-bias/. 
 
