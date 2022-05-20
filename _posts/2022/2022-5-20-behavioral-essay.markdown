@@ -10,6 +10,9 @@ categories:
 toc: true
 ---
 
+### Data Malpractice
+
+
 Behavioral economics research plays a critical role in today’s public policy decisions. What comes with those decisions, however, are spillover effects. Decisions are an incision in the timeline of humanity; lives are affected, and money is spent implementing policies. It is well documented that, at times, research scientists fake data in order to get papers published. (Ariely et al). Political scientists should be wary of research-driven policy because of perverse research incentives, data manipulation, replication issues, and data dredging. This problem can potentially be solved through structural changes and an increase in data transparency. 
 
 
@@ -30,7 +33,9 @@ The solution to the aforementioned issues with research-based policy lies in cha
 
 In conclusion, perverse research incentives and a toxic research culture combine to form a pathway to data fabrication or research missteps. The problem with this is the fact that it causes public policy makers to lose money in their attempts to make informed policy decisions based on behavioral economics research. There needs to be a paradigm shift in research culture where we restructure the rewards and incentives in research. Whereas we have previously rewarded the number of publications, thus emphasizing quantitative metrics, it is more important to strengthen the communal culture of research, allow researchers to take their time, and strictly follow processes in order to ensure ethical research practice. 
 
-Works Cited
+### Works Cited
+
+
 Clayton, Aubrey. “How Eugenics Shaped Statistics.” Nautilus | Science Connected, 14 Sept. 2021, https://nautil.us/how-eugenics-shaped-statistics-9365/. 
 
 “Data-Dredging Bias.” Catalog of Bias, 27 Nov. 2020, https://catalogofbias.org/biases/data-dredging-bias/. 
