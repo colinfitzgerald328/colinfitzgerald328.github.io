@@ -13,7 +13,7 @@ main:
   - title: "Training Log"
     url: https://www.strava.com/athletes/84239936
   - title: "Pace Calculator"
-    url: https://Running-Pace-Calculator.colinfitzgeral2.repl.co
+    url: http://running-pace-calculator.vercel.app/
   
   - title: "About"
     url: /about/
