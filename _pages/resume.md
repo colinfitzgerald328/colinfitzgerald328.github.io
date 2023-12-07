@@ -11,7 +11,7 @@ classes: wide
 </object>
 -->
 
-![Resume page 1](/assets/resume/colinfitzgerald_resume_2023.png)
+![Resume page 1](/assets/resume/colinfitzgerald_resume_2023_12_6.pdf)
 
-[Download PDF](/assets/resume/colinfitzgerald_resume_2023.pdf) 
+[Download PDF](/assets/resume/colinfitzgerald_resume_2023_12_6.pdf) 
 
