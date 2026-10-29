@@ -1,6 +1,0 @@
----
-layout: single
-title:  "temptitle"
-date:   tempdatetime -0800
-excerpt: "description"
----

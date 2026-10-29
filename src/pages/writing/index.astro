@@ -1,0 +1,44 @@
+---
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import WritingList from "../../components/WritingList.astro";
+---
+
+<Base title="Writing | Colin FitzGerald" description="Class projects and running analysis from Colin FitzGerald's Berkeley years.">
+  <section class="band">
+    <div class="wrap head">
+      <Header current="writing" />
+      <h1 class="display">Writing</h1>
+      <p>Class projects and running analysis from my Berkeley years.</p>
+    </div>
+  </section>
+  <main class="wrap list">
+    <WritingList />
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .head {
+    padding-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  h1 {
+    margin-top: 40px;
+    font-weight: 900;
+    font-size: clamp(64px, 9vw, 132px);
+    line-height: 0.9;
+  }
+  .head p {
+    margin: 0;
+    font-size: 20px;
+    color: var(--on-track-muted);
+  }
+  .list {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+</style>

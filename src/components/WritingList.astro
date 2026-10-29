@@ -1,0 +1,110 @@
+---
+import { getCollection } from "astro:content";
+
+type Item = { href: string; title: string; blurb: string; date: Date | null; year: number };
+
+const posts = await getCollection("posts");
+const fmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", timeZone: "UTC" });
+
+const items: Item[] = [
+  ...posts.map((p) => ({
+    href: `/writing/${p.id}/`,
+    title: p.data.title,
+    blurb: p.data.excerpt,
+    date: p.data.date,
+    year: p.data.date.getUTCFullYear(),
+  })),
+  // A full Jupyter HTML export, served as-is from public/ so its own styles stay contained to that page.
+  {
+    href: "/writing/collegiate-running-data/",
+    title: "Analyzing the Difference Between 2019 and 2021 Collegiate Outdoor 1500m Data",
+    blurb: "How the 1500m changed between the 2019 and 2021 outdoor seasons.",
+    date: new Date("2021-04-26T00:00:00Z"),
+    year: 2021,
+  },
+  {
+    href: "/training/",
+    title: "My Training Log, January 2021",
+    blurb: "Every workout from January 2021, day by day, with the notes I kept.",
+    date: null,
+    year: 2021,
+  },
+];
+
+const byYear = new Map<number, Item[]>();
+for (const item of items) byYear.set(item.year, [...(byYear.get(item.year) ?? []), item]);
+const years = [...byYear.entries()]
+  .sort((a, b) => b[0] - a[0])
+  .map(([year, list]) => ({
+    year,
+    list: list.sort((a, b) => (b.date?.getTime() ?? 0) - (a.date?.getTime() ?? 0)),
+  }));
+---
+
+<div class="years">
+  {
+    years.map(({ year, list }) => (
+      <div class="year">
+        <h3 class="display">{year}</h3>
+        <ul>
+          {list.map((item) => (
+            <li>
+              <a href={item.href}>{item.title}</a>
+              <span class="muted">
+                {item.blurb}
+                {item.date && <time datetime={item.date.toISOString().slice(0, 10)}> {fmt.format(item.date)}</time>}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .years {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .year {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 48px;
+    padding-top: 24px;
+    border-top: 3px solid var(--ink);
+  }
+  h3 {
+    flex: 0 0 140px;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--track);
+  }
+  ul {
+    flex: 999 1 520px;
+    min-width: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  li a {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  li a:hover {
+    color: var(--track);
+  }
+  time {
+    white-space: nowrap;
+  }
+</style>

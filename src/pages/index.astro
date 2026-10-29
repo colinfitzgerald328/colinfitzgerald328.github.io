@@ -1,0 +1,510 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Lanes from "../components/Lanes.astro";
+import WritingList from "../components/WritingList.astro";
+
+const work = [
+  {
+    when: "Jul 2025 to now",
+    role: "Senior Software Engineer, Air Scribe, at Commure",
+    what: "Led Air Scribe Orders from scoping to a staged launch behind a kill switch. Leading configurable carry-forward. Made visit recording durable on web and React Native, and own reliability for the Cloud Run services as clinic volume grows.",
+    split: "1y 3m",
+    current: true,
+  },
+  {
+    when: "Jan 2024 to Jul 2025",
+    role: "Software Engineer, Air EHR and Air Scribe, at Commure",
+    what: "Core engineer on Air from the 0-to-1 build through its July 2025 launch and growth to $10M+ ARR. Built the Air Scribe backend from scratch; moving to async I/O made note processing 3x faster. Cut company-wide cold starts from over 4 minutes to under 10 seconds.",
+    split: "1y 6m",
+  },
+  {
+    when: "Jun 2022 to Jan 2024",
+    role: "Full-Stack Engineer at RoBhat Labs, acquired by Commure",
+    what: "Built content-ranking infrastructure that lifted D1 retention 7% and notification engagement 5x, and a semantic search tool that cut operators' manual work by 25%. Managed a team of 10 content operators.",
+    split: "1y 7m",
+  },
+  {
+    when: "May to Aug 2021",
+    role: "Data Science Intern at CoreVest Finance",
+    what: "An OCR-based ETL pipeline over 1,000+ PDF loan applications, and an intern team that trained a random forest on it to help underwriters.",
+    split: "3m",
+  },
+  {
+    when: "2018 to 2022",
+    role: "UC Berkeley, Economics with a minor in Data Science",
+    what: "Captain of Cal Track and Field. Led the team through the PAC-12 Championships while training 25+ hours a week.",
+    split: "4y",
+  },
+];
+---
+
+<Base title="Colin FitzGerald">
+  <section class="band hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <Header current="home" />
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title" class="display">I build AI tools for clinicians.</h1>
+          <p class="hero-lede">
+            I helped take Air, Commure's AI-native EHR, from 0 to 1, then built the backend for Air Scribe, an ambient AI
+            scribe for physical therapy. Before any of that, I ran.
+          </p>
+          <div class="hero-actions">
+            <a href="/resume/" class="pill pill-lane">Read my resume</a>
+            <a href="mailto:colinfitzgerald328@gmail.com" class="pill pill-outline">Email me</a>
+          </div>
+        </div>
+        <div class="hero-lanes">
+          <Lanes />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="wrap now" aria-labelledby="now-title">
+      <img
+        src="/images/portrait.jpg"
+        alt="Black and white portrait of Colin against a textured wall"
+        width="1600"
+        height="1062"
+        loading="lazy"
+      />
+      <div class="now-copy">
+        <h2 id="now-title" class="section-title">Right now</h2>
+        <p class="big">
+          I'm a senior software engineer at Commure in Mountain View, leading features on Air Scribe end to end with
+          product: orders the scribe drafts from the visit conversation, configurable carry-forward between notes, and
+          recording that survives a dropped connection.
+        </p>
+        <p class="muted">
+          On the side I'm building MyLogbook, an AI training coach for runners and cyclists, now in beta. I live in San
+          Francisco.
+        </p>
+      </div>
+    </section>
+
+    <section id="work" class="wrap work" aria-labelledby="work-title">
+      <div class="section-head">
+        <h2 id="work-title" class="section-title">Work, in splits</h2>
+        <p class="muted">Each stop and how long I was there, newest first. <a href="/resume/">The full resume</a> has the detail.</p>
+      </div>
+      <ol class="timeline">
+        {
+          work.map((w) => (
+            <li class:list={{ current: w.current }}>
+              <span class="when">{w.when}</span>
+              <div class="what">
+                <h3>{w.role}</h3>
+                <p>{w.what}</p>
+              </div>
+              <span class="split display">{w.split}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="wrap projects-inner">
+        <h2 id="projects-title" class="section-title">Things I've built on my own</h2>
+
+        <article class="project">
+          <div class="project-visual inputs" aria-hidden="true">
+            <span>Strava</span>
+            <span>Garmin</span>
+            <span>Recovery data</span>
+            <span>Training notes</span>
+            <strong class="display">One view of training load</strong>
+          </div>
+          <div class="project-copy">
+            <h3 class="display">MyLogbook</h3>
+            <p class="big">An AI training coach for runners and cyclists that I designed, built and launched solo. It's in beta.</p>
+            <p>
+              It pulls Strava and Garmin activities, recovery data and LLM-parsed notes into one view of training load,
+              then replans around missed sessions and fatigue so athletes keep progressing without overreaching.
+            </p>
+            <p class="muted small">
+              Built with TypeScript, Hono, React and Drizzle on Postgres with row-level security, plus Python services for
+              Garmin sync, run as retried QStash jobs.
+            </p>
+            <a href="https://mylogbook.run" class="visit">Visit mylogbook.run</a>
+          </div>
+        </article>
+
+        <article class="project reverse">
+          <div class="project-copy">
+            <h3 class="display">Daybook</h3>
+            <p class="big">A photo and video journal that keeps full-resolution originals, with a feed for friends and family.</p>
+            <p>
+              Uploads go straight to R2 and Cloudflare resizes them at the edge. A Postgres social graph decides who sees
+              what, and a GPU pipeline transcodes 4K HDR video without losing color.
+            </p>
+            <p class="muted small">Built with Go, Next.js, PostgreSQL and Cloudflare.</p>
+            <a href="https://daybook.fitzgeraldmedia.org" class="visit">Visit Daybook</a>
+          </div>
+          <div class="project-visual stat band">
+            <span>One photo from a phone</span>
+            <strong class="display">3.3 MB</strong>
+            <span>reaches a friend's screen as</span>
+            <strong class="display lane">12 KB</strong>
+            <span>in about 150 milliseconds, as AVIF.</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="writing" class="wrap writing" aria-labelledby="writing-title">
+      <div class="section-head">
+        <h2 id="writing-title" class="section-title">Writing</h2>
+        <p class="muted">Class projects and running analysis from my Berkeley years.</p>
+      </div>
+      <WritingList />
+    </section>
+
+    <section id="photos" class="wrap photos" aria-labelledby="photos-title">
+      <h2 id="photos-title" class="section-title">Photos</h2>
+      <p>
+        For a while I carried a camera everywhere, trying to capture the world and use my images to make people happy:
+        Rock Creek Lake and Minaret Vista in Mammoth Lakes, coffee, and my little brother racing, including the shot used
+        for his Nike Cross Country Nationals photo. They live on <a href="https://unsplash.com/@colinfitzgerald328">Unsplash</a>.
+      </p>
+    </section>
+
+    <section id="story" class="story" aria-labelledby="story-title">
+      <div class="wrap story-inner">
+        <figure>
+          <img
+            src="/images/racing.jpg"
+            alt="Colin racing cross country in a Crescenta Valley singlet"
+            width="840"
+            height="471"
+            loading="lazy"
+          />
+          <figcaption class="muted small">Racing cross country in high school, before Berkeley.</figcaption>
+        </figure>
+        <div class="story-copy">
+          <h2 id="story-title" class="section-title">How I got here</h2>
+          <p class="big">
+            My story started with running. Ever since I was a little kid, I loved to run. I brought intense passion and
+            dedication to the sport, and I was lucky enough to have it carry me to virtually any university I wanted.
+          </p>
+          <p>
+            I chose the University of California, Berkeley, where I was a student-athlete, majoring in Economics with a
+            minor in Data Science.
+          </p>
+          <p>
+            During quarantine, I decided to learn to code, with no prior experience. I was awful at first. I struggled and
+            couldn't grasp even the most basic concepts. But I was persistent and patient with myself, and slowly I got more
+            confident. To me, it's one huge puzzle.
+          </p>
+          <p>
+            I started small with simple Python projects and dabbled in R, splitting my time between website projects and
+            data science. I hoped to one day contribute to projects that could change the world, and worked to learn as
+            much as I could until then.
+          </p>
+          <p class="muted small">
+            The first version of this site took its inspiration from my friend
+            <a href="https://raviriley.github.io">Ravi's website</a>; I learned his workflow and built from there.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer big />
+</Base>
+
+<style>
+  .hero {
+    padding-bottom: 72px;
+  }
+  .hero-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px;
+    align-items: flex-end;
+    padding-top: 56px;
+  }
+  .hero-copy {
+    flex: 999 1 520px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .hero-copy h1 {
+    font-weight: 900;
+    font-size: clamp(68px, 9.5vw, 144px);
+    line-height: 0.9;
+    letter-spacing: -0.01em;
+  }
+  .hero-lede {
+    margin: 0;
+    max-width: 32em;
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--on-track-muted);
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .hero-lanes {
+    flex: 1 1 420px;
+    min-width: 0;
+  }
+
+  .big {
+    font-size: 21px;
+    line-height: 1.55;
+  }
+  .small {
+    font-size: 16px;
+  }
+  p {
+    margin: 0;
+  }
+
+  .now {
+    padding-top: 96px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    align-items: center;
+  }
+  .now img {
+    flex: 1 1 380px;
+    min-width: 0;
+    max-width: 520px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 38% 45%;
+    border-radius: var(--radius);
+  }
+  .now-copy {
+    flex: 999 1 460px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 38em;
+  }
+
+  .section-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px 32px;
+  }
+  .section-head p {
+    max-width: 26em;
+  }
+
+  .work {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 36px;
+    border-left: 3px solid var(--track);
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+  .timeline li {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 32px;
+    align-items: baseline;
+  }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: -46px;
+    top: 8px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 3px solid var(--track);
+  }
+  .timeline li.current::before {
+    background: var(--lane);
+  }
+  .when {
+    flex: 0 0 190px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .what {
+    flex: 999 1 420px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .what h3 {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+  .what p {
+    color: var(--ink-2);
+    max-width: 38em;
+  }
+  .split {
+    flex: 0 0 auto;
+    font-size: 40px;
+    line-height: 1;
+    color: var(--track);
+  }
+
+  .projects {
+    background: var(--tint);
+  }
+  .projects-inner {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+  }
+  .project.reverse {
+    flex-wrap: wrap-reverse;
+  }
+  .project-copy {
+    flex: 1 1 380px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .project-copy h3 {
+    font-size: 56px;
+    line-height: 1;
+  }
+  .project-copy p {
+    color: var(--ink-2);
+  }
+  .project-copy .big {
+    color: var(--ink);
+  }
+  .visit {
+    align-self: flex-start;
+    font-weight: 700;
+    padding: 10px 0;
+  }
+  .project-visual {
+    flex: 1 1 520px;
+    min-width: 0;
+    border-radius: var(--radius);
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .inputs {
+    background: #ffffff;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .inputs span {
+    padding: 8px 16px;
+    border-radius: 18px;
+    background: var(--tint);
+    font-weight: 700;
+  }
+  .inputs strong {
+    margin-top: 14px;
+    font-size: clamp(40px, 5vw, 64px);
+    color: var(--track);
+  }
+  .stat {
+    gap: 6px;
+  }
+  .stat span {
+    font-size: 17px;
+    color: var(--on-track-muted);
+  }
+  .stat strong {
+    font-weight: 900;
+    font-size: clamp(64px, 8vw, 112px);
+    line-height: 0.95;
+  }
+  .stat strong + span {
+    padding-top: 12px;
+  }
+  .stat .lane {
+    color: var(--lane);
+  }
+
+  .writing {
+    padding-top: 96px;
+    padding-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .photos {
+    padding-top: 32px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .photos p {
+    max-width: 40em;
+  }
+
+  .story {
+    background: var(--tint);
+  }
+  .story-inner {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px;
+    align-items: flex-start;
+  }
+  .story figure {
+    flex: 1 1 400px;
+    min-width: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .story img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 55% 30%;
+    border-radius: var(--radius);
+  }
+  .story-copy {
+    flex: 999 1 480px;
+    min-width: 0;
+    max-width: 38em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+</style>

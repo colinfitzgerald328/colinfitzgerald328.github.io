@@ -1,0 +1,85 @@
+---
+interface Props {
+  big?: boolean;
+}
+
+const { big = false } = Astro.props;
+---
+
+<footer class="band">
+  <div class="wrap footer">
+    {
+      big && (
+        <div class="hello">
+          <p class="lede">Building something for clinicians, or training for something? Say hello.</p>
+          <a href="mailto:colinfitzgerald328@gmail.com" class="email">
+            colinfitzgerald328@gmail.com
+          </a>
+        </div>
+      )
+    }
+    <div class="base">
+      <nav aria-label="Elsewhere">
+        <a href="https://github.com/colinfitzgerald328">GitHub</a>
+        <a href="https://linkedin.com/in/colinfitzgerald328">LinkedIn</a>
+        <a href="https://unsplash.com/@colinfitzgerald328">Unsplash</a>
+        <a href="/training/">Training log</a>
+        <a href="/resume/">Resume</a>
+      </nav>
+      <span class="copy">© {new Date().getFullYear()} Colin FitzGerald</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding-top: 56px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .hello {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 32px;
+  }
+  .lede {
+    margin: 0;
+    font-size: 20px;
+    color: var(--on-track-muted);
+  }
+  .email {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(36px, 6vw, 88px);
+    line-height: 1;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .email:hover {
+    color: var(--lane);
+  }
+  .base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    border-top: 2px solid var(--lane-line);
+    padding-top: 20px;
+    font-size: 16px;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 24px;
+  }
+  nav a,
+  .copy {
+    padding: 12px 0;
+  }
+  .copy {
+    color: var(--on-track-muted);
+  }
+</style>

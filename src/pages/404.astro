@@ -1,0 +1,45 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Base title="Page not found | Colin FitzGerald">
+  <section class="band">
+    <div class="wrap head">
+      <Header />
+      <h1 class="display">Off course.</h1>
+      <p>There's no page at this address. It may have moved when the site was rebuilt.</p>
+      <div class="actions">
+        <a href="/" class="pill pill-lane">Go to the home page</a>
+        <a href="/writing/" class="pill pill-outline">Browse the writing</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Base>
+
+<style>
+  .head {
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  h1 {
+    margin-top: 64px;
+    font-weight: 900;
+    font-size: clamp(72px, 12vw, 180px);
+    line-height: 0.9;
+  }
+  p {
+    margin: 0;
+    font-size: 20px;
+    color: var(--on-track-muted);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+</style>

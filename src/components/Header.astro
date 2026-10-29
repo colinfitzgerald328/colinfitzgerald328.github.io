@@ -1,0 +1,65 @@
+---
+interface Props {
+  current?: "home" | "writing" | "training" | "resume";
+}
+
+const { current } = Astro.props;
+const links = [
+  { href: "/#work", label: "Work" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/writing/", label: "Writing", key: "writing" },
+  { href: "/training/", label: "Training log", key: "training" },
+  { href: "/resume/", label: "Resume", key: "resume" },
+];
+---
+
+<header class="site-header">
+  <a href="/" class="wordmark">Colin FitzGerald</a>
+  <nav aria-label="Primary">
+    {
+      links.map((l) => (
+        <a href={l.href} aria-current={l.key && l.key === current ? "page" : undefined}>
+          {l.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 32px;
+    padding-top: 24px;
+  }
+  .wordmark {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    padding: 8px 0;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 24px;
+    font-size: 16px;
+  }
+  nav a {
+    text-decoration: none;
+    padding: 12px 0;
+  }
+  nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    color: var(--on-track);
+  }
+  nav a[aria-current="page"] {
+    color: var(--lane);
+    font-weight: 700;
+  }
+</style>

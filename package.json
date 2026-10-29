@@ -1,0 +1,27 @@
+{
+  "name": "colinfitzgerald-site",
+  "version": "1.0.0",
+  "description": "Colin FitzGerald personal site",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colinfitzgerald328/colinfitzgerald328.github.io.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/colinfitzgerald328/colinfitzgerald328.github.io/issues"
+  },
+  "homepage": "https://github.com/colinfitzgerald328/colinfitzgerald328.github.io#readme",
+  "dependencies": {
+    "astro": "^7.4.4",
+    "motion": "^14.7.1"
+  },
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  }
+}

@@ -1,0 +1,173 @@
+---
+import { peakMiles, weeks } from "../data/training";
+
+const summary = `Weekly running mileage from late December 2020 through early February 2021: ${weeks
+  .map((w) => w.miles)
+  .join(", ")} miles.`;
+---
+
+<figure class="lanes" data-lanes>
+  <div class="track" role="img" aria-label={summary}>
+    {
+      weeks.map((w, i) => (
+        <div class="lane" aria-hidden="true">
+          <span class="lane-no">{i + 1}</span>
+          <div class="lane-run">
+            <div class="bar" data-bar style={`width: ${(w.miles / peakMiles) * 100}%`}>
+              <span class="week">{w.start}</span>
+            </div>
+          </div>
+          <span class="miles" data-miles={w.miles}>
+            {w.miles}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+  <figcaption>
+    <span>Miles per week, from my January 2021 training log. <a href="/training/">Read the log</a></span>
+    <button type="button" class="replay" data-replay aria-label="Replay the mileage animation">Replay</button>
+  </figcaption>
+</figure>
+
+<style>
+  .lanes {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .track {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid var(--lane-line);
+  }
+  .lane {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 56px;
+    border-bottom: 2px solid var(--lane-line);
+  }
+  .lane-no {
+    flex: 0 0 28px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 30px;
+    color: #c9d6f2;
+  }
+  .lane-run {
+    flex: 1 1 auto;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .bar {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    bottom: 14px;
+    background: var(--lane);
+    border-radius: 0 14px 14px 0;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .week {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .miles {
+    flex: 0 0 64px;
+    text-align: right;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 34px;
+    font-variant-numeric: tabular-nums;
+  }
+  figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 16px;
+    color: var(--on-track-muted);
+  }
+  figcaption a {
+    font-weight: 700;
+  }
+  .replay {
+    min-height: 44px;
+    padding: 0 18px;
+    background: transparent;
+    color: var(--on-track);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 22px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .replay:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  /* With scripting on and motion allowed, bars wait off the start line until the script runs them in. Without
+     either, they simply render finished. */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js) .bar {
+      transform: translateX(-101%);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .replay {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  import { animate, stagger } from "motion";
+
+  const root = document.querySelector<HTMLElement>("[data-lanes]");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (root && !reduce.matches) {
+    const bars = Array.from(root.querySelectorAll<HTMLElement>("[data-bar]"));
+    const counters = Array.from(root.querySelectorAll<HTMLElement>("[data-miles]"));
+    const GAP = 0.11;
+    let running: { stop: () => void }[] = [];
+
+    const run = () => {
+      for (const a of running) a.stop();
+      running = [];
+      // A gentle spring: each bar leans a touch past its mark and settles, like a runner at the line.
+      running.push(
+        animate(
+          bars,
+          { x: ["-101%", "0%"] },
+          { type: "spring", bounce: 0.22, visualDuration: 0.9, delay: stagger(GAP) },
+        ),
+      );
+      counters.forEach((el, i) => {
+        const target = Number(el.dataset.miles);
+        running.push(
+          animate(0, target, {
+            duration: 1,
+            delay: i * GAP,
+            ease: "easeOut",
+            onUpdate: (v) => {
+              el.textContent = String(Math.round(v));
+            },
+          }),
+        );
+      });
+    };
+
+    run();
+    root.querySelector("[data-replay]")?.addEventListener("click", run);
+  }
+</script>

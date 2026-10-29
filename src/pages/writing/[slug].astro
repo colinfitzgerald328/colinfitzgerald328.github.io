@@ -1,0 +1,142 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeZone: "UTC" }).format(post.data.date);
+---
+
+<Base title={`${post.data.title} | Colin FitzGerald`} description={post.data.excerpt}>
+  <section class="band">
+    <div class="wrap head">
+      <Header current="writing" />
+      <p class="kicker"><a href="/writing/">Writing</a>, <time datetime={post.data.date.toISOString().slice(0, 10)}>{date}</time></p>
+      <h1 class="display">{post.data.title}</h1>
+      <p class="excerpt">{post.data.excerpt}</p>
+    </div>
+  </section>
+  <main class="wrap">
+    <article class="prose">
+      <Content />
+    </article>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .head {
+    padding-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .kicker {
+    margin: 40px 0 0;
+    font-size: 16px;
+    color: var(--on-track-muted);
+  }
+  h1 {
+    max-width: 18em;
+    font-weight: 900;
+    font-size: clamp(44px, 6vw, 88px);
+    line-height: 0.95;
+  }
+  .excerpt {
+    margin: 0;
+    max-width: 36em;
+    font-size: 20px;
+    color: var(--on-track-muted);
+  }
+  .prose {
+    max-width: 46em;
+    min-width: 0;
+    padding: 56px 0 96px;
+    overflow-wrap: anywhere;
+  }
+  .prose :global(h1),
+  .prose :global(h2),
+  .prose :global(h3),
+  .prose :global(h4) {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 1.05;
+    margin: 1.6em 0 0.5em;
+  }
+  .prose :global(h1) {
+    font-size: 44px;
+  }
+  .prose :global(h2) {
+    font-size: 36px;
+  }
+  .prose :global(h3) {
+    font-size: 28px;
+  }
+  .prose :global(h4) {
+    font-size: 22px;
+  }
+  .prose :global(> :first-child) {
+    margin-top: 0;
+  }
+  .prose :global(p),
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin: 0 0 1em;
+  }
+  .prose :global(img) {
+    display: block;
+    margin: 1.5em 0;
+    border-radius: var(--radius-sm);
+    background: #ffffff;
+  }
+  .prose :global(pre) {
+    max-width: 100%;
+    overflow-wrap: normal;
+    margin: 1.5em 0;
+    padding: 18px 20px;
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    font-size: 15px;
+    line-height: 1.5;
+    border: 1px solid var(--tint);
+  }
+  .prose :global(code) {
+    font-size: 0.9em;
+  }
+  .prose :global(:not(pre) > code) {
+    background: var(--tint);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+  .prose :global(table) {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 15px;
+  }
+  .prose :global(th),
+  .prose :global(td) {
+    padding: 6px 12px;
+    border-bottom: 1px solid var(--tint);
+    text-align: left;
+    white-space: nowrap;
+  }
+  .prose :global(th) {
+    font-weight: 700;
+  }
+  .prose :global(blockquote) {
+    margin: 1.5em 0;
+    padding-left: 20px;
+    border-left: 3px solid var(--track);
+    color: var(--ink-2);
+  }
+</style>

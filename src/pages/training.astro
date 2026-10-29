@@ -1,0 +1,236 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { dayName, monthlyMiles, peakMiles, weeklyAverage, weeks } from "../data/training";
+---
+
+<Base title="Training log, January 2021 | Colin FitzGerald" description="Colin FitzGerald's training log from January 2021, day by day.">
+  <section class="band">
+    <div class="wrap head">
+      <Header current="training" />
+      <div class="head-grid">
+        <div class="head-copy">
+          <h1 class="display">January 2021</h1>
+          <p>
+            Six weeks of training, written down the day it happened: the workouts, the doubles, a tight knee, and the day it
+            all clicked.
+          </p>
+        </div>
+        <dl class="totals">
+          <div>
+            <dt>miles in January, all-purpose</dt>
+            <dd class="display lane">{monthlyMiles}</dd>
+          </div>
+          <div>
+            <dt>miles a week, or something like that</dt>
+            <dd class="display">{weeklyAverage}</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <blockquote class="pull">
+      <p class="display">
+        “Training is difficult but you have to keep your head on straight through the downs, give your body the rest it
+        needs, and keep showing up.”
+      </p>
+      <footer class="muted">From the log, Friday, February 5</footer>
+    </blockquote>
+
+    <div class="weeks">
+      {
+        weeks.map((w) => (
+          <section class="week" aria-label={`Week of ${w.start}, ${w.miles} miles`}>
+            <div class="week-head">
+              <h2 class="display">Week of {w.start}</h2>
+              <div class="meter" aria-hidden="true">
+                <div style={`width: ${(w.miles / peakMiles) * 100}%`} />
+              </div>
+              <span class="display week-miles">{w.miles} mi</span>
+            </div>
+            <ol class="days">
+              {w.days.map((d, i) => (
+                <li class:list={["day", d.kind]}>
+                  <span class="day-top">
+                    <span class="display day-date">{d.date}</span>
+                    <span class="day-name">{dayName(i)}</span>
+                  </span>
+                  <span class="day-text">{d.text}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))
+      }
+      <p class="muted note">
+        About that {monthlyMiles}: I'm not too sure how many of those miles were running. It's more of an all-purpose mileage
+        number.
+      </p>
+    </div>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  .head {
+    padding-bottom: 64px;
+  }
+  .head-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 64px;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 48px;
+  }
+  .head-copy {
+    flex: 999 1 520px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  h1 {
+    font-weight: 900;
+    font-size: clamp(64px, 9vw, 132px);
+    line-height: 0.9;
+  }
+  .head-copy p {
+    margin: 0;
+    max-width: 34em;
+    font-size: 20px;
+    color: var(--on-track-muted);
+  }
+  .totals {
+    flex: 1 1 320px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .totals div {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4px;
+  }
+  .totals dt {
+    font-size: 16px;
+    color: var(--on-track-muted);
+  }
+  .totals dd {
+    margin: 0;
+    font-weight: 900;
+    font-size: 88px;
+    line-height: 0.9;
+  }
+  .totals .lane {
+    color: var(--lane);
+  }
+
+  .pull {
+    margin: 0;
+    padding: 72px 0 32px;
+    max-width: 22em;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .pull p {
+    margin: 0;
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1.05;
+  }
+  .pull footer {
+    font-size: 16px;
+  }
+
+  .weeks {
+    padding: 40px 0 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  .week {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .week-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 24px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--ink);
+  }
+  .week-head h2,
+  .week-miles {
+    font-size: 36px;
+    line-height: 1;
+  }
+  .week-miles {
+    font-variant-numeric: tabular-nums;
+  }
+  .meter {
+    flex: 1 1 200px;
+    height: 14px;
+    border-radius: 7px;
+    background: var(--tint);
+    overflow: hidden;
+  }
+  .meter div {
+    height: 100%;
+    border-radius: 7px;
+    background: var(--track);
+  }
+  .days {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  .day {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 14px 16px;
+    border-radius: var(--radius-sm);
+    background: #ffffff;
+  }
+  .day.rest {
+    background: transparent;
+    color: var(--muted);
+    box-shadow: inset 0 0 0 2px var(--tint);
+  }
+  .day.best {
+    background: var(--lane);
+  }
+  .day-top {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .day-date {
+    font-size: 30px;
+    line-height: 1;
+  }
+  .day-name {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .day-text {
+    font-size: 15px;
+    line-height: 1.45;
+    white-space: pre-line;
+  }
+  .note {
+    margin: 0;
+    max-width: 40em;
+  }
+</style>
